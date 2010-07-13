@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  from_code: MyText
+  to_code: MyText
+  from_date: 2010-07-13 00:01:35
+  to_date: 2010-07-13 00:01:35
+  prebook_date: 2010-07-13 00:01:35
+  boughtFlag: 1
+
+two:
+  from_code: MyText
+  to_code: MyText
+  from_date: 2010-07-13 00:01:35
+  to_date: 2010-07-13 00:01:35
+  prebook_date: 2010-07-13 00:01:35
+  boughtFlag: 1

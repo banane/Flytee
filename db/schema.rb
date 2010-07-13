@@ -9,6 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20100713070135) do
+
+  create_table "flights", :force => true do |t|
+    t.text     "from_code"
+    t.text     "to_code"
+    t.datetime "from_date"
+    t.datetime "to_date"
+    t.datetime "prebook_date"
+    t.integer  "boughtFlag"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

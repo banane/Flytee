@@ -1,0 +1,36 @@
+<h1>Editing flight</h1>
+
+<% form_for(@flight) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :from_code %><br />
+    <%= f.text_area :from_code %>
+  </p>
+  <p>
+    <%= f.label :to_code %><br />
+    <%= f.text_area :to_code %>
+  </p>
+  <p>
+    <%= f.label :from_date %><br />
+    <%= f.datetime_select :from_date %>
+  </p>
+  <p>
+    <%= f.label :to_date %><br />
+    <%= f.datetime_select :to_date %>
+  </p>
+  <p>
+    <%= f.label :prebook_date %><br />
+    <%= f.datetime_select :prebook_date %>
+  </p>
+  <p>
+    <%= f.label :boughtFlag %><br />
+    <%= f.text_field :boughtFlag %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @flight %> |
+<%= link_to 'Back', flights_path %>
