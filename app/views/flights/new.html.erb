@@ -4,12 +4,12 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :from_code %><br />
-    <%= f.text_field :from_code %>
+    From<br />
+    <%= select("city", "state", Citystate.all.collect {|p| [ p.city, p.state ] }) %>
   </p>
   <p>
-    <%= f.label :to_code %><br />
-    <%= f.text_field :to_code %>
+    To<br />
+    <%= select("city", "state", Citystate.all.collect {|p| [ p.city, p.state ] }) %>
   </p>
   <p>
     <%= f.label :from_date %><br />

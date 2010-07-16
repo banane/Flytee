@@ -401,3 +401,91 @@ Processing FlightsController#new (for 127.0.0.1 at 2010-07-13 00:16:17) [GET]
 Rendering template within layouts/flights
 Rendering flights/new
 Completed in 37ms (View: 31, DB: 0) | 200 OK [http://localhost/flights/new]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlights (20100713070135)
+Migrating to CreateCitystates (20100716040658)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "citystates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100716040658')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("citystates")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("flights")[0m
+  [4;36;1mCitystate Load (0.4ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+  [4;35;1mCitystate Create (0.7ms)[0m   [0mINSERT INTO "citystates" ("city", "created_at", "updated_at", "state") VALUES('Los Angeles', '2010-07-16 04:11:31', '2010-07-16 04:11:31', 'California')[0m
+  [4;36;1mCitystate Load (0.4ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+  [4;35;1mCitystate Create (0.8ms)[0m   [0mINSERT INTO "citystates" ("city", "created_at", "updated_at", "state") VALUES('San Francisco', '2010-07-16 04:11:59', '2010-07-16 04:11:59', 'California')[0m
+
+
+Processing FlightsController#index (for 127.0.0.1 at 2010-07-15 21:14:59) [GET]
+  [4;36;1mFlight Load (0.8ms)[0m   [0;1mSELECT * FROM "flights" [0m
+Rendering template within layouts/flights
+Rendering flights/index
+Completed in 222ms (View: 216, DB: 1) | 200 OK [http://localhost/flights]
+
+
+Processing FlightsController#new (for 127.0.0.1 at 2010-07-15 21:15:01) [GET]
+Rendering template within layouts/flights
+Rendering flights/new
+  [4;35;1mCitystate Load (0.5ms)[0m   [0mSELECT * FROM "citystates" [0m
+
+ActionView::TemplateError (undefined method `name' for #<Citystate:0x103778d10>) on line #8 of app/views/flights/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :from_code %><br />
+8:     <%= select("city", "state", Citystate.all.collect {|p| [ p.city, p.name ] }) %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :to_code %><br />
+
+    app/views/flights/new.html.erb:8
+    app/views/flights/new.html.erb:8:in `collect'
+    app/views/flights/new.html.erb:8
+    app/views/flights/new.html.erb:3
+    app/controllers/flights_controller.rb:29:in `new'
+
+Rendered rescues/_trace (59.5ms)
+Rendered rescues/_request_and_response (14.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing FlightsController#new (for 127.0.0.1 at 2010-07-15 21:15:20) [GET]
+Rendering template within layouts/flights
+Rendering flights/new
+  [4;36;1mCitystate Load (0.5ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+Completed in 140ms (View: 133, DB: 0) | 200 OK [http://localhost/flights/new]
+
+
+Processing FlightsController#new (for 127.0.0.1 at 2010-07-15 21:15:33) [GET]
+Rendering template within layouts/flights
+Rendering flights/new
+  [4;35;1mCitystate Load (0.4ms)[0m   [0mSELECT * FROM "citystates" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+Completed in 47ms (View: 41, DB: 0) | 200 OK [http://localhost/flights/new]
+
+
+Processing FlightsController#new (for 127.0.0.1 at 2010-07-15 21:15:45) [GET]
+Rendering template within layouts/flights
+Rendering flights/new
+  [4;35;1mCitystate Load (0.4ms)[0m   [0mSELECT * FROM "citystates" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+Completed in 48ms (View: 41, DB: 0) | 200 OK [http://localhost/flights/new]
+
+
+Processing FlightsController#new (for 127.0.0.1 at 2010-07-15 21:18:37) [GET]
+Rendering template within layouts/flights
+Rendering flights/new
+  [4;35;1mCitystate Load (0.4ms)[0m   [0mSELECT * FROM "citystates" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+Completed in 127ms (View: 120, DB: 0) | 200 OK [http://localhost/]
