@@ -5,11 +5,11 @@
 
   <p>
     From<br />
-    <%= select("city", "state", Citystate.all.collect {|p| [ p.city, p.state ] }) %>
+    <%= select("flight", "from_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.id ] }) %>
   </p>
   <p>
     To<br />
-    <%= select("city", "state", Citystate.all.collect {|p| [ p.city, p.state ] }) %>
+    <%= select("flight", "to_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.id ] }) %>
   </p>
   <p>
     <%= f.label :from_date %><br />
