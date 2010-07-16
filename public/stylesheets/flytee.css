@@ -1,0 +1,31 @@
+body { background-color: #fff; color: #333; }
+
+
+
+h2 {
+	font-family:geneva;
+	color:#000;
+}
+
+#mainhead {
+	width:500px;
+	text-align:center;
+	margin-left:100px;
+}	
+
+#wrapper {
+	width:100%;
+}
+
+#mainblurb {
+	position:relative;
+	float:center;
+	width:500px;
+
+	color:#000;
+	font-family:arial;
+	font-size: 1.5em;
+	line-height:2em;
+	margin-left:100px;
+}
+

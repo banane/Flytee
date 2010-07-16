@@ -1,0 +1,34 @@
+Join our program for: <br />
+<% unless session[:last_button]
+     session[:last_button] = 1
+   end
+
+   if session[:last_button] > 1 then this_num = 1 end
+   if session[:last_button] < 2 then this_num = 2 end
+   
+   session[:last_button] = this_num
+   button = TestButton.find(this_num)
+%>
+<h2>
+<%= button.button_label %>  </h2>
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :fname %><br />
+    <%= f.text_field :fname %>
+  </p>
+  <p>
+    <%= f.label :lname %><br />
+    <%= f.text_field :lname %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', users_path %>
