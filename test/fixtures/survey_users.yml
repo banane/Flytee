@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  book_travel: MyString
+  reason_book: MyString
+  company_policy: MyText
+  book_same_day: MyString
+  why_wait: MyText
+  problem_long: MyText
+  resources: MyText
+  contact: MyString
+
+two:
+  book_travel: MyString
+  reason_book: MyString
+  company_policy: MyText
+  book_same_day: MyString
+  why_wait: MyText
+  problem_long: MyText
+  resources: MyText
+  contact: MyString

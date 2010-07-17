@@ -1,0 +1,44 @@
+<h1>Editing survey_user</h1>
+
+<% form_for(@survey_user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :book_travel %><br />
+    <%= f.text_field :book_travel %>
+  </p>
+  <p>
+    <%= f.label :reason_book %><br />
+    <%= f.text_field :reason_book %>
+  </p>
+  <p>
+    <%= f.label :company_policy %><br />
+    <%= f.text_area :company_policy %>
+  </p>
+  <p>
+    <%= f.label :book_same_day %><br />
+    <%= f.text_field :book_same_day %>
+  </p>
+  <p>
+    <%= f.label :why_wait %><br />
+    <%= f.text_area :why_wait %>
+  </p>
+  <p>
+    <%= f.label :problem_long %><br />
+    <%= f.text_area :problem_long %>
+  </p>
+  <p>
+    <%= f.label :resources %><br />
+    <%= f.text_area :resources %>
+  </p>
+  <p>
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @survey_user %> |
+<%= link_to 'Back', survey_users_path %>

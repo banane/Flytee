@@ -3756,3 +3756,2262 @@ Rendering template within layouts/users
 Rendering users/new
   [4;35;1mTestButton Load (0.3ms)[0m   [0mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 2) [0m
 Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:15:43) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mTestButton Load (0.3ms)[0m   [0;1mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 1) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:15:44) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;35;1mTestButton Load (0.3ms)[0m   [0mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 2) [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:15:44) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mTestButton Load (0.3ms)[0m   [0;1mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 1) [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:15:45) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;35;1mTestButton Load (0.3ms)[0m   [0mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 2) [0m
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:15:48) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mTestButton Load (0.3ms)[0m   [0;1mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 1) [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:20:56) [GET]
+Rendering template within layouts/users
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/users/new.html.erb:29: syntax error, unexpected '{', expecting ')'
+...ld :test_button_id, :options={ :value=> session[:last_button...
+                              ^
+/Users/anna/dev/Flytee/app/views/users/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+...value=> session[:last_button]} ).to_s); @output_buffer.conca...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "Join our program for: <br />\n"
+;  unless session[:last_button]
+     session[:last_button] = 1
+   end
+
+   if session[:last_button] > 1 then this_num = 1 end
+   if session[:last_button] < 2 then this_num = 2 end
+   
+   session[:last_button] = this_num
+   button = TestButton.find(this_num)
+@output_buffer.concat "\n<h2>\n"
+
+; @output_buffer.concat(( button.button_label ).to_s); @output_buffer.concat "  </h2>\n"
+;  form_for(@user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :fname ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :fname ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :lname ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :lname ).to_s); @output_buffer.concat "\n  </p>\n  "
+
+; @output_buffer.concat(( f.hidden_field :test_button_id, :options={ :value=> session[:last_button]} ).to_s); @output_buffer.concat "\n  <p>\n    "
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/users/new.html.erb:38:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/users/new.html.erb:29: syntax error, unexpected '{', expecting ')'
+...ld :test_button_id, :options={ :value=> session[:last_button...
+                              ^
+/Users/anna/dev/Flytee/app/views/users/new.html.erb:29: syntax error, unexpected '}', expecting ')'
+...value=> session[:last_button]} ).to_s); @output_buffer.conca...
+                              ^) on line #29 of app/views/users/new.html.erb:
+26:     <%= f.label :lname %><br />
+27:     <%= f.text_field :lname %>
+28:   </p>
+29:   <%= f.hidden_field :test_button_id, :options={ :value=> session[:last_button]} %>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+32:   </p>
+
+    app/views/users/new.html.erb:38:in `compile!'
+    app/controllers/users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (51.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:22:18) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;35;1mTestButton Load (0.3ms)[0m   [0mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 2) [0m
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-16 16:22:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NQO4dfreGXuOUP1xna679qLlKeLhQIaU7qoAZJGX1Sk=", "user"=>{"lname"=>"billstrom", "fname"=>"anna", "test_button_id"=>"2", "email"=>"banane@gmail.com"}}
+  [4;36;1mUser Create (15.8ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "lname", "fname", "test_button_id", "email") VALUES('2010-07-16 23:22:38', '2010-07-16 23:22:38', 'billstrom', 'anna', 2, 'banane@gmail.com')[0m
+Redirected to http://localhost:3000/users/1
+Completed in 67ms (DB: 16) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-16 16:22:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 102ms (View: 95, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 16:22:41) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:22:43) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;35;1mTestButton Load (0.3ms)[0m   [0mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 1) [0m
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-07-16 16:22:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NQO4dfreGXuOUP1xna679qLlKeLhQIaU7qoAZJGX1Sk=", "user"=>{"lname"=>"billstrom", "fname"=>"anna", "test_button_id"=>"1", "email"=>"anna_billstrom@yahoo.com"}}
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "lname", "fname", "test_button_id", "email") VALUES('2010-07-16 23:22:52', '2010-07-16 23:22:52', 'billstrom', 'anna', 1, 'anna_billstrom@yahoo.com')[0m
+Redirected to http://localhost:3000/users/2
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-16 16:22:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 16:22:54) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:39:10) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;35;1mTestButton Load (0.3ms)[0m   [0mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 2) [0m
+Completed in 34ms (View: 27, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-16 16:39:16) [GET]
+Rendering template within layouts/users
+Rendering users/new
+  [4;36;1mTestButton Load (0.3ms)[0m   [0;1mSELECT * FROM "test_buttons" WHERE ("test_buttons"."id" = 1) [0m
+Completed in 100ms (View: 94, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 16:48:05) [GET]
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 100ms (View: 93, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:48:06) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'survey_users'):
+  app/controllers/survey_users_controller.rb:27:in `new'
+  app/controllers/survey_users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (44.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:48:10) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'survey_users'):
+  app/controllers/survey_users_controller.rb:27:in `new'
+  app/controllers/survey_users_controller.rb:27:in `new'
+
+Rendered rescues/_trace (43.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 16:48:12) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 42ms (View: 36, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-16 16:48:13) [GET]
+
+ActionController::RoutingError (No route matches "/survey_user/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 16:49:31) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+
+ActionView::TemplateError (survey_user_url failed to generate from {:controller=>"survey_users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["survey_users", :id] - are they all satisfied?) on line #13 of app/views/users/index.html.erb:
+10: <br />
+11: You're in luck because that's exactly what NAME does for you!
+12: <br />
+13: <%= link_to "Get Started", survey_user_path %>
+14: </div>
+15: </div>
+
+    (eval):16:in `survey_user_path'
+    app/views/users/index.html.erb:13
+    app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (142.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 16:50:00) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+
+ActionView::TemplateError (survey_user_url failed to generate from {:controller=>"survey_users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["survey_users", :id] - are they all satisfied?) on line #13 of app/views/users/index.html.erb:
+10: <br />
+11: You're in luck because that's exactly what NAME does for you!
+12: <br />
+13: <%= link_to "Get Started", survey_user_path %>
+14: </div>
+15: </div>
+
+    (eval):16:in `survey_user_path'
+    app/views/users/index.html.erb:13
+    app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (59.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 16:50:22) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 16:50:25) [GET]
+  [4;36;1mSurveyUser Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: survey_users: SELECT * FROM "survey_users" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: survey_users: SELECT * FROM "survey_users" ):
+  app/controllers/survey_users_controller.rb:5:in `index'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlights (20100713070135)
+Migrating to CreateCitystates (20100716040658)
+Migrating to CreateUsers (20100716191847)
+Migrating to CreateTestButtons (20100716220808)
+Migrating to User (20100716221209)
+Migrating to AddSurveyColsToUser (20100716234025)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100716234025')[0m
+Migrating to CreateSurveyUsers (20100716234651)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "survey_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_travel" varchar(255), "reason_book" varchar(255), "company_policy" text, "book_same_day" varchar(255), "why_wait" text, "problem_long" text, "resources" text, "contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100716234651')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("citystates")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("flights")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("survey_users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("test_buttons")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 16:50:34) [GET]
+  [4;35;1mSurveyUser Load (0.5ms)[0m   [0mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 16:51:23) [GET]
+  [4;36;1mSurveyUser Load (0.5ms)[0m   [0;1mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/survey_users]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:51:25) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:51:26) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:51:41) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:51:53) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:51:55) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:52:29) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:53:01) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:54:28) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:58:42) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n    "
+
+
+
+; @output_buffer.concat(( f.radio_button :book_travel, 'Yes'  ).to_s); @output_buffer.concat "    "; @output_buffer.concat(( f.radio_button :book_travel, 'No'  ).to_s); @output_buffer.concat "    "; @output_buffer.concat(( f.radio_button :book_travel, 'Other:'  ).to_s); @output_buffer.concat "\n   "
+; @output_buffer.concat((f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:55:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #15 of app/views/survey_users/new.html.erb:
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:     <%= f.radio_button :book_travel, 'Yes'  %>    <%= f.radio_button :book_travel, 'No'  %>    <%= f.radio_button :book_travel, 'Other:'  %>
+15:    <%=f.text_field, :book_travel %>
+16: 
+17:   </p>
+18:   <p>
+
+    app/views/survey_users/new.html.erb:55:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (49.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:59:02) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n    "
+
+
+
+; @output_buffer.concat(( f.radio_button :book_travel, 'Yes', selected  ).to_s); @output_buffer.concat " "; @output_buffer.concat(( f.radio_button :book_travel, 'No'  ).to_s); @output_buffer.concat "    "; @output_buffer.concat(( f.radio_button :book_travel, 'Other:'  ).to_s); @output_buffer.concat "\n   "
+; @output_buffer.concat((f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:55:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #15 of app/views/survey_users/new.html.erb:
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:     <%= f.radio_button :book_travel, 'Yes', selected  %> <%= f.radio_button :book_travel, 'No'  %>    <%= f.radio_button :book_travel, 'Other:'  %>
+15:    <%=f.text_field, :book_travel %>
+16: 
+17:   </p>
+18:   <p>
+
+    app/views/survey_users/new.html.erb:55:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (50.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:59:37) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n    "
+
+
+
+; @output_buffer.concat(( f.radio_button 'book_travel', 'Yes', selected  ).to_s); @output_buffer.concat " \n   "
+; @output_buffer.concat((f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:55:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #15 of app/views/survey_users/new.html.erb:
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:     <%= f.radio_button 'book_travel', 'Yes', selected  %> 
+15:    <%=f.text_field, :book_travel %>
+16: 
+17:   </p>
+18:   <p>
+
+    app/views/survey_users/new.html.erb:55:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (139.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:59:44) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n    "
+
+
+
+; @output_buffer.concat(( f.radio_button :book_travel, 'Yes', selected  ).to_s); @output_buffer.concat " \n   "
+; @output_buffer.concat((f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:55:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #15 of app/views/survey_users/new.html.erb:
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:     <%= f.radio_button :book_travel, 'Yes', selected  %> 
+15:    <%=f.text_field, :book_travel %>
+16: 
+17:   </p>
+18:   <p>
+
+    app/views/survey_users/new.html.erb:55:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (49.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:59:47) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n    "
+
+
+
+; @output_buffer.concat(( f.radio_button :book_travel, 'Yes', yes  ).to_s); @output_buffer.concat " \n   "
+; @output_buffer.concat((f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:55:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #15 of app/views/survey_users/new.html.erb:
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:     <%= f.radio_button :book_travel, 'Yes', yes  %> 
+15:    <%=f.text_field, :book_travel %>
+16: 
+17:   </p>
+18:   <p>
+
+    app/views/survey_users/new.html.erb:55:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (50.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:59:50) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n    "
+
+
+
+; @output_buffer.concat(( f.radio_button :book_travel, 'Yes'  ).to_s); @output_buffer.concat " \n   "
+; @output_buffer.concat((f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:55:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:15: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #15 of app/views/survey_users/new.html.erb:
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:     <%= f.radio_button :book_travel, 'Yes'  %> 
+15:    <%=f.text_field, :book_travel %>
+16: 
+17:   </p>
+18:   <p>
+
+    app/views/survey_users/new.html.erb:55:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (136.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 16:59:55) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:14: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n   "
+
+
+
+; @output_buffer.concat((f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:54:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:14: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...((f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #14 of app/views/survey_users/new.html.erb:
+11: 
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:    <%=f.text_field, :book_travel %>
+15: 
+16:   </p>
+17:   <p>
+
+    app/views/survey_users/new.html.erb:54:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (50.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:00:07) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+ERROR: compiling _run_erb_app47views47survey_users47new46html46erb RAISED compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:14: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...( f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47survey_users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"mainblurb\">\nHelp us build something you want!\n<br />\nWe're getting ready to launch and want to make our service more useful for you.\n<br />\nPlease fill out the survey below:\n</div>\n<div id=\"form_body\">\n"
+
+
+
+
+
+
+
+;  form_for(@survey_user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n   Do you book most of your own travel?<br />\n   "
+
+
+
+; @output_buffer.concat(( f.text_field, :book_travel ).to_s); @output_buffer.concat "\n\n  </p>\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :reason_book ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :reason_book ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :company_policy ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :company_policy ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :book_same_day ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :book_same_day ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :why_wait ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :why_wait ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :problem_long ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :problem_long ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :resources ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :resources ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :contact ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :contact ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n</div>\n\n"
+
+
+; @output_buffer.concat(( link_to 'Back', survey_users_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:54:in `compile!'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/anna/dev/Flytee/app/controllers/survey_users_controller.rb:29:in `new'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/anna/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/anna/.gem/ruby/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/anna/.gem/ruby/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/anna/dev/Flytee/app/views/survey_users/new.html.erb:14: syntax error, unexpected ')', expecting tCOLON2 or '[' or '.'
+...( f.text_field, :book_travel ).to_s); @output_buffer.concat ...
+                              ^) on line #14 of app/views/survey_users/new.html.erb:
+11: 
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:    <%= f.text_field, :book_travel %>
+15: 
+16:   </p>
+17:   <p>
+
+    app/views/survey_users/new.html.erb:54:in `compile!'
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (135.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:00:19) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:00:45) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #14 of app/views/survey_users/new.html.erb:
+11: 
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:        <%= f.radio_button :reason_book %>
+15: 
+16: 
+17:   </p>
+
+    app/views/survey_users/new.html.erb:14:in `radio_button'
+    app/views/survey_users/new.html.erb:14
+    app/views/survey_users/new.html.erb:9
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (145.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:00:51) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:00:57) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:01:03) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+
+ActionView::TemplateError (undefined method `merge' for "Yes":String) on line #14 of app/views/survey_users/new.html.erb:
+11: 
+12:   <p>
+13:    Do you book most of your own travel?<br />
+14:        <%= f.radio_button :reason_book, 'Yes', 'Yes' %>
+15: 
+16: 
+17:   </p>
+
+    app/views/survey_users/new.html.erb:14
+    app/views/survey_users/new.html.erb:9
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (146.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:01:07) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:01:14) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:01:19) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:01:50) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:01:51) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 100ms (View: 10, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:01:59) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:02:09) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:03:03) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:03:16) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:03:27) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:03:53) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 24ms (View: 18, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:13:16) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:13:28) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:14:13) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+
+ActionView::TemplateError (undefined method `book_saproblem_longme_day' for #<SurveyUser:0x103414908>) on line #43 of app/views/survey_users/new.html.erb:
+40:   </p>
+41:   <p>
+42:     <%= f.label :problem_long %><br />
+43:     <%= f.radio_button :book_saproblem_longme_day, 'Yes' %> Yes<br />
+44:       <%= f.radio_button :problem_long, 'No' %> No<br />
+45:       If no, how long do you wait between first search and booking airline tickets?
+46: 	    <%= f.text_field :problem_long %>
+
+    app/views/survey_users/new.html.erb:43
+    app/views/survey_users/new.html.erb:9
+    app/controllers/survey_users_controller.rb:29:in `new'
+
+Rendered rescues/_trace (142.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlights (20100713070135)
+Migrating to CreateCitystates (20100716040658)
+Migrating to CreateUsers (20100716191847)
+Migrating to CreateTestButtons (20100716220808)
+Migrating to User (20100716221209)
+Migrating to AddSurveyColsToUser (20100716234025)
+Migrating to CreateSurveyUsers (20100716234651)
+Migrating to AddFeedbackSurveyUsers (20100717001647)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100717001647')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("citystates")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("flights")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("survey_users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("test_buttons")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (28.6ms)[0m   [0mCREATE TEMPORARY TABLE "altered_survey_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_travel" varchar(255), "reason_book" varchar(255), "company_policy" text, "book_same_day" varchar(255), "why_wait" text, "problem_long" text, "resources" text, "contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("survey_users")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "survey_users"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "survey_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_travel" varchar(255), "reason_book" varchar(255), "company_policy" text, "book_same_day" varchar(255), "why_wait" text, "problem_long" text, "resources" text, "contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_survey_users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mDROP TABLE "altered_survey_users"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TEMPORARY TABLE "altered_survey_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_travel" varchar(255), "reason_book" varchar(255), "company_policy" text, "book_same_day" varchar(255), "why_wait" text, "problem_long" text, "resources" text, "contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("survey_users")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "survey_users"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "survey_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_travel" varchar(255), "reason_book" varchar(255), "company_policy" text, "book_same_day" varchar(255), "why_wait" text, "problem_long" text, "resources" text, "contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_survey_users")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_survey_users"[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20100717001647'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("citystates")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("flights")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("survey_users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("test_buttons")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlights (20100713070135)
+Migrating to CreateCitystates (20100716040658)
+Migrating to CreateUsers (20100716191847)
+Migrating to CreateTestButtons (20100716220808)
+Migrating to User (20100716221209)
+Migrating to AddSurveyColsToUser (20100716234025)
+Migrating to CreateSurveyUsers (20100716234651)
+Migrating to AddFeedbackSurveyUsers (20100717001647)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "survey_users" ADD "feedback" text[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717001647')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (5.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("citystates")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("flights")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("survey_users")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("test_buttons")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:19:43) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 27ms (View: 19, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#create (for 127.0.0.1 at 2010-07-16 17:20:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NQO4dfreGXuOUP1xna679qLlKeLhQIaU7qoAZJGX1Sk=", "survey_user"=>{"company_policy"=>"", "why_wait"=>"", "book_same_day"=>"", "book_travel"=>"", "contact"=>"", "resources"=>"", "feedback"=>"", "problem_long"=>""}}
+  [4;35;1mSurveyUser Create (0.4ms)[0m   [0mINSERT INTO "survey_users" ("created_at", "company_policy", "book_travel", "book_same_day", "why_wait", "updated_at", "contact", "resources", "reason_book", "feedback", "problem_long") VALUES('2010-07-17 00:20:08', '', '', '', '', '2010-07-17 00:20:08', '', '', NULL, '', '')[0m
+Redirected to http://localhost:3000/survey_users/1
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/survey_users]
+
+
+Processing SurveyUsersController#show (for 127.0.0.1 at 2010-07-16 17:20:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSurveyUser Load (0.3ms)[0m   [0;1mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 1) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/show
+Completed in 37ms (View: 30, DB: 0) | 200 OK [http://localhost/survey_users/1]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:20:10) [GET]
+  [4;35;1mSurveyUser Load (0.7ms)[0m   [0mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/survey_users]
+
+
+Processing SurveyUsersController#show (for 127.0.0.1 at 2010-07-16 17:20:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSurveyUser Load (0.4ms)[0m   [0;1mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 1) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/show
+Completed in 101ms (View: 94, DB: 0) | 200 OK [http://localhost/survey_users/1]
+
+
+Processing SurveyUsersController#edit (for 127.0.0.1 at 2010-07-16 17:20:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSurveyUser Load (0.3ms)[0m   [0mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 1) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/edit
+Completed in 38ms (View: 32, DB: 0) | 200 OK [http://localhost/survey_users/1/edit]
+
+
+Processing SurveyUsersController#show (for 127.0.0.1 at 2010-07-16 17:21:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSurveyUser Load (0.3ms)[0m   [0;1mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 1) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/survey_users/1]
+
+
+Processing SurveyUsersController#show (for 127.0.0.1 at 2010-07-16 17:22:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSurveyUser Load (0.3ms)[0m   [0mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 1) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/show
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/survey_users/1]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:22:04) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:22:14) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 24ms (View: 18, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:22:24) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 105ms (View: 19, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:22:47) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:23:11) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:23:18) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:23:23) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:23:29) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:23:59) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 106ms (View: 100, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 17:24:07) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:24:09) [GET]
+  [4;35;1mSurveyUser Load (0.7ms)[0m   [0mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/survey_users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 17:24:26) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `survey_users_new_path' for #<ActionView::Base:0x1034fee40>) on line #13 of app/views/users/index.html.erb:
+10: <br />
+11: You're in luck because that's exactly what NAME does for you!
+12: <br />
+13: <%= link_to "Get Started", survey_users_new_path %>
+14: </div>
+15: </div>
+
+    app/views/users/index.html.erb:13
+    app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (141.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 17:24:52) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `new_survey_user' for #<ActionView::Base:0x10378a268>) on line #13 of app/views/users/index.html.erb:
+10: <br />
+11: You're in luck because that's exactly what NAME does for you!
+12: <br />
+13: <%= link_to "Get Started", new_survey_user %>
+14: </div>
+15: </div>
+
+    app/views/users/index.html.erb:13
+    app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (50.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 17:24:55) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `new_survey_user' for #<ActionView::Base:0x10335d7a8>) on line #13 of app/views/users/index.html.erb:
+10: <br />
+11: You're in luck because that's exactly what NAME does for you!
+12: <br />
+13: <%= link_to "Get Started", new_survey_user %>
+14: </div>
+15: </div>
+
+    app/views/users/index.html.erb:13
+    app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (136.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 17:25:05) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:25:07) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]

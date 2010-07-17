@@ -9,8 +9,14 @@ Join our program for: <br />
    session[:last_button] = this_num
    button = TestButton.find(this_num)
 %>
-<h2>
-<%= button.button_label %>  </h2>
+<h2><%= button.button_label %>  </h2>
+
+<h2>Help us build something you want!
+<br />
+We're getting ready to launch and want to make our service more useful for you.
+<br />
+Please fill out the survey below:</h2>
+<div id="form_body">
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
 
@@ -26,6 +32,7 @@ Join our program for: <br />
     <%= f.label :lname %><br />
     <%= f.text_field :lname %>
   </p>
+  <%= f.hidden_field :test_button_id, :value=> session[:last_button] %>
   <p>
     <%= f.submit 'Create' %>
   </p>

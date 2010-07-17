@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :survey_users
+
   map.resources :users
 
   map.resources :flights

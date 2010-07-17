@@ -1,0 +1,34 @@
+<h1>Listing survey_users</h1>
+
+<table>
+  <tr>
+    <th>Book travel</th>
+    <th>Reason book</th>
+    <th>Company policy</th>
+    <th>Book same day</th>
+    <th>Why wait</th>
+    <th>Problem long</th>
+    <th>Resources</th>
+    <th>Contact</th>
+  </tr>
+
+<% @survey_users.each do |survey_user| %>
+  <tr>
+    <td><%=h survey_user.book_travel %></td>
+    <td><%=h survey_user.reason_book %></td>
+    <td><%=h survey_user.company_policy %></td>
+    <td><%=h survey_user.book_same_day %></td>
+    <td><%=h survey_user.why_wait %></td>
+    <td><%=h survey_user.problem_long %></td>
+    <td><%=h survey_user.resources %></td>
+    <td><%=h survey_user.contact %></td>
+    <td><%= link_to 'Show', survey_user %></td>
+    <td><%= link_to 'Edit', edit_survey_user_path(survey_user) %></td>
+    <td><%= link_to 'Destroy', survey_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New survey_user', new_survey_user_path %>
