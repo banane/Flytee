@@ -44,7 +44,7 @@ class SurveyUsersController < ApplicationController
 
     respond_to do |format|
       if @survey_user.save
-        flash[:notice] = 'SurveyUser was successfully created.'
+        flash[:notice] = 'Your survey was successfully added.'
         format.html { redirect_to(@survey_user) }
         format.xml  { render :xml => @survey_user, :status => :created, :location => @survey_user }
       else

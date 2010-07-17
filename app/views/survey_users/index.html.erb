@@ -3,25 +3,35 @@
 <table>
   <tr>
     <th>Book travel</th>
+    <th>Book travel ext. answer</th>
     <th>Reason book</th>
     <th>Company policy</th>
     <th>Book same day</th>
+    <th>Book same day extended answer</th>
     <th>Why wait</th>
-    <th>Problem long</th>
+    <th>problem short answer yes/no</th>
+    <th>Problem longer answer</th>
+    <td>Feedback</td>
     <th>Resources</th>
     <th>Contact</th>
+    <th>Contact-no</th>
   </tr>
 
 <% @survey_users.each do |survey_user| %>
   <tr>
     <td><%=h survey_user.book_travel %></td>
+    <td><%=h survey_user.book_travel_long %></td>
     <td><%=h survey_user.reason_book %></td>
     <td><%=h survey_user.company_policy %></td>
     <td><%=h survey_user.book_same_day %></td>
+    <td><%=h survey_user.book_same_day_long %></td>
     <td><%=h survey_user.why_wait %></td>
+    <td><%=h survey_user.problem_short %></td>
     <td><%=h survey_user.problem_long %></td>
     <td><%=h survey_user.resources %></td>
+    <td><%=h survey_user.feedback %></td>
     <td><%=h survey_user.contact %></td>
+    <td><%=h survey_user.contact_no %></td>
     <td><%= link_to 'Show', survey_user %></td>
     <td><%= link_to 'Edit', edit_survey_user_path(survey_user) %></td>
     <td><%= link_to 'Destroy', survey_user, :confirm => 'Are you sure?', :method => :delete %></td>

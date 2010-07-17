@@ -13,7 +13,7 @@ Please fill out the survey below:
    Do you book most of your own travel?<br />
       <%= f.radio_button :book_travel, 'Yes' %> Yes<br />
       <%= f.radio_button :book_travel, 'No' %> No<br />
-      <%= f.radio_button :book_travel, 'Other' %>  I'm part of the process but my  <%= f.text_field :book_travel %>  (assistant/wife/husband/boyfriend/girlfriend/mother/father, etc.)  actually books it in the end.
+      <%= f.radio_button :book_travel, '' %>  I'm part of the process but my  <%= f.text_field :book_travel_long %>  (assistant/wife/husband/boyfriend/girlfriend/mother/father, etc.)  actually books it in the end.
 
 
   </p>
@@ -32,7 +32,7 @@ Please fill out the survey below:
       <%= f.radio_button :book_same_day, 'Yes' %> Yes<br />
       <%= f.radio_button :book_same_day, 'No' %> No<br />
       If no, how long do you wait between first search and booking airline tickets?
-	    <%= f.text_field :book_same_day %>
+	    <%= f.text_field :book_same_day_long %>
   </p>
   <p>
     Why wait?<br />
@@ -40,8 +40,8 @@ Please fill out the survey below:
   </p>
   <p>
     Have you ever searched for an airline ticket one day only to come back to purchase and it increased in price?<br />
-    <%= f.radio_button :problem_long, 'Yes' %> Yes<br />
-      <%= f.radio_button :problem_long, 'No' %> No<br />
+    <%= f.radio_button :problem_short, 'Yes' %> Yes<br />
+      <%= f.radio_button :problem_short, 'No' %> No<br />
 	If Yes, please describe the time you remember, price change, length of time you waited.<br />
 	<%= f.text_area :problem_long %>
   </p>
@@ -54,9 +54,9 @@ Please fill out the survey below:
   
   <p>
 	Are you willing to talk with us via phone or IM to give feedback on our new service?<br />
-     <%= f.radio_button :problem_long, 'Yes' %> Yes at this email address: 
+     <%= f.radio_button :contact, 'Yes' %> Yes at this email address: 
      <%= f.text_field :contact %><br />
-      <%= f.radio_button :problem_long, 'No' %> No<br />
+      <%= f.radio_button :contact_no, 'No' %> No<br />
   </p>
   <p>
     <%= f.submit 'Create' %>

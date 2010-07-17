@@ -6015,3 +6015,171 @@ Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:25:07) [GET
 Rendering template within layouts/survey_users
 Rendering survey_users/new
 Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 17:34:44) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 69ms (View: 63, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:34:50) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#create (for 127.0.0.1 at 2010-07-16 17:35:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NQO4dfreGXuOUP1xna679qLlKeLhQIaU7qoAZJGX1Sk=", "survey_user"=>{"company_policy"=>"dfsafdsafdsafdsafdsa", "why_wait"=>"fdsafdsafdas", "book_same_day"=>"", "book_travel"=>"", "contact"=>"anna_billstrom@yahoo.com", "resources"=>"", "reason_book"=>"Business", "feedback"=>"fdsafdsa", "problem_long"=>"Yes"}}
+  [4;35;1mSurveyUser Create (0.4ms)[0m   [0mINSERT INTO "survey_users" ("created_at", "company_policy", "book_travel", "book_same_day", "why_wait", "updated_at", "contact", "resources", "reason_book", "feedback", "problem_long") VALUES('2010-07-17 00:35:18', 'dfsafdsafdsafdsafdsa', '', '', 'fdsafdsafdas', '2010-07-17 00:35:18', 'anna_billstrom@yahoo.com', '', 'Business', 'fdsafdsa', 'Yes')[0m
+Redirected to http://localhost:3000/survey_users/2
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/survey_users]
+
+
+Processing SurveyUsersController#show (for 127.0.0.1 at 2010-07-16 17:35:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSurveyUser Load (0.3ms)[0m   [0;1mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 2) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/survey_users/2]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:35:24) [GET]
+  [4;35;1mSurveyUser Load (0.8ms)[0m   [0mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+
+ActionView::TemplateError (undefined local variable or method `survey_user' for #<ActionView::Base:0x1035838e8>) on line #11 of app/views/survey_users/index.html.erb:
+8:     <th>Book same day</th>
+9:     <th>Why wait</th>
+10:     <th>Problem long</th>
+11:     <td><%=h survey_user.feedback %></td>
+12:     <th>Resources</th>
+13:     <th>Contact</th>
+14:   </tr>
+
+    app/views/survey_users/index.html.erb:11
+    app/controllers/survey_users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (52.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:35:55) [GET]
+  [4;36;1mSurveyUser Load (0.8ms)[0m   [0;1mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/survey_users/]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:36:19) [GET]
+  [4;35;1mSurveyUser Load (0.9ms)[0m   [0mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/survey_users]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlights (20100713070135)
+Migrating to CreateCitystates (20100716040658)
+Migrating to CreateUsers (20100716191847)
+Migrating to CreateTestButtons (20100716220808)
+Migrating to User (20100716221209)
+Migrating to AddSurveyColsToUser (20100716234025)
+Migrating to CreateSurveyUsers (20100716234651)
+Migrating to AddFeedbackSurveyUsers (20100717001647)
+Migrating to SurveyUsers (20100717003924)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (54.9ms)[0m   [0mALTER TABLE "survey_users" ADD "book_travel_long" varchar(255)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "survey_users" ADD "book_same_day_long" varchar(255)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "survey_users" ADD "problem_short" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "survey_users" ADD "contact_no" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100717003924')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("citystates")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("flights")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("survey_users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("test_buttons")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-16 17:43:16) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:43:18) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 103ms (View: 58, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#create (for 127.0.0.1 at 2010-07-16 17:44:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NQO4dfreGXuOUP1xna679qLlKeLhQIaU7qoAZJGX1Sk=", "survey_user"=>{"contact_no"=>"No", "book_same_day_long"=>"3 days", "company_policy"=>"la de da", "why_wait"=>"big answer here.", "book_same_day"=>"No", "book_travel"=>"", "contact"=>"", "book_travel_long"=>"boyfriend", "resources"=>"lots of sites", "problem_short"=>"Yes", "reason_book"=>"Pleasure", "feedback"=>"nothing.", "problem_long"=>"fdjsaklfjdksal;fjkdl;sajfdkl;sa long answer to this issue."}}
+  [4;35;1mSurveyUser Create (0.5ms)[0m   [0mINSERT INTO "survey_users" ("contact_no", "created_at", "company_policy", "book_same_day_long", "book_travel", "book_same_day", "why_wait", "updated_at", "contact", "book_travel_long", "resources", "reason_book", "problem_short", "feedback", "problem_long") VALUES('No', '2010-07-17 00:44:02', 'la de da', '3 days', '', 'No', 'big answer here.', '2010-07-17 00:44:02', '', 'boyfriend', 'lots of sites', 'Pleasure', 'Yes', 'nothing.', 'fdjsaklfjdksal;fjkdl;sajfdkl;sa long answer to this issue.')[0m
+Redirected to http://localhost:3000/survey_users/3
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/survey_users]
+
+
+Processing SurveyUsersController#show (for 127.0.0.1 at 2010-07-16 17:44:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSurveyUser Load (0.7ms)[0m   [0;1mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 3) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/show
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/survey_users/3]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:44:06) [GET]
+  [4;35;1mSurveyUser Load (1.1ms)[0m   [0mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 104ms (View: 96, DB: 1) | 200 OK [http://localhost/survey_users/]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:45:44) [GET]
+  [4;36;1mSurveyUser Load (1.1ms)[0m   [0;1mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/survey_users/]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 17:46:01) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#create (for 127.0.0.1 at 2010-07-16 17:46:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"NQO4dfreGXuOUP1xna679qLlKeLhQIaU7qoAZJGX1Sk=", "survey_user"=>{"book_same_day_long"=>"", "company_policy"=>"", "why_wait"=>"", "book_travel"=>"Yes", "contact"=>"sssss", "book_travel_long"=>"", "resources"=>"", "problem_short"=>"Yes", "feedback"=>"", "problem_long"=>""}}
+  [4;35;1mSurveyUser Create (0.4ms)[0m   [0mINSERT INTO "survey_users" ("contact_no", "created_at", "company_policy", "book_same_day_long", "book_travel", "book_same_day", "why_wait", "updated_at", "contact", "book_travel_long", "resources", "reason_book", "problem_short", "feedback", "problem_long") VALUES(NULL, '2010-07-17 00:46:18', '', '', 'Yes', NULL, '', '2010-07-17 00:46:18', 'sssss', '', '', NULL, 'Yes', '', '')[0m
+Redirected to http://localhost:3000/survey_users/4
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/survey_users]
+
+
+Processing SurveyUsersController#show (for 127.0.0.1 at 2010-07-16 17:46:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mSurveyUser Load (0.4ms)[0m   [0;1mSELECT * FROM "survey_users" WHERE ("survey_users"."id" = 4) [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/show
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/survey_users/4]
+
+
+Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-16 17:46:22) [GET]
+  [4;35;1mSurveyUser Load (1.6ms)[0m   [0mSELECT * FROM "survey_users" [0m
+Rendering template within layouts/survey_users
+Rendering survey_users/index
+Completed in 32ms (View: 22, DB: 2) | 200 OK [http://localhost/survey_users/]
