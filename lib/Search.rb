@@ -7,10 +7,11 @@ class Search
   @@port = 80
   @@token = '92Dt_nblxFAzwnwRX5ENYw'
   @@lastcount = 0
-  @@results = Hash.new
+
 
   def start_kayak_search(from_code, to_code, from_date, from_time, to_date, to_time)
-   
+	@results = Hash.new
+	
     token ='92Dt_nblxFAzwnwRX5ENYw'
     sid = getsession(token);
 
@@ -33,10 +34,8 @@ class Search
         if searchid 
           searchid = searchid.text
         else
-          msg =  "search error:"
           puts body
-          @@results << msg
-          @@results << body
+          @results["error"]= body
         end
       end    
     url = "/s/apibasic/flight?searchid=#{searchid}&apimode=1&_sid_=#{sid}"
@@ -47,21 +46,16 @@ class Search
       xml = REXML::Document.new(body)
       xml.elements.each("/searchresult/trips/trip") do |e|
         tmpArray = Array.new
-
-        puts e.attribute("id")        
         e.each_element("price") do |t|
-          puts t.text  
-          puts t.attribute("url") 
-          puts t.attribute("currency")
           price_s = t.text.to_s + " " + t.attribute("currency").to_s
           tmpArray = [price_s, t.attribute("url").to_s]
         end
-        @@results[e.attribute("id")] = tmpArray
+        @results[e.attribute("id")] = tmpArray
         tmpArray = nil
       end 
     end  
   
-    return @@results	
+    return @results	
   end
 
 	
