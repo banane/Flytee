@@ -6216,3 +6216,63 @@ Processing SurveyUsersController#index (for 127.0.0.1 at 2010-07-18 17:43:53) [G
 Rendering template within layouts/survey_users
 Rendering survey_users/index
 Completed in 55ms (View: 34, DB: 13) | 200 OK [http://localhost/survey_users/]
+
+
+Processing FlightsController#index (for 127.0.0.1 at 2010-07-18 17:50:06) [GET]
+  [4;36;1mFlight Load (1.6ms)[0m   [0;1mSELECT * FROM "flights" [0m
+Rendering template within layouts/flights
+Rendering flights/index
+Completed in 306ms (View: 299, DB: 2) | 200 OK [http://localhost/flights]
+
+
+Processing FlightsController#new (for 127.0.0.1 at 2010-07-18 17:50:10) [GET]
+Rendering template within layouts/flights
+Rendering flights/new
+  [4;35;1mCitystate Load (0.6ms)[0m   [0mSELECT * FROM "citystates" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+Completed in 47ms (View: 40, DB: 1) | 200 OK [http://localhost/flights/new]
+
+
+Processing FlightsController#create (for 127.0.0.1 at 2010-07-18 17:50:13) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"aM2Pzlj2PtV1MTQlK8RVkhQBbigLTDI+lHYA0l41E8k=", "boughtFlag"=>"0", "flight"=>{"prebook_date(2i)"=>"7", "to_date(3i)"=>"19", "prebook_date(3i)"=>"19", "to_date(4i)"=>"00", "prebook_date(4i)"=>"00", "to_date(5i)"=>"50", "prebook_date(5i)"=>"50", "from_date(1i)"=>"2010", "from_date(2i)"=>"7", "from_code"=>"1", "from_date(3i)"=>"19", "from_date(4i)"=>"00", "to_code"=>"1", "from_date(5i)"=>"50", "to_date(1i)"=>"2010", "prebook_date(1i)"=>"2010", "to_date(2i)"=>"7"}}
+  [4;35;1mFlight Create (0.6ms)[0m   [0mINSERT INTO "flights" ("created_at", "prebook_date", "updated_at", "from_code", "from_date", "boughtFlag", "to_code", "to_date") VALUES('2010-07-19 00:50:13', '2010-07-19 00:50:00', '2010-07-19 00:50:13', '1', '2010-07-19 00:50:00', NULL, '1', '2010-07-19 00:50:00')[0m
+Redirected to http://localhost:3000/flights/5
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/flights]
+
+
+Processing FlightsController#show (for 127.0.0.1 at 2010-07-18 17:50:13) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mFlight Load (0.3ms)[0m   [0;1mSELECT * FROM "flights" WHERE ("flights"."id" = 5) [0m
+Rendering template within layouts/flights
+Rendering flights/show
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/flights/5]
+
+
+Processing FlightsController#index (for 127.0.0.1 at 2010-07-18 17:50:16) [GET]
+  [4;35;1mFlight Load (0.9ms)[0m   [0mSELECT * FROM "flights" [0m
+Rendering template within layouts/flights
+Rendering flights/index
+Completed in 24ms (View: 19, DB: 1) | 200 OK [http://localhost/flights]
+
+
+Processing FlightsController#new (for 127.0.0.1 at 2010-07-18 17:50:19) [GET]
+Rendering template within layouts/flights
+Rendering flights/new
+  [4;36;1mCitystate Load (0.6ms)[0m   [0;1mSELECT * FROM "citystates" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "citystates" [0m
+Completed in 128ms (View: 36, DB: 1) | 200 OK [http://localhost/flights/new]
+
+
+Processing FlightsController#create (for 127.0.0.1 at 2010-07-18 17:50:21) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"aM2Pzlj2PtV1MTQlK8RVkhQBbigLTDI+lHYA0l41E8k=", "boughtFlag"=>"0", "flight"=>{"prebook_date(2i)"=>"7", "to_date(3i)"=>"19", "prebook_date(3i)"=>"19", "to_date(4i)"=>"00", "prebook_date(4i)"=>"00", "to_date(5i)"=>"50", "prebook_date(5i)"=>"50", "from_date(1i)"=>"2010", "from_date(2i)"=>"7", "from_code"=>"1", "from_date(3i)"=>"19", "from_date(4i)"=>"00", "to_code"=>"1", "from_date(5i)"=>"50", "to_date(1i)"=>"2010", "prebook_date(1i)"=>"2010", "to_date(2i)"=>"7"}}
+  [4;36;1mFlight Create (0.5ms)[0m   [0;1mINSERT INTO "flights" ("created_at", "prebook_date", "updated_at", "from_code", "from_date", "boughtFlag", "to_code", "to_date") VALUES('2010-07-19 00:50:21', '2010-07-19 00:50:00', '2010-07-19 00:50:21', '1', '2010-07-19 00:50:00', NULL, '1', '2010-07-19 00:50:00')[0m
+Redirected to http://localhost:3000/flights/6
+Completed in 37ms (DB: 0) | 302 Found [http://localhost/flights]
+
+
+Processing FlightsController#show (for 127.0.0.1 at 2010-07-18 17:50:21) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFlight Load (0.3ms)[0m   [0mSELECT * FROM "flights" WHERE ("flights"."id" = 6) [0m
+Rendering template within layouts/flights
+Rendering flights/show
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/flights/6]
