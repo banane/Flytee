@@ -10,7 +10,6 @@ class Search
 
 
   def start_kayak_search(from_code, to_code, from_date, from_time, to_date, to_time)
-	@results = Hash.new
 	
     token ='92Dt_nblxFAzwnwRX5ENYw'
     sid = getsession(token);
@@ -35,7 +34,6 @@ class Search
           searchid = searchid.text
         else
           puts body
-          @results["error"]= body
         end
       end    
     url = "/s/apibasic/flight?searchid=#{searchid}&apimode=1&_sid_=#{sid}"
@@ -43,19 +41,10 @@ class Search
       response = http.get(url)
       puts "http://#{@@hostname}#{url}"
       body = response.body      
-      xml = REXML::Document.new(body)
-      xml.elements.each("/searchresult/trips/trip") do |e|
-        tmpArray = Array.new
-        e.each_element("price") do |t|
-          price_s = t.text.to_s + " " + t.attribute("currency").to_s
-          tmpArray = [price_s, t.attribute("url").to_s]
-        end
-        @results[e.attribute("id")] = tmpArray
-        tmpArray = nil
-      end 
-    end  
-  
-    return @results	
+      @xml = REXML::Document.new(body)
+    end
+
+    return @xml
   end
 
 	

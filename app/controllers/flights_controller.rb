@@ -46,7 +46,8 @@ class FlightsController < ApplicationController
   def create
     @flight = Flight.new(params[:flight])
     @srch = Search.new
-    @results = Hash.new
+   @xml = REXML::Document.new
+
 
     from_date_dt =Time.utc(params[:flight][:"from_date(1i)"].to_i,params[:flight][:"from_date(2i)"].to_i,params[:flight][:"from_date(3i)"].to_i,params[:flight][:"from_date(4i)"].to_i,params[:flight][:"from_date(5i)"].to_i)
     from_time = from_date_dt.strftime("%H:%M").to_s
@@ -59,7 +60,7 @@ class FlightsController < ApplicationController
     
     
    
-   @results = @srch.start_kayak_search(
+   @xml = @srch.start_kayak_search(
     	params[:flight][:from_code], 
     	params[:flight][:to_code],
     	from_date,from_time, to_date, to_time)

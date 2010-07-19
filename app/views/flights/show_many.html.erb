@@ -3,12 +3,25 @@
 Flight Search Criteria:<br />
 From: <%= @flight.from_code %><br />
 To: <%= @flight.to_code %><br />
-
-Departing: <%= @flight.from_date %><br />
-Arriving: <%= @flight.to_date %> 
+Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %>
 </div>
 <ul>
-<% @results.keys.each do |t| %>
-<li>price: <%=@results[t][0] %> link: <a href="http://www.kayak.com<%=@results[t][1] %>">Book at Kayak</a>
-<% end %>
+<%
+      @xml.elements.each("/searchresult/trips/trip") do |e| %>
+        <% e.each_element("price") do |t|   %>       
+         <li><%=t.attribute("id") %>
+          $<%=t.text%>
+          <a href="http://www.kayak.com<%=t.attribute("url").to_s%>">Book on Kayak</a>
+        <% end %>
+ 		<% e.each_element("legs") do |legs| %>
+   		<%  legs.each_element("leg") do |l| %>
+   		  <%  l.each_element do |ld| %>
+   		     <%=ld.text.to_s %>|
+   	      <%  end %>
+   		<%  end %>
+	 <%	end %>
+
+	</li>
+     <% end %>
 </ul>
+<a href="">more...</a>
