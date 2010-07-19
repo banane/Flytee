@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100717003924) do
+ActiveRecord::Schema.define(:version => 20100718032034) do
 
   create_table "citystates", :force => true do |t|
     t.string   "city"
     t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "code"
   end
 
   create_table "flights", :force => true do |t|

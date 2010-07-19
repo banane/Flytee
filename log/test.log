@@ -1,0 +1,55 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (25.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (44.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateFlights (20100713070135)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "flights" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_code" text, "to_code" text, "from_date" datetime, "to_date" datetime, "prebook_date" datetime, "boughtFlag" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100713070135')[0m
+Migrating to CreateCitystates (20100716040658)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "citystates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100716040658')[0m
+Migrating to CreateUsers (20100716191847)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "fname" varchar(255), "lname" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100716191847')[0m
+Migrating to CreateTestButtons (20100716220808)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "test_buttons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "button_label" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100716220808')[0m
+Migrating to User (20100716221209)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mALTER TABLE "users" ADD "test_button_id" integer[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100716221209')[0m
+Migrating to AddSurveyColsToUser (20100716234025)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100716234025')[0m
+Migrating to CreateSurveyUsers (20100716234651)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "survey_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_travel" varchar(255), "reason_book" varchar(255), "company_policy" text, "book_same_day" varchar(255), "why_wait" text, "problem_long" text, "resources" text, "contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100716234651')[0m
+Migrating to AddFeedbackSurveyUsers (20100717001647)
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "survey_users" ADD "feedback" text[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100717001647')[0m
+Migrating to SurveyUsers (20100717003924)
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "survey_users" ADD "book_travel_long" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "survey_users" ADD "book_same_day_long" varchar(255)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "survey_users" ADD "problem_short" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "survey_users" ADD "contact_no" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100717003924')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("citystates")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("flights")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("survey_users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("test_buttons")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m

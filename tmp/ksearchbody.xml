@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<searchresult>
+  <searchinstance></searchinstance>
+  <searchid>OJpxJk</searchid>
+  <count>514</count>
+  <morepending></morepending>
+<!-- api results -->
+   <trips>
+             <trip id="1fb9ea1cdedf88167108412584852a13">
+        <price url="/book/flight?code=d30f750943.OJpxJk.0.F.VX,VX.53440.1fb9ea1cdedf88167108412584852a13&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">534</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 08:00</depart>
+            <arrive>2010/09/02 09:20</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>925</flight>
+              <duration_minutes>80</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 08:00</dt>
+              <o>LAX</o>
+              <at>2010/09/02 09:20</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 07:25</depart>
+            <arrive>2010/09/04 08:50</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>920</flight>
+              <duration_minutes>85</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 07:25</dt>
+              <o>SFO</o>
+              <at>2010/09/04 08:50</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="e56600bf10f3b2b4cf062609e32cfc06">
+        <price url="/book/flight?code=6226609daa.OJpxJk.0.F.VX,VX.53440.e56600bf10f3b2b4cf062609e32cfc06&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">534</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 08:00</depart>
+            <arrive>2010/09/02 09:20</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>925</flight>
+              <duration_minutes>80</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 08:00</dt>
+              <o>LAX</o>
+              <at>2010/09/02 09:20</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 19:05</depart>
+            <arrive>2010/09/04 20:35</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>944</flight>
+              <duration_minutes>90</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 19:05</dt>
+              <o>SFO</o>
+              <at>2010/09/04 20:35</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="38d97a4f9c37d7f5e95950b7e654d88f">
+        <price url="/book/flight?code=6bde52e0ef.OJpxJk.0.F.VX,VX.53440.38d97a4f9c37d7f5e95950b7e654d88f&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">534</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 08:00</depart>
+            <arrive>2010/09/02 09:20</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>925</flight>
+              <duration_minutes>80</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 08:00</dt>
+              <o>LAX</o>
+              <at>2010/09/02 09:20</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 16:35</depart>
+            <arrive>2010/09/04 18:05</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>936</flight>
+              <duration_minutes>90</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 16:35</dt>
+              <o>SFO</o>
+              <at>2010/09/04 18:05</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="bd62798ecead11150a38700fb37e1526">
+        <price url="/book/flight?code=a9472efa40.OJpxJk.0.F.VX,VX.53440.bd62798ecead11150a38700fb37e1526&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">534</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 08:00</depart>
+            <arrive>2010/09/02 09:20</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>925</flight>
+              <duration_minutes>80</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 08:00</dt>
+              <o>LAX</o>
+              <at>2010/09/02 09:20</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 14:50</depart>
+            <arrive>2010/09/04 16:20</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>928</flight>
+              <duration_minutes>90</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 14:50</dt>
+              <o>SFO</o>
+              <at>2010/09/04 16:20</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="20323c05ea2762d2345b58906cefdbf9">
+        <price url="/book/flight?code=737afe784b.OJpxJk.0.F.VX,VX.53440.20323c05ea2762d2345b58906cefdbf9&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">534</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 08:00</depart>
+            <arrive>2010/09/02 09:20</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>925</flight>
+              <duration_minutes>80</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 08:00</dt>
+              <o>LAX</o>
+              <at>2010/09/02 09:20</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 11:40</depart>
+            <arrive>2010/09/04 13:10</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>203</flight>
+              <duration_minutes>90</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 11:40</dt>
+              <o>SFO</o>
+              <at>2010/09/04 13:10</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="135f0c75eaca4f877822512487dae129">
+        <price url="/book/flight?code=a52079d65b.OJpxJk.0.F.VX,VX.57940.135f0c75eaca4f877822512487dae129&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">579</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 06:30</depart>
+            <arrive>2010/09/02 07:45</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>200</flight>
+              <duration_minutes>75</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 06:30</dt>
+              <o>LAX</o>
+              <at>2010/09/02 07:45</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 07:25</depart>
+            <arrive>2010/09/04 08:50</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>920</flight>
+              <duration_minutes>85</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 07:25</dt>
+              <o>SFO</o>
+              <at>2010/09/04 08:50</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="78813831e26d41b3b71af29ad33935fe">
+        <price url="/book/flight?code=231dcc0124.OJpxJk.0.F.VX,VX.57940.78813831e26d41b3b71af29ad33935fe&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">579</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 11:35</depart>
+            <arrive>2010/09/02 12:50</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>927</flight>
+              <duration_minutes>75</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 11:35</dt>
+              <o>LAX</o>
+              <at>2010/09/02 12:50</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 07:25</depart>
+            <arrive>2010/09/04 08:50</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>920</flight>
+              <duration_minutes>85</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 07:25</dt>
+              <o>SFO</o>
+              <at>2010/09/04 08:50</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="c6acbe149359713d3f4ea8fcd771d908">
+        <price url="/book/flight?code=747f46eca7.OJpxJk.0.F.VX,VX.57940.c6acbe149359713d3f4ea8fcd771d908&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">579</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 14:00</depart>
+            <arrive>2010/09/02 15:15</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>929</flight>
+              <duration_minutes>75</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 14:00</dt>
+              <o>LAX</o>
+              <at>2010/09/02 15:15</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 07:25</depart>
+            <arrive>2010/09/04 08:50</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>920</flight>
+              <duration_minutes>85</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 07:25</dt>
+              <o>SFO</o>
+              <at>2010/09/04 08:50</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="a149ea5926972af7bc8f90fa7823dde2">
+        <price url="/book/flight?code=40305f2e9e.OJpxJk.0.F.VX,VX.57940.a149ea5926972af7bc8f90fa7823dde2&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">579</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 06:30</depart>
+            <arrive>2010/09/02 07:45</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>200</flight>
+              <duration_minutes>75</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 06:30</dt>
+              <o>LAX</o>
+              <at>2010/09/02 07:45</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 16:35</depart>
+            <arrive>2010/09/04 18:05</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>936</flight>
+              <duration_minutes>90</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 16:35</dt>
+              <o>SFO</o>
+              <at>2010/09/04 18:05</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+                   <trip id="857f4ee66dc734b8ab4a4e0319578d42">
+        <price url="/book/flight?code=805aadb083.OJpxJk.0.F.VX,VX.57940.857f4ee66dc734b8ab4a4e0319578d42&amp;_sid_=9-FZPzkjZKElyPn_Ob4Pmd" currency="USD">579</price>
+        <legs>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>LAX</orig>
+            <dest>SFO</dest>
+            <depart>2010/09/02 06:30</depart>
+            <arrive>2010/09/02 07:45</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>200</flight>
+              <duration_minutes>75</duration_minutes>
+              <equip>Airbus A319</equip>
+              <miles>-1</miles>
+              <dt>2010/09/02 06:30</dt>
+              <o>LAX</o>
+              <at>2010/09/02 07:45</at>
+              <d>SFO</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+           <leg>
+            <airline>VX</airline>
+            <airline_display>Virgin America</airline_display>
+            <orig>SFO</orig>
+            <dest>LAX</dest>
+            <depart>2010/09/04 14:50</depart>
+            <arrive>2010/09/04 16:20</arrive>
+            <stops>0</stops>
+            <duration_minutes>-1</duration_minutes>
+            <cabin>$sleg.cabinClass</cabin>
+            <segment>
+              <airline>VX</airline>
+              <flight>928</flight>
+              <duration_minutes>90</duration_minutes>
+              <equip>Airbus A320-100/200</equip>
+              <miles>-1</miles>
+              <dt>2010/09/04 14:50</dt>
+              <o>SFO</o>
+              <at>2010/09/04 16:20</at>
+              <d>LAX</d>
+              <cabin>$seg.cabinClass</cabin>
+            </segment>
+          </leg>
+         </legs>
+      </trip>
+           </trips>
+</searchresult>

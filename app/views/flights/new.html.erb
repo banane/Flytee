@@ -5,25 +5,24 @@
 
   <p>
     From<br />
-    <%= select("flight", "from_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.id ] }) %>
+    <%= select("flight", "from_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
   </p>
   <p>
     To<br />
-    <%= select("flight", "to_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.id ] }) %>
+    <%= select("flight", "to_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
   </p>
   <p>
+
     <%= f.label :from_date %><br />
-    <%= f.datetime_select :from_date %>
+    <%= f.datetime_select :from_date, :default=>14.days.from_now, :minute_step=>30 %>
   </p>
   <p>
     <%= f.label :to_date %><br />
-    <%= f.datetime_select :to_date %>
+    <%= f.datetime_select :to_date, :default=>28.days.from_now, :minute_step=>30 %>
   </p>
   <p>
-    <%= f.label :prebook_date %><br />
-    <%= f.datetime_select :prebook_date %>
-  </p>
-  <p><input type='hidden' name="boughtFlag" value="0"></p>
+   <%= f.hidden_field :prebook_date, :value=>Time.now %>
+   </p>
   <p>
     <%= f.submit 'Create' %>
   </p>

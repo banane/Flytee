@@ -1,0 +1,14 @@
+<h1>Flight search results</h1>
+<div style="border:1px purple dotted">
+Flight Search Criteria:<br />
+From: <%= @flight.from_code %><br />
+To: <%= @flight.to_code %><br />
+
+Departing: <%= @flight.from_date %><br />
+Arriving: <%= @flight.to_date %> 
+</div>
+<ul>
+<% @results.keys.each do |t| %>
+<li>price: <%=@results[t][0] %> link: <a href="http://www.kayak.com<%=@results[t][1] %>">Book at Kayak</a>
+<% end %>
+</ul>
