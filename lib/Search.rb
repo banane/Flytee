@@ -28,9 +28,6 @@ class Search
         response = http.get(url)
         puts "http://#{@@hostname}#{url}"
         body = response.body      
-        File.open("ksearchid.xml", "w") do |f|
-          f.puts(body)
-        end
         xml = REXML::Document.new(body)
         searchid = xml.elements['//searchid']
         if searchid 
@@ -44,15 +41,9 @@ class Search
       end    
     url = "/s/apibasic/flight?searchid=#{searchid}&apimode=1&_sid_=#{sid}"
     Net::HTTP.start(@@hostname, @@port) do |http|
- #     if count
-  #      url += "&c=#{count}"
-   #   end
       response = http.get(url)
       puts "http://#{@@hostname}#{url}"
-      body = response.body
-      File.open("ksearchbody.xml", "w") do |f|
-        f.puts(body)
-      end
+      body = response.body      
       xml = REXML::Document.new(body)
       xml.elements.each("/searchresult/trips/trip") do |e|
         tmpArray = Array.new
