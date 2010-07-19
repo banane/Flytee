@@ -1,0 +1,18 @@
+<p>
+  <b>User:</b>
+  <%=h @flight_select.user_id %>
+</p>
+
+<p>
+  <b>Kayak flight:</b>
+  <%=h @flight_select.kayak_flight_id %>
+</p>
+
+<p>
+  <b>Search:</b>
+  <%=h @flight_select.search_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_flight_select_path(@flight_select) %> |
+<%= link_to 'Back', flight_selects_path %>

@@ -1,3 +1,4 @@
+<%  @flight_select = FlightSelect.new %>
 <h1>Flight search results</h1>
 <div style="border:1px purple dotted; width:300px;">
 Flight Search Criteria:<br />
@@ -5,11 +6,19 @@ From: <%= @flight.from_code %><br />
 To: <%= @flight.to_code %><br />
 Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %>
 </div>
-<ul>
-<%
-      @xml.elements.each("/searchresult/trips/trip") do |e| %>
+<% form_for(@flight_select) do |f| %>
+  <%= f.error_messages %>
+
+
+<%= f.hidden_field :user_id %>
+<%= f.hidden_field :search_id, :value=>@flight.id %>
+
+<%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
+<p>
         <% e.each_element("price") do |t|   %>       
-         <li><%=t.attribute("id") %>
+	<%= f.radio_button :kayak_flight_id, :value=>t.attribute('url') %>        
+<!--         <input type="radio" name="kayak_flight_id" value="<%=t.attribute('url')%>">-->
+         <%=t.attribute("id") %>
           $<%=t.text%>
           <a href="http://www.kayak.com<%=t.attribute("url").to_s%>">Book on Kayak</a>
         <% end %>
@@ -20,8 +29,10 @@ Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %>
    	      <%  end %>
    		<%  end %>
 	 <%	end %>
-
-	</li>
+	</p>
      <% end %>
-</ul>
+ <p>
+    <%= f.submit 'Select' %>
+  </p>
+<% end %>
 <a href="">more...</a>

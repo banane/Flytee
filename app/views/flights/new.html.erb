@@ -1,4 +1,4 @@
-<h1>New flight</h1>
+<h1>Search For A Flight</h1>
 
 <% form_for(@flight) do |f| %>
   <%= f.error_messages %>
@@ -24,7 +24,7 @@
    <%= f.hidden_field :prebook_date, :value=>Time.now %>
    </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Search' %>
   </p>
 <% end %>
 
