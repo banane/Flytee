@@ -1,41 +1,55 @@
-body { background-color: #fff; color: #333; }
+@charset "UTF-8";
+/* CSS Document */
 
 
-
-h2 {
-	font-family:geneva;
-	color:#000;
+body {
+	font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	line-height: 35px;
+	color: #6A6D71;
+	overflow: hidden;
+	background: #81A3D7 100%; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#81A3D7'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#81A3D7)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #81A3D7); /* for firefox 3.6+ */
 }
 
-p {
-margin-top:15px;
-margin-bottom:25px;
-   }
-
-#mainhead {
-	width:500px;
-	text-align:center;
-	margin-left:100px;
-}	
-
-#wrapper {
-	width:100%;
+#logo {
+	width: 600px;
+	margin: 100px auto 0px auto;
 }
 
-#form_body {
-   margin-left:100px;
-   width:500px;
+.main {
+	width: 550px;
+	text-align: center;
+	background-color: #FFF;
+	margin: 0 auto 300px auto;
+	padding: 20px;
+	height: auto;	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	behavior: url(/stylesheets/pie.htc);
 }
 
-#mainblurb {
-	position:relative;
-	float:center;
-	width:500px;
-
-	color:#000;
-	font-family:arial;
-	font-size: 1.5em;
-	line-height:2em;
-	margin-left:100px;
+.title {
+	font-weight: 800;
+	letter-spacing: 0px;
 }
 
+.content {
+	margin-top: 15px;
+}
+
+.highlight {
+	font-weight: 300;
+	color: #81A3D7;
+	margin-top:30px;
+	margin-bottom:22px;
+}
+
+.button {
+	vertical-align: middle;
+}

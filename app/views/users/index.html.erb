@@ -1,15 +1,9 @@
-<div id="wrapper">
-<div id="mainhead">
-<h2>FreezeFare</h2>
-</div>
-<div id="mainblurb">
-<br />
-Wanna Fly but not ready to Buy?
-<br />
-Wanna Hold an airline at today's price & decide later?
-<br />
-You're in luck because that's exactly what FreezeFare does for you!
-<br />
-<%= link_to "Get Started", new_survey_user_path %>
-</div>
-</div>
+<div id="logo"><img src="images/freezefare-logo.png" /></div>
+
+<div class="main">  
+        <div class="title">Looking to fly but not ready to buy?</div>
+        <div class="content">Freezefare will hold your flight at today&#8217;s price &#38; give you up to a week to decide.</div>
+        <div class="highlight">
+          Just $10 &#8212; <%= link_to image_tag("freezefare-getstarted-btn.gif", :border=>0, :class => "button", :align => "center"), new_survey_user_path %>
+        </div>
+</div> <!-- end main -->
