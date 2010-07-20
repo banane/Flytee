@@ -11,13 +11,13 @@ Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %>
 
 
 <%= f.hidden_field :user_id %>
-<%= f.hidden_field :search_id, :value=>@flight.id %>
+<%= f.hidden_field :search_id %>
 
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
-<p>
+<p>    	<%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>        
+
         <% e.each_element("price") do |t|   %>       
-	<%= f.radio_button :kayak_flight_id, :value=>t.attribute('url') %>        
-<!--         <input type="radio" name="kayak_flight_id" value="<%=t.attribute('url')%>">-->
+
          <%=t.attribute("id") %>
           $<%=t.text%>
           <a href="http://www.kayak.com<%=t.attribute("url").to_s%>">Book on Kayak</a>
