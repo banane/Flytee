@@ -13,7 +13,7 @@ body {
 	background: -moz-linear-gradient(top,  #FFF,  #81A3D7); /* for firefox 3.6+ */
 }
 
-.splash body {
+body.splash {
 	font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Arial, Helvetica, sans-serif;
 	font-size: 28px;
 	font-weight: 100;
