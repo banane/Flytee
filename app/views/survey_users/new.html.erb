@@ -1,66 +1,80 @@
 <div id="mainblurb">
-Help us build something you want!
-<br />
-We're getting ready to launch and want to make our service more useful for you.
+  <img src="/images/freezefare-logo.png" />
+
+  <h1>Help us build something you want!</h1>
+<h2>
+We&#8217;re getting ready to launch &amp; want to make our service more useful for you.
 <br />
 Please fill out the survey below:
-</div>
+</h2>
+
+<hr />
 <div id="form_body">
 <% form_for(@survey_user) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-   Do you book most of your own travel?<br />
+  
+   <h3>Do you book most of your own travel?</h3>
+  <div>
       <%= f.radio_button :book_travel, 'Yes' %> Yes<br />
       <%= f.radio_button :book_travel, 'No' %> No<br />
       <%= f.radio_button :book_travel, '' %>  I'm part of the process but my  <%= f.text_field :book_travel_long %>  (assistant/wife/husband/boyfriend/girlfriend/mother/father, etc.)  actually books it in the end.
+  </div>
 
-
-  </p>
-  <p>
-   What is the reason behind the travel that you book?<br />
+<h3>   What is the reason behind the travel that you book?</h3>
+  <div>
    <%= f.radio_button :reason_book, 'Business' %> Business
    <%= f.radio_button :reason_book, 'Pleasure' %> Pleasure
    <%= f.radio_button :reason_book, 'Half of each' %> About half business, half pleasure
-  </p>
-  <p>
-    Describe any policies your company has on its booking business trips?<br />
-    <%= f.text_area :company_policy %>
-  </p>
-  <p>
-    Do you Book the same day that you first start searching?<br />
+  </div>
+
+  <h3>  Describe any policies your company has on its booking business trips?</h3>
+
+  
+      <%= f.text_area :company_policy %>
+  
+
+    <h3>Do you Book the same day that you first start searching?</h3>
+    
       <%= f.radio_button :book_same_day, 'Yes' %> Yes<br />
       <%= f.radio_button :book_same_day, 'No' %> No<br />
       If no, how long do you wait between first search and booking airline tickets?
 	    <%= f.text_field :book_same_day_long %>
-  </p>
-  <p>
-    Why wait?<br />
+  
+
+    <h3>Why wait?</h3>
+    
     <%= f.text_area :why_wait %>
-  </p>
-  <p>
-    Have you ever searched for an airline ticket one day only to come back to purchase and it increased in price?<br />
+  
+
+    <h3>Have you ever searched for an airline ticket one day only to come back to purchase and it increased in price?</h3>
+
     <%= f.radio_button :problem_short, 'Yes' %> Yes<br />
       <%= f.radio_button :problem_short, 'No' %> No<br />
 	If Yes, please describe the time you remember, price change, length of time you waited.<br />
 	<%= f.text_area :problem_long %>
-  </p>
-  <p>
-	What internet sites do you visit when searching and booking airfare<br/>
-	<%= f.text_area :resources %>
-  </p>
-  What's the single most critical thing you are hoping that FreezeFare can do for you?<br />
+  
+
+	<h3>What internet sites do you visit when searching and booking airfare</h3>
+  	<%= f.text_area :resources %>
+  
+  
+  <h3>What&#8217;s the single most critical thing you are hoping that FreezeFare can do for you?</h3>
+  
   <%= f.text_area :feedback %>
   
-  <p>
-	Are you willing to talk with us via phone or IM to give feedback on our new service?<br />
+
+	<h3>Are you willing to talk with us via phone or IM to give feedback on our new service?</h3>
+
+
      <%= f.radio_button :contact, 'Yes' %> Yes at this email address: 
      <%= f.text_field :contact %><br />
       <%= f.radio_button :contact_no, 'No' %> No<br />
-  </p>
-  <p>
+  
+  
     <%= f.submit 'Create' %>
-  </p>
+  
 <% end %>
 </div>
 
+</div>

@@ -4,6 +4,17 @@
 
 body {
 	font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 100;
+	color: #6A6D71;
+	background: #81A3D7 100%; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#81A3D7'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#81A3D7)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #81A3D7); /* for firefox 3.6+ */
+}
+
+.splash body {
+	font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Arial, Helvetica, sans-serif;
 	font-size: 28px;
 	font-weight: 100;
 	letter-spacing: 1px;
@@ -21,7 +32,7 @@ body {
 	margin: 100px auto 0px auto;
 }
 
-.main {
+.splash .main {
 	width: 550px;
 	text-align: center;
 	background-color: #FFF;
@@ -34,22 +45,45 @@ body {
 	behavior: url(/stylesheets/pie.htc);
 }
 
-.title {
+.splash .title {
 	font-weight: 800;
 	letter-spacing: 0px;
 }
 
-.content {
+.splash .content {
 	margin-top: 15px;
 }
 
-.highlight {
+.splash .highlight {
 	font-weight: 300;
 	color: #81A3D7;
 	margin-top:30px;
 	margin-bottom:22px;
 }
 
-.button {
+.splash .button {
 	vertical-align: middle;
+}
+
+#mainblurb{
+	width: 550px;
+	text-align: center;
+	background-color: #FFF;
+	margin: 0 auto 300px auto;
+	padding: 20px;
+	height: auto;	
+	font-weight: normal;
+}
+#mainblurb h2{
+	font-weight: normal;
+}
+#mainblurb h3{
+	margin-left:5px;
+}
+#form_body{
+	text-align:left;
+}
+
+#mainblurb textarea{
+	width:530px;
 }

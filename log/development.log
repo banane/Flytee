@@ -6196,3 +6196,696 @@ Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-16 18:20:15) [GET
 Rendering template within layouts/survey_users
 Rendering survey_users/new
 Completed in 293ms (View: 190, DB: 0) | 200 OK [http://localhost/survey_users/new]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (261.7ms)[0m   [0;1mCREATE TABLE "citystates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCREATE TABLE "flights" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "from_code" text, "to_code" text, "from_date" datetime, "to_date" datetime, "prebook_date" datetime, "boughtFlag" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (315.3ms)[0m   [0;1mCREATE TABLE "survey_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_travel" varchar(255), "reason_book" varchar(255), "company_policy" text, "book_same_day" varchar(255), "why_wait" text, "problem_long" text, "resources" text, "contact" varchar(255), "created_at" datetime, "updated_at" datetime, "feedback" text, "book_travel_long" varchar(255), "book_same_day_long" varchar(255), "problem_short" varchar(255), "contact_no" varchar(255)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (340.7ms)[0m   [0;1mCREATE TABLE "test_buttons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "button_label" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (320.7ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "fname" varchar(255), "lname" varchar(255), "created_at" datetime, "updated_at" datetime, "test_button_id" integer) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (36.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (39.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100717003924')[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100713070135')[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100716040658')[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100716191847')[0m
+  [4;36;1mSQL (11.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100716220808')[0m
+  [4;35;1mSQL (304.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100716221209')[0m
+  [4;36;1mSQL (15.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100716234025')[0m
+  [4;35;1mSQL (10.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100716234651')[0m
+  [4;36;1mSQL (55.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100717001647')[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-18 13:48:18) [GET]
+  [4;36;1mUser Load (22.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 93ms (View: 45, DB: 22) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:17:17) [GET]
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 73ms (View: 46, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 10:17:21) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 51ms (View: 45, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:21:08) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:21:38) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:22:02) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:22:40) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:22:44) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:23:11) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:25:04) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 835ms (View: 827, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:26:01) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 120ms (View: 114, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:30:59) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 58ms (View: 53, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-19 10:31:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/freezefare-getstarted-btn.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-19 10:31:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/freezefare-getstarted-btn.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:31:39) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-19 10:31:39) [GET]
+
+ActionController::RoutingError (No route matches "/images/images/freezefare-getstarted-btn.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:31:53) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 62ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:32:25) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:34:36) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:35:45) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:36:23) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 634ms (View: 65, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:37:23) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 82ms (View: 55, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:56:41) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 70ms (View: 55, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 10:59:26) [GET]
+  [4;36;1mUser Load (1.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 10:59:55) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 39ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:00:38) [GET]
+  [4;35;1mUser Load (19.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 75ms (View: 46, DB: 19) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:02:42) [GET]
+  [4;36;1mUser Load (34.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 131ms (View: 75, DB: 35) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:05:06) [GET]
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 40ms (View: 21, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-19 11:06:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheet/Pie.htc" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-19 11:06:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheet/PIE.htc" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-19 11:07:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheet/PIE.htc" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-19 11:07:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheet/Pie.htc" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:07:04) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 37ms (View: 32, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:07:31) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:08:32) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:10:04) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 99ms (View: 45, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:10:18) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:12:30) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:13:36) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 60ms (View: 55, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:14:06) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:14:27) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:15:02) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:15:23) [GET]
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 16ms (View: 2, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:16:34) [GET]
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 11:17:06) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-19 19:30:25) [GET]
+  [4;36;1mUser Load (10.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 326ms (View: 244, DB: 10) | 200 OK [http://localhost/]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:30:28) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 116ms (View: 104, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:31:49) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:31:56) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:32:05) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:33:08) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:33:34) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:35:06) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:35:17) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:36:12) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:38:55) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#images to png (for 127.0.0.1 at 2010-07-19 19:38:56) [GET]
+  Parameters: {"id"=>"freezefare-logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:41:25) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#images to png (for 127.0.0.1 at 2010-07-19 19:41:26) [GET]
+  Parameters: {"id"=>"freezefare-logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SurveyUsersController#images to png (for 127.0.0.1 at 2010-07-19 19:41:34) [GET]
+  Parameters: {"id"=>"freezefare-logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:44:49) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 29ms (View: 18, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#images to png (for 127.0.0.1 at 2010-07-19 19:44:50) [GET]
+  Parameters: {"id"=>"freezefare-logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SurveyUsersController#images to png (for 127.0.0.1 at 2010-07-19 19:44:55) [GET]
+  Parameters: {"id"=>"freezefare-logo"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:45:13) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 25ms (View: 19, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 19:48:12) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 121ms (View: 112, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:04:13) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 94ms (View: 84, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:06:12) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 77ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:07:21) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:08:03) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:09:36) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:10:32) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:10:42) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 84ms (View: 78, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:10:48) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:10:54) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:12:08) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:12:43) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:13:30) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 80ms (View: 75, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:13:35) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:14:07) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:17:33) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:18:31) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:21:37) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 85ms (View: 79, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:22:52) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:24:02) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:25:35) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:26:32) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:26:49) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:27:00) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 82ms (View: 77, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:28:18) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:29:01) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:30:25) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 24ms (View: 18, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:30:41) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:31:02) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 84ms (View: 79, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:31:41) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:34:55) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/survey_users/new]
+
+
+Processing SurveyUsersController#new (for 127.0.0.1 at 2010-07-19 20:34:56) [GET]
+Rendering template within layouts/survey_users
+Rendering survey_users/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/survey_users/new]
