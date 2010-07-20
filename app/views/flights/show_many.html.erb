@@ -1,0 +1,38 @@
+<%  @flight_select = FlightSelect.new %>
+<h1>Flight search results</h1>
+<div style="border:1px purple dotted; width:300px;">
+Flight Search Criteria:<br />
+From: <%= @flight.from_code %><br />
+To: <%= @flight.to_code %><br />
+Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %>
+</div>
+<% form_for(@flight_select) do |f| %>
+  <%= f.error_messages %>
+
+
+<%= f.hidden_field :user_id %>
+<%= f.hidden_field :search_id %>
+
+<%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
+<p>    	<%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>        
+
+        <% e.each_element("price") do |t|   %>       
+
+         <%=t.attribute("id") %>
+          $<%=t.text%>
+          <a href="http://www.kayak.com<%=t.attribute("url").to_s%>">Book on Kayak</a>
+        <% end %>
+ 		<% e.each_element("legs") do |legs| %>
+   		<%  legs.each_element("leg") do |l| %>
+   		  <%  l.each_element do |ld| %>
+   		     <%=ld.text.to_s %>|
+   	      <%  end %>
+   		<%  end %>
+	 <%	end %>
+	</p>
+     <% end %>
+ <p>
+    <%= f.submit 'Select' %>
+  </p>
+<% end %>
+<a href="">more...</a>

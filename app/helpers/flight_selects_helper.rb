@@ -1,0 +1,2 @@
+module FlightSelectsHelper
+end

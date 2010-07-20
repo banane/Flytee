@@ -13,8 +13,6 @@
     <th>Problem longer answer</th>
     <td>Feedback</td>
     <th>Resources</th>
-    <th>Contact</th>
-    <th>Contact-no</th>
   </tr>
 
 <% @survey_users.each do |survey_user| %>
@@ -30,8 +28,6 @@
     <td><%=h survey_user.problem_long %></td>
     <td><%=h survey_user.resources %></td>
     <td><%=h survey_user.feedback %></td>
-    <td><%=h survey_user.contact %></td>
-    <td><%=h survey_user.contact_no %></td>
     <td><%= link_to 'Show', survey_user %></td>
     <td><%= link_to 'Edit', edit_survey_user_path(survey_user) %></td>
     <td><%= link_to 'Destroy', survey_user, :confirm => 'Are you sure?', :method => :delete %></td>

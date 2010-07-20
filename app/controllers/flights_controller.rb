@@ -1,4 +1,8 @@
+require RAILS_ROOT  + '/lib/Search.rb'
+
 class FlightsController < ApplicationController
+
+
   # GET /flights
   # GET /flights.xml
   def index
@@ -13,7 +17,7 @@ class FlightsController < ApplicationController
   # GET /flights/1
   # GET /flights/1.xml
   def show
-    @flight = Flight.find(params[:id])
+  #    @flight = Flight.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -30,7 +34,7 @@ class FlightsController < ApplicationController
       format.html # new.html.erb
       format.xml  { render :xml => @flight }
     end
-  end
+      end
 
   # GET /flights/1/edit
   def edit
@@ -41,19 +45,32 @@ class FlightsController < ApplicationController
   # POST /flights.xml
   def create
     @flight = Flight.new(params[:flight])
+    @srch = Search.new
+   @xml = REXML::Document.new
 
-    respond_to do |format|
-      if @flight.save
-        flash[:notice] = 'Flight was successfully created.'
-        format.html { redirect_to(@flight) }
-        format.xml  { render :xml => @flight, :status => :created, :location => @flight }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @flight.errors, :status => :unprocessable_entity }
-      end
-    end
+
+    from_date_dt =Time.utc(params[:flight][:"from_date(1i)"].to_i,params[:flight][:"from_date(2i)"].to_i,params[:flight][:"from_date(3i)"].to_i,params[:flight][:"from_date(4i)"].to_i,params[:flight][:"from_date(5i)"].to_i)
+    from_time = from_date_dt.strftime("%H:%M").to_s
+    from_date = from_date_dt.strftime("%m/%d/%Y").to_s
+
+    
+    to_date_dt =Time.utc(params[:flight][:"to_date(1i)"].to_i,params[:flight][:"to_date(2i)"].to_i,params[:flight][:"to_date(3i)"].to_i, params[:flight][:"to_date(4i)"].to_i,params[:flight][:"to_date(5i)"].to_i)
+	to_time =   to_date_dt.strftime("%H:%M").to_s
+	to_date = to_date_dt.strftime("%m/%d/%Y").to_s
+    
+    
+   
+   @xml = @srch.start_kayak_search(
+    	params[:flight][:from_code], 
+    	params[:flight][:to_code],
+    	from_date,from_time, to_date, to_time)
+    	
+   
+   render :action => :show_many
+
   end
-
+  
+  
   # PUT /flights/1
   # PUT /flights/1.xml
   def update
@@ -82,4 +99,8 @@ class FlightsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+	
+
+  
 end
