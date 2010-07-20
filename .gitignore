@@ -3,4 +3,5 @@ log/
 
 # manage dbs with heroku db:push, db:pull not source control
 db/development.sqlite3
+db/test.sqlite3
 db/schema.rb
