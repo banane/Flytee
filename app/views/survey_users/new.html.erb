@@ -1,9 +1,9 @@
 <body>
 <div id="wrapper">
 <div id="mainblurb">
-  <img src="/images/freezefare-logo.png" />
+<img src="/images/freezefare-logo.png" />
 
-  <h1>Help us build something you want!</h1>
+<h1>Help us build something you want!</h1>
 <h2>
 We&#8217;re getting ready to launch &amp; want to make our service more useful for you.
 <br />
@@ -23,12 +23,14 @@ Please fill out the survey below:
       <%= f.radio_button :book_travel, 'Other Person' %>I'm involved in the process, but someone else books it in the end<br />
   </div>
 
-<h3>What is the reason behind the travel that you book?</h3>
+
+  <h3>Do you book most of your own travel?</h3>
   <div>
-   <%= f.radio_button :reason_book, 'Business' %> Business
-   <%= f.radio_button :reason_book, 'Pleasure' %> Pleasure
-   <%= f.radio_button :reason_book, 'Half of each' %> About half business, half pleasure
+  <%= f.radio_button :book_travel, 'Yes' %> Yes<br />
+  <%= f.radio_button :book_travel, 'No' %> No<br />
+  <%= f.radio_button :book_travel, '' %>  I'm involved in the process, but someone else books it in the end
   </div>
+
 <h3>What resources do you use to book your plane travel?</h3>
 <%= f.radio_button :resources, 'Bing' %>Bing Travel / Farecast<br />
 <%= f.radio_button :resources, 'Expedia' %>Expedia<br />
@@ -51,14 +53,35 @@ Please fill out the survey below:
 <%= f.radio_button :price, 'It Depends' %>It depends on the flight - I'll explain below<br />
 <%= f.text_area :price_long, :cols=>20, :rows=>10 %>
 
-	<h3>Can we contact you via email to ask follow-up questions & keep you updated? We won't share or sell your email</h3>
+  <h3>What is the reason behind most of your air travel?</h3>
+    <div><%= f.radio_button :reason_book, 'Business' %> Business</div>
+    <div><%= f.radio_button :reason_book, 'Pleasure' %> Pleasure</div>
+    <div><%= f.radio_button :reason_book, 'Half of each' %> About half personal, half business</div>
+
+  <h3>What resources do you use to book your plane travel?</h3>
+    <div><%= f.radio_button :resources, 'Bing' %>Bing Travel / Farecast</div>
+    <div><%= f.radio_button :resources, 'Expedia' %>Expedia</div>
+    <div><%= f.radio_button :resources, 'Kayak' %>Kayak</div>
+    <div><%= f.radio_button :resources, 'Momondo' %>Momondo</div>
+    <div><%= f.radio_button :resources, 'Orbitz' %>Orbitz</div>
+    <div><%= f.radio_button :resources, 'Travelocity' %>Travelocity</div>
+    <div><%= f.radio_button :resources, 'Expedia' %>Expedia</div>
+
+    <h3>Do you usually book your flights on the same day that you start your flight search?</h3>
+      <%= f.radio_button :book_same_day, 'Yes' %> Yes<br />
+      <%= f.radio_button :book_same_day, 'No' %> No, because<br />
+      <%= f.text_field :book_same_day_long %>
+
+    <h3>Can we contact you via email to ask you follow-up questions &amp; keep you updated? We won&#8217;t share or sell your email.</h3>
+      <%= f.radio_button :contact, 'Yes' %> Yes at this email address: 
+      <%= f.text_field :contact_long %><br />
+      <%= f.radio_button :contact, 'No' %> No<br />
+
+  <div class="button">
+    <%= image_submit_tag 'freezefare-getstarted-btn.gif' %>
+  </div>
 
 
-     <%= f.radio_button :contact, 'Yes' %> Yes at this email address: 
-     <%= f.text_field :contact_long %><br />
-      <%= f.radio_button :contact, 'No' %> No thanks<br />
-      <br />
-  	<%= image_submit_tag('/images/freezefare-submit-btn.gif') %>
 <% end %>
 
 </div>
