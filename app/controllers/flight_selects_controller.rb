@@ -13,7 +13,7 @@ class FlightSelectsController < ApplicationController
   # GET /flight_selects/1
   # GET /flight_selects/1.xml
   def show
-    @flight_select = FlightSelect.find(params[:id])
+    @flight_select = FlightSelect.find(params[:id], :include=>:flight)
 
     respond_to do |format|
       format.html # show.html.erb

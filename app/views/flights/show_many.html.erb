@@ -1,3 +1,5 @@
+<% form_for(@flight_select) do |f| %>
+  <%= f.error_messages %>
 
 <h1>Flight search results</h1>
 <div style="border:1px purple dotted; width:300px;">
@@ -8,11 +10,7 @@ Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %><br />
 Search ID (flight_id): <%= @flight.id %>
 </div>
 
-
-<% form_for(@flight_select) do |f| %>
-  <%= f.error_messages %>
-
-<%= f.hidden_field :flight_id, @flight.id %>
+<%= f.hidden_field :flight_id, :value=>@flight.id %>
 
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
 <p>    	<%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>        
