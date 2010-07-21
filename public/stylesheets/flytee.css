@@ -87,3 +87,6 @@ body.splash {
 #mainblurb textarea{
 	width:530px;
 }
+#mainblurb .button{
+	text-align:center;
+}
