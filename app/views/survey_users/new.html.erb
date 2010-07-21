@@ -27,14 +27,14 @@ Please fill out the survey below:
     <div><%= f.radio_button :reason_book, 'Half of each' %> About half personal, half business</div>
 
   <h3>What resources do you use to book your plane travel?</h3>
-    <div><%= f.radio_button :resources, 'Bing' %>Bing Travel / Farecast</div>
-    <div><%= f.radio_button :resources, 'Expedia' %>Expedia</div>
-    <div><%= f.radio_button :resources, 'Kayak' %>Kayak</div>
-    <div><%= f.radio_button :resources, 'Momondo' %>Momondo</div>
-    <div><%= f.radio_button :resources, 'Orbitz' %>Orbitz</div>
-    <div><%= f.radio_button :resources, 'Travelocity' %>Travelocity</div>
-    <div><%= f.radio_button :resources, 'Expedia' %>Expedia</div>
-	<div>Other <%= f.text_field :resources %>
+
+    <div><%= f.check_box :res_bing, {} ,'Bing' %>Bing Travel / Farecast</div>
+    <div><%= f.check_box :res_expedia,  {} ,'Expedia' %>Expedia</div>
+    <div><%= f.check_box :res_kayak,  {} ,'Kayak' %>Kayak</div>
+    <div><%= f.check_box :res_momondo, {} , 'Momondo' %>Momondo</div>
+    <div><%= f.check_box :res_orbitz, {} , 'Orbitz' %>Orbitz</div>
+    <div><%= f.check_box :res_travelocity, {} ,'Travelocity' %>Travelocity</div>
+	<div><%= f.check_box :resources,  {} ,'Other' %> <%= f.text_field :resources %>
 
     <h3>Do you usually book your flights on the same day that you start your flight search?</h3>
       <%= f.radio_button :book_same_day, 'Yes' %> Yes<br />
