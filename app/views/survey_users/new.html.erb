@@ -1,3 +1,5 @@
+<body>
+<div id="wrapper">
 <div id="mainblurb">
   <img src="/images/freezefare-logo.png" />
 
@@ -18,64 +20,47 @@ Please fill out the survey below:
   <div>
       <%= f.radio_button :book_travel, 'Yes' %> Yes<br />
       <%= f.radio_button :book_travel, 'No' %> No<br />
-      <%= f.radio_button :book_travel, '' %>  I'm part of the process but my  <%= f.text_field :book_travel_long %>  (assistant/wife/husband/boyfriend/girlfriend/mother/father, etc.)  actually books it in the end.
+      <%= f.radio_button :book_travel, 'Other Person' %>I'm involved in the process, but someone else books it in the end<br />
   </div>
 
-<h3>   What is the reason behind the travel that you book?</h3>
+<h3>What is the reason behind the travel that you book?</h3>
   <div>
    <%= f.radio_button :reason_book, 'Business' %> Business
    <%= f.radio_button :reason_book, 'Pleasure' %> Pleasure
    <%= f.radio_button :reason_book, 'Half of each' %> About half business, half pleasure
   </div>
+<h3>What resources do you use to book your plane travel?</h3>
+<%= f.radio_button :resources, 'Bing' %>Bing Travel / Farecast<br />
+<%= f.radio_button :resources, 'Expedia' %>Expedia<br />
+<%= f.radio_button :resources, 'Kayakng' %>Kayak<br />
+<%= f.radio_button :resources, 'Momondo' %>Momondo<br />
+<%= f.radio_button :resources, 'Orbitz' %>Orbitz<br />
+<%= f.radio_button :resources, 'Travelocity' %>Travelocity<br />
+<%= f.radio_button :resources, 'Other' %> Other: <%= f.text_field :resources %>  
 
-  <h3>  Describe any policies your company has on its booking business trips?</h3>
-
-  
-      <%= f.text_area :company_policy, :cols=>20, :rows=>10 %>
-  
-
-    <h3>Do you Book the same day that you first start searching?</h3>
-    
+    <h3>Do you Book the same day that you first start searching?</h3>    
       <%= f.radio_button :book_same_day, 'Yes' %> Yes<br />
-      <%= f.radio_button :book_same_day, 'No' %> No<br />
-      If no, how long do you wait between first search and booking airline tickets?
-	    <%= f.text_field :book_same_day_long %>
+      <%= f.radio_button :book_same_day, 'No' %> No, because: 
+      <%= f.text_field :book_same_day_long %>
   
+<h3>How much would you pay to hold your flight for a week at today's price?</h3>
+<%= f.radio_button :price, 'Nothing' %>Nothing - I wouldn't pay for this service
+<%= f.radio_button :price, 'under $10' %>Under $10<br />
+<%= f.radio_button :price, '$10 - $20' %>$10 - $20<br />
+<%= f.radio_button :price, 'Over $20' %>Over $20<br />
+<%= f.radio_button :price, 'It Depends' %>It depends on the flight - I'll explain below<br />
+<%= f.text_area :price_long, :cols=>20, :rows=>10 %>
 
-    <h3>Why wait?</h3>
-    
-    <%= f.text_area :why_wait, :cols=>20, :rows=>10 %>
-  
-
-    <h3>Have you ever searched for an airline ticket one day only to come back to purchase and it increased in price?</h3>
-
-    <%= f.radio_button :problem_short, 'Yes' %> Yes<br />
-      <%= f.radio_button :problem_short, 'No' %> No<br />
-	If Yes, please describe the time you remember, price change, length of time you waited.<br />
-	<%= f.text_area :problem_long, :cols=>20, :rows=>10 %>
-  
-
-	<h3>What internet sites do you visit when searching and booking airfare</h3>
-  	<%= f.text_area :resources, :cols=>20, :rows=>10 %>
-  
-  
-  <h3>What&#8217;s the single most critical thing you are hoping that FreezeFare can do for you?</h3>
-  
-  <%= f.text_area :feedback, :cols=>20, :rows=>10 %>
-  
-
-	<h3>Are you willing to talk with us via phone or IM to give feedback on our new service?</h3>
+	<h3>Can we contact you via email to ask follow-up questions & keep you updated? We won't share or sell your email</h3>
 
 
      <%= f.radio_button :contact, 'Yes' %> Yes at this email address: 
      <%= f.text_field :contact_long %><br />
-      <%= f.radio_button :contact, 'No' %> No<br />
+      <%= f.radio_button :contact, 'No' %> No thanks<br />
       <br />
-  
-  
-    <%= f.submit 'Submit' %>
-  
+  	<%= image_submit_tag('/images/freezefare-submit-btn.gif') %>
 <% end %>
-</div>
 
 </div>
+</div>
+</body>

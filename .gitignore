@@ -1,5 +1,6 @@
 # ignore logs
 log/
+log
 
 # manage dbs with heroku db:push, db:pull not source control
 db/development.sqlite3

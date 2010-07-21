@@ -1,4 +1,4 @@
-<h1>Listing survey_users</h1>
+<h1>surveys</h1>
 
 <table>
   <tr>
@@ -12,6 +12,8 @@
     <th>problem short answer yes/no</th>
     <th>Problem longer answer</th>
     <th>Resources</th>
+    <th>Price</th>
+    <th>Price-long</th>
     <th>Feedback</th>
   </tr>
 
@@ -27,10 +29,10 @@
     <td><%=h survey_user.problem_short %></td>
     <td><%=h survey_user.problem_long %></td>
     <td><%=h survey_user.resources %></td>
+    <td><%=h survey_user.price %></td>
+    <td><%=h survey_user.price_long %></td>
     <td><%=h survey_user.feedback %></td>
-    <td><%= link_to 'Show', survey_user %></td>
-    <td><%= link_to 'Edit', edit_survey_user_path(survey_user) %></td>
-    <td><%= link_to 'Destroy', survey_user, :confirm => 'Are you sure?', :method => :delete %></td>
+   
   </tr>
 <% end %>
 </table>
