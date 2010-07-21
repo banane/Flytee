@@ -4,14 +4,14 @@
   <tr>
     <th>User</th>
     <th>Kayak flight</th>
-    <th>Search</th>
+    <th>Search (flight requirements)</th>
   </tr>
 
 <% @flight_selects.each do |flight_select| %>
   <tr>
     <td><%=h flight_select.user_id %></td>
     <td><%=h flight_select.kayak_flight_id %></td>
-    <td><%=h flight_select.search_id %></td>
+    <td><%= link_to 'Freeze Another Flight', :controller=>"flights", :action=>"show", :id=>flight_select.flight_id %> </td>
     <td><%= link_to 'Show', flight_select %></td>
     <td><%= link_to 'Edit', edit_flight_select_path(flight_select) %></td>
     <td><%= link_to 'Destroy', flight_select, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -21,4 +21,3 @@
 
 <br />
 
-<%= link_to 'New flight_select', new_flight_select_path %>
