@@ -18,7 +18,7 @@ Please fill out the survey below:
   <div>
   <%= f.radio_button :book_travel, 'Yes' %> Yes<br />
   <%= f.radio_button :book_travel, 'No' %> No<br />
-  <%= f.radio_button :book_travel, '' %>  I'm involved in the process, but someone else books it in the end
+  <%= f.radio_button :book_travel, 'someone_else' %>  I'm involved in the process, but someone else books it in the end
   </div> 
   
   <h3>What is the reason behind most of your air travel?</h3>
@@ -42,12 +42,12 @@ Please fill out the survey below:
 
   
 <h3>How much would you pay to hold your flight for a week at today's price?</h3>
-<%= f.radio_button :price, 'Nothing' %>Nothing - I wouldn't pay for this service
-<%= f.radio_button :price, 'under $10' %>Under $10<br />
-<%= f.radio_button :price, '$10 - $20' %>$10 - $20<br />
-<%= f.radio_button :price, 'Over $20' %>Over $20<br />
-<%= f.radio_button :price, 'It Depends' %>It depends on the flight - I'll explain below<br />
-<%= f.text_area :price_long, :cols=>20, :rows=>10 %>
+<div><%= f.radio_button :price, 'Nothing' %>Nothing - I wouldn't pay for this service</div>
+<div><%= f.radio_button :price, 'under $10' %>Under $10</div>
+<div><%= f.radio_button :price, '$10 - $20' %>$10 - $20</div>
+<div><%= f.radio_button :price, 'Over $20' %>Over $20</div>
+<div><%= f.radio_button :price, 'It Depends' %>It depends on the flight - I'll explain below</div>
+<div><%= f.text_area :price_long, :cols=>20, :rows=>10 %></div>
 
     <h3>Can we contact you via email to ask you follow-up questions &amp; keep you updated? We won&#8217;t share or sell your email.</h3>
       <%= f.radio_button :contact, 'Yes' %> Yes at this email address: 
@@ -58,9 +58,11 @@ Please fill out the survey below:
     <%= image_submit_tag 'freezefare-submit-btn.gif' %>
   </div>
 
-
+<%= params[:moo]%>
 <% end %>
 
 </div>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
