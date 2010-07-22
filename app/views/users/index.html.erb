@@ -2,11 +2,12 @@
 
 <div class="main">  
         <div class="title">Looking to fly but not ready to buy?</div>
-        <div class="content">Freezefare will hold your flight at today&#8217;s price &#38; so you have more time to decide.</div>
+        <div class="content">
+			<p>Freezefare will hold your flight at today&#8217;s price so you can have more time to decide.</p>
+			<p>How long would you like to freeze your flight?</p>
+		</div>
         <div class="highlight">
-          <%= link_to image_tag("freezefare-10percent-btn.gif", :border=>0, :class => "button", :align => "center"), new_survey_user_path(:button_label => 'tenpercent') %>
-             <%= link_to image_tag("freezefare-5bucks-btn.gif", :border=>0, :class => "button", :align => "center"), new_survey_user_path(:button_label => '5bucks') %>
-             
-
+			<%= link_to image_tag("freezefare-5bucks-btn.gif", :border=>0, :class => "button", :align => "center"), new_survey_user_path(:button_label => '5bucks') %>
+            <%= link_to image_tag("freezefare-10percent-btn.gif", :border=>0, :class => "button", :align => "center"), new_survey_user_path(:button_label => 'tenpercent') %>
         </div>
 </div> <!-- end main -->
