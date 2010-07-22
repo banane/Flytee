@@ -25,6 +25,7 @@ class SurveyUsersController < ApplicationController
   # GET /survey_users/new.xml
   def new
     @survey_user = SurveyUser.new
+    @sourceid = params[:source]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,7 @@ class SurveyUsersController < ApplicationController
   # POST /survey_users.xml
   def create
     @survey_user = SurveyUser.new(params[:survey_user])
+    
 
     respond_to do |format|
       if @survey_user.save
