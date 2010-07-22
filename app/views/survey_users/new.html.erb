@@ -13,6 +13,8 @@ Please fill out the survey below:
 <hr />
 <div id="form_body">
 <% form_for(@survey_user) do |f| %>
+ 	<%= f.hidden_field :source, :value=>session[:source] %>
+	<%= f.hidden_field :button_label, :value=>params['button_label'] %>
 
   <h3>Do you book most of your own travel?</h3>
   <div>
