@@ -44,7 +44,7 @@ class FlightSelectsController < ApplicationController
 
     respond_to do |format|
       if @flight_select.save
-        flash[:notice] = 'FlightSelect was successfully created.'
+        flash[:notice] = 'Your flight selection saved.'
         format.html { redirect_to(@flight_select) }
         format.xml  { render :xml => @flight_select, :status => :created, :location => @flight_select }
       else

@@ -10,28 +10,37 @@ Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %><br />
 Search ID (flight_id): <%= @flight.id %>
 </div>
 
+
 <%= f.hidden_field :flight_id, :value=>@flight.id %>
-
+    <%= f.submit 'Freeze' %>
+<br />
+<table border=0>
+<tr><th colspan=2></th><th colspan=8>Departing Flight</th><th colspan=8>Returning Flight</th></tr>
+<tr><th></th>
+<th></th><th></th><th colspan=2>Airline</th><th>Dept: Airport</th><th>Arr: Airport</th><th>ETD</th><th>ETA</th><th colspan=4></th>
+<th colspan=2>Airline</th><th>Dept: Airport</th><th>Arr: Airport</th><th>ETD</th><th>ETA</th><th colspan=3></th></tr>
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
-<p>    	<%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>        
-
+<tr>
+<td>   	<%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>     </td>   
         <% e.each_element("price") do |t|   %>       
+       
 
          <%=t.attribute("id") %>
-          $<%=t.text%>
-          <a href="http://www.kayak.com<%=t.attribute("url").to_s%>">Book on Kayak</a>
+         <td> $<%=t.text%></td>
+
         <% end %>
- 		<% e.each_element("legs") do |legs| %>
+    	<% e.each_element("legs") do |legs| %>
    		<%  legs.each_element("leg") do |l| %>
    		  <%  l.each_element do |ld| %>
-   		     <%=ld.text.to_s %>|
-   	      <%  end %>
+   		    <td> <%=ld.text.to_s %></td>
+   		   <%  end %>
    		<%  end %>
 	 <%	end %>
+	 </tr>
 	</p>
      <% end %>
+</table>
  <p>
-    <%= f.submit 'Select' %>
+    <%= f.submit 'Freeze' %>
   </p>
 <% end %>
-<a href="">more...</a>
