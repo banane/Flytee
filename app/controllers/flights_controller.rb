@@ -29,6 +29,8 @@ class FlightsController < ApplicationController
   # GET /flights/new.xml
   def new
     @flight = Flight.new
+    @routes_o = Route.find(:all, :order=>"origin_code", :group=>"origin_code")
+    @routes_d = Route.find(:all, :order=>"dest_code", :group=>"dest_code")
 
     respond_to do |format|
       format.html # new.html.erb

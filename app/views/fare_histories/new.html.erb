@@ -5,11 +5,16 @@
 
   <p>
     <%= f.label :offer_date %><br />
-    <%= f.datetime_select :offer_date %>
+    <%= f.datetime_select :offer_date, :minute_step=>30  %>
   </p>
-  <p>
-    <%= f.label :itinerary_id %><br />
-    <%= f.text_field :itinerary_id %>
+  <p>Itinerary:<br />
+<%  @itineraries = Itinerary.find(:all)
+    @itineraries.each do |itin| %>
+    	<%=f.radio_button :itinerary_id, :value=> itin.id%><%= itin.dept_date %> to 
+	    <%=itin.ret_date %> via
+
+        <br />
+    <% end %>
   </p>
   <p>
     <%= f.label :low_price %><br />

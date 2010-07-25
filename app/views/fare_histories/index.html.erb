@@ -1,18 +1,32 @@
 <h1>Listing fare_histories</h1>
 
-<table>
-  <tr>
-    <th>Offer date</th>
-    <th>Itinerary</th>
-    <th>Route</th>
+<table border=1>
+<tr>
+	<th></th>
+	<th colspan="2">Itinerary</th>
+	<th colspan="4">Route</th>
+	<th colspan=3"></th>
+</tr>
+<tr>
+	<th>Offer date</th>
+    <th>Departing</th>
+    <th>Return </th>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>Carrier</th>
     <th>Low price</th>
+    <th colspan="3"></th>
   </tr>
 
 <% @fare_histories.each do |fare_history| %>
   <tr>
-    <td><%=h fare_history.offer_date %></td>
-    <td><%=h fare_history.itinerary_id %></td>
-    <td><%=h fare_history.route_id %></td>
+    <td><%=h fare_history.offer_date.strftime("%m/%d/%Y") %></td>
+    <td><%=h fare_history.itinerary.dept_date.strftime("%m/%d/%Y") %></td>
+    <td><%=h fare_history.itinerary.ret_date.strftime("%m/%d/%Y") %></td>
+
+    <td><%=h fare_history.itinerary.route.origin_code %></td>
+    <td><%=h fare_history.itinerary.route.dest_code %></td>
+    <td><%=h fare_history.itinerary.route.carrier_code %></td>
     <td><%=h fare_history.low_price %></td>
     <td><%= link_to 'Show', fare_history %></td>
     <td><%= link_to 'Edit', edit_fare_history_path(fare_history) %></td>
@@ -23,4 +37,4 @@
 
 <br />
 
-<%= link_to 'New fare_history', new_fare_history_path %>
+<%= link_to 'Log a new price', new_fare_history_path %>

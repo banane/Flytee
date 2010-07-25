@@ -5,15 +5,19 @@
 
   <p>
     <%= f.label :dept_date %><br />
-    <%= f.datetime_select :dept_date %>
+    <%= f.datetime_select :dept_date, :minute_step=>30  %>
   </p>
   <p>
     <%= f.label :ret_date %><br />
-    <%= f.datetime_select :ret_date %>
+    <%= f.datetime_select :ret_date, :minute_step=>30  %>
   </p>
-  <p>
-    <%= f.label :route_id %><br />
-    <%= f.text_field :route_id %>
+  <p>Routes:<br />
+    <% @routes = Route.find(:all, :order=>:origin_code)
+    @routes.each do |route| %>
+    <%= f.radio_button :route_id, :value=>route.id %> 
+    <%=route.origin_code %> to <%=route.dest_code %> on <%=route.carrier_code %>
+    <br />
+    <% end %>
   </p>
   <p>
     <%= f.submit 'Create' %>

@@ -12,8 +12,16 @@
     <%= f.datetime_select :ret_date %>
   </p>
   <p>
-    <%= f.label :route_id %><br />
-    <%= f.text_field :route_id %>
+    <h2>Routes</h2>
+    <% @routes = Route.find(:all)
+    @routes.each do |r| %>
+    
+    <%=f.radio_button :route_id, :value=>r.id%>
+    <%=h r.origin_code %> to <%=h r.dest_code %> via <%=h r.carrier_code %><br />
+   
+   
+     <% end %>
+
   </p>
   <p>
     <%= f.submit 'Update' %>

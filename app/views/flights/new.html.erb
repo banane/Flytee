@@ -5,11 +5,11 @@
 
   <p>
     From<br />
-    <%= select("flight", "from_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
+    <%= select("flight", "from_code", @routes_o.map {|r| [ r.origin_code, r.origin_code ] }) %>
   </p>
   <p>
     To<br />
-    <%= select("flight", "to_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
+    <%= select("flight", "to_code", @routes_d.map {|r| [ r.dest_code, r.dest_code ] }) %>
   </p>
   <p>
 
