@@ -1,0 +1,33 @@
+<p>
+  <b>Origin code:</b>
+  <%=h @route.origin_code %>
+</p>
+
+<p>
+  <b>Dest code:</b>
+  <%=h @route.dest_code %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%=h @route.rank %>
+</p>
+
+<p>
+  <b>Pass per day:</b>
+  <%=h @route.pass_per_day %>
+</p>
+
+<p>
+  <b>Carrier code:</b>
+  <%=h @route.carrier_code %>
+</p>
+
+<p>
+  <b>Ave fare:</b>
+  <%=h @route.ave_fare %>
+</p>
+
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>

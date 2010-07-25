@@ -1,0 +1,23 @@
+<p>
+  <b>Offer date:</b>
+  <%=h @fare_history.offer_date %>
+</p>
+
+<p>
+  <b>Itinerary:</b>
+  <%=h @fare_history.itinerary_id %>
+</p>
+
+<p>
+  <b>Route:</b>
+  <%=h @fare_history.route_id %>
+</p>
+
+<p>
+  <b>Low price:</b>
+  <%=h @fare_history.low_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_fare_history_path(@fare_history) %> |
+<%= link_to 'Back', fare_histories_path %>

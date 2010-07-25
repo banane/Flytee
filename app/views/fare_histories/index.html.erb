@@ -1,0 +1,26 @@
+<h1>Listing fare_histories</h1>
+
+<table>
+  <tr>
+    <th>Offer date</th>
+    <th>Itinerary</th>
+    <th>Route</th>
+    <th>Low price</th>
+  </tr>
+
+<% @fare_histories.each do |fare_history| %>
+  <tr>
+    <td><%=h fare_history.offer_date %></td>
+    <td><%=h fare_history.itinerary_id %></td>
+    <td><%=h fare_history.route_id %></td>
+    <td><%=h fare_history.low_price %></td>
+    <td><%= link_to 'Show', fare_history %></td>
+    <td><%= link_to 'Edit', edit_fare_history_path(fare_history) %></td>
+    <td><%= link_to 'Destroy', fare_history, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New fare_history', new_fare_history_path %>

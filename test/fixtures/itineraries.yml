@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dept_date: 2010-07-24 17:57:26
+  ret_date: 2010-07-24 17:57:26
+  route_id: 1
+
+two:
+  dept_date: 2010-07-24 17:57:26
+  ret_date: 2010-07-24 17:57:26
+  route_id: 1

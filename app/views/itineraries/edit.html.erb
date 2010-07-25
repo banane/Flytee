@@ -1,0 +1,24 @@
+<h1>Editing itinerary</h1>
+
+<% form_for(@itinerary) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :dept_date %><br />
+    <%= f.datetime_select :dept_date %>
+  </p>
+  <p>
+    <%= f.label :ret_date %><br />
+    <%= f.datetime_select :ret_date %>
+  </p>
+  <p>
+    <%= f.label :route_id %><br />
+    <%= f.text_field :route_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @itinerary %> |
+<%= link_to 'Back', itineraries_path %>

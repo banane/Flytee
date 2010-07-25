@@ -1,13 +1,24 @@
 class SurveyUsersController < ApplicationController
   # GET /survey_users
   # GET /survey_users.xml
-  def index
+
+  def archive
     @survey_users = SurveyUser.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @survey_users }
     end
+  end
+  
+  
+  def index
+    session[:source] = params['source']
+ 
+    respond_to do |format|
+      format.html # index.html.erb
+    end
+
   end
 
   # GET /survey_users/1

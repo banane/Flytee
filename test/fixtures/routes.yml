@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  origin_code: MyString
+  dest_code: MyString
+  rank: 1
+  pass_per_day: 1
+  carrier_code: MyString
+  ave_fare: 9.99
+
+two:
+  origin_code: MyString
+  dest_code: MyString
+  rank: 1
+  pass_per_day: 1
+  carrier_code: MyString
+  ave_fare: 9.99

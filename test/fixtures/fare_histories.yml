@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  offer_date: 2010-07-24 17:58:22
+  itinerary_id: 1
+  route_id: 
+  low_price: 9.99
+
+two:
+  offer_date: 2010-07-24 17:58:22
+  itinerary_id: 1
+  route_id: 
+  low_price: 9.99

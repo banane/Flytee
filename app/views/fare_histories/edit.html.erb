@@ -1,0 +1,28 @@
+<h1>Editing fare_history</h1>
+
+<% form_for(@fare_history) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :offer_date %><br />
+    <%= f.datetime_select :offer_date %>
+  </p>
+  <p>
+    <%= f.label :itinerary_id %><br />
+    <%= f.text_field :itinerary_id %>
+  </p>
+  <p>
+    <%= f.label :route_id %><br />
+    <%= f.text_field :route_id %>
+  </p>
+  <p>
+    <%= f.label :low_price %><br />
+    <%= f.text_field :low_price %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @fare_history %> |
+<%= link_to 'Back', fare_histories_path %>

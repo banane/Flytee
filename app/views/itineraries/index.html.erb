@@ -1,0 +1,24 @@
+<h1>Listing itineraries</h1>
+
+<table>
+  <tr>
+    <th>Dept date</th>
+    <th>Ret date</th>
+    <th>Route</th>
+  </tr>
+
+<% @itineraries.each do |itinerary| %>
+  <tr>
+    <td><%=h itinerary.dept_date %></td>
+    <td><%=h itinerary.ret_date %></td>
+    <td><%=h itinerary.route_id %></td>
+    <td><%= link_to 'Show', itinerary %></td>
+    <td><%= link_to 'Edit', edit_itinerary_path(itinerary) %></td>
+    <td><%= link_to 'Destroy', itinerary, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New itinerary', new_itinerary_path %>

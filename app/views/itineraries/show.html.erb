@@ -1,0 +1,18 @@
+<p>
+  <b>Dept date:</b>
+  <%=h @itinerary.dept_date %>
+</p>
+
+<p>
+  <b>Ret date:</b>
+  <%=h @itinerary.ret_date %>
+</p>
+
+<p>
+  <b>Route:</b>
+  <%=h @itinerary.route_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_itinerary_path(@itinerary) %> |
+<%= link_to 'Back', itineraries_path %>

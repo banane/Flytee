@@ -1,0 +1,36 @@
+<h1>Editing route</h1>
+
+<% form_for(@route) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :origin_code %><br />
+    <%= f.text_field :origin_code %>
+  </p>
+  <p>
+    <%= f.label :dest_code %><br />
+    <%= f.text_field :dest_code %>
+  </p>
+  <p>
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </p>
+  <p>
+    <%= f.label :pass_per_day %><br />
+    <%= f.text_field :pass_per_day %>
+  </p>
+  <p>
+    <%= f.label :carrier_code %><br />
+    <%= f.text_field :carrier_code %>
+  </p>
+  <p>
+    <%= f.label :ave_fare %><br />
+    <%= f.text_field :ave_fare %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @route %> |
+<%= link_to 'Back', routes_path %>

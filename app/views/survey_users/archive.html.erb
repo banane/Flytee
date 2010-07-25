@@ -1,0 +1,74 @@
+
+
+<div id="dumpTable"><h1>surveys</h1> Total so far: <%=h @survey_users.count %>, last Survey submitted: <%=h @survey_users.last.created_at %>
+<br />
+<a href="#feedback">See longer narratives- Feedback & Price Long</a>
+<br />
+
+<table width="1000px" border=1>
+  <tr>
+    <th>Book<br /> travel</th>
+    
+    <th>Reason<br /> book</th>
+    <th>Company<br /> policy</th>
+    <th>Book<br /> same day</th>
+    <th>Book same day long</th>
+    <th>Why wait</th>
+    <th>problem<br /> short answer yes/no</th>
+    <th>Problem longer</th>
+    <th>Rsrc<br />- bing<br />/farecast</th>
+    <th>Rsrc<br /> - expedia</th>
+    <th>Rsrc<br /> - kayak</th>
+    <th>Rsrc<br />mo-<br />mondo</th>
+    <th>Rsrc<br /> - orbitz</th>
+    <th>Rsrc<br /> - travel<br />ocity</th>
+    <th>Rsrc<br /> - other</th>
+    <th>Price</th>
+    <th>Price<br />-long</th>
+    <th width="300px">Feedback</th>
+  </tr>
+
+<% @survey_users.each do |survey_user| %>
+  <tr>
+    <td><%=h survey_user.book_travel %></td>
+    <td><%=h survey_user.reason_book %></td>
+    <td><%=h survey_user.company_policy %></td>
+    <td><%=h survey_user.book_same_day %></td>
+    <td><%=h survey_user.book_same_day_long %></td>
+    <td><%=h survey_user.why_wait %></td>
+    <td><%=h survey_user.problem_short %></td>
+    <td><%=h survey_user.problem_long %></td>
+    <td><%=h survey_user.res_bing %></td>
+    <td><%=h survey_user.res_expedia %></td>
+    <td><%=h survey_user.res_kayak %></td>
+    <td><%=h survey_user.res_momondo %></td>
+    <td><%=h survey_user.res_travelocity %></td>
+    <td><%=h survey_user.res_orbitz %></td>
+ 
+    <td><%=h survey_user.resources %></td>
+    <td><%=h survey_user.price %></td>
+    <td><%=h survey_user.price_long %></td>
+    <td width="300px"><%=h survey_user.feedback %></td>
+   
+  </tr>
+<% end %>
+</table>
+
+<br />
+<a name="feedback"></a>
+<h1>Just Price & Feedback</h1>
+<table border=1 width="100%">
+<tr><th>Feedback</th>
+<th>Price-Long</th></tr>
+<% @survey_users.each do |survey_user2| %>
+  <tr>
+ <td width="300px"><%=h survey_user2.feedback %></td>
+ <td width="300px"><%=h survey_user2.price_long %></td>
+ 
+</tr>
+<% end %>
+</table>
+ <hr>
+ <%= link_to 'New survey_user', new_survey_user_path %>
+ 
+ </div>
