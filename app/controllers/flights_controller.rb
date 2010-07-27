@@ -31,10 +31,12 @@ class FlightsController < ApplicationController
     @flight = Flight.new
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @flight }
-    end
-      end
+        format.html
+        format.xml { render :xml => @flight }
+    end    
+  end
+  
+  
 
   # GET /flights/1/edit
   def edit
@@ -110,8 +112,4 @@ class FlightsController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
-	
-
-  
 end

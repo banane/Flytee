@@ -1,31 +1,43 @@
-<h1>Search For A Flight</h1>
+<div id="logo"><img src="/images/freezefare-logo.png" /></div>
 
+<div class="main">  
+       <div class="content">
+			<p>Freeze your flight at today's cheapest price so you can have more time to decide if you want to buy.</p>
+		</div>
+<div style="text-align:left; font-size:12pt;">
 <% form_for(@flight) do |f| %>
+<table border=1 width=100%>
   <%= f.error_messages %>
-
-  <p>
-    From<br />
+<tr>
+<td> From</td><td>To</td>
+</tr>
+<tr>
+<td>
     <%= select("flight", "from_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
-  </p>
-  <p>
-    To<br />
-    <%= select("flight", "to_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
-  </p>
-  <p>
-
-    <%= f.label :from_date %><br />
+</td>
+<td>
     <%= f.datetime_select :from_date, :default=>14.days.from_now, :minute_step=>30 %>
-  </p>
-  <p>
+</td>
+</tr>
+<tr>
+<td> To</td><td>Returning on:</td>
+</tr>
+<tr>
+<td>
+    <%= select("flight", "to_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
+</td>
+<td>
     <%= f.label :to_date %><br />
     <%= f.datetime_select :to_date, :default=>28.days.from_now, :minute_step=>30 %>
-  </p>
-  <p>
+</td>
+</tr>
+
+</table>
    <%= f.hidden_field :prebook_date, :value=>Time.now %>
-   </p>
   <p>
-    <%= f.submit 'Search' %>
+      <%= image_submit_tag 'freezefare-search-flights-btn.gif' %>
+
   </p>
 <% end %>
-
-<%= link_to 'Back', flights_path %>
+</div>
+</div>
