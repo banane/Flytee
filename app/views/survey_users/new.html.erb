@@ -3,9 +3,9 @@
 <div id="mainblurb">
 <img src="/images/freezefare-logo.png" />
 
-<h1>Help us build something you want!</h1>
+<h1>We're sorry- We're not ready to process payments</h1>
 <h2>
-We&#8217;re getting ready to launch &amp; want to make our service more useful for you.
+But we'd love to hear about your travel planning so we can make a better product.
 <br />
 Please fill out the survey below:
 </h2>
@@ -13,8 +13,11 @@ Please fill out the survey below:
 <hr />
 <div id="form_body">
 <% form_for(@survey_user) do |f| %>
+<% session[:test_version]? val='multiple options' : val='single option' %>
+
  	<%= f.hidden_field :source, :value=>session[:source] %>
 	<%= f.hidden_field :button_label, :value=>params['button_label'] %>
+	<%= f.hidden_field :test_version, :value=>val %>
 
   <h3>Do you book most of your own travel?</h3>
   <div>

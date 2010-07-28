@@ -5,7 +5,6 @@
 			<p>Freeze your flight at today's cheapest price so you can have more time to decide if you want to buy.</p>
 		</div>
 <div style="text-align:left; font-size:12pt;">
-<%=h session[:test_version] %>*******TEST VERSION
 <% form_for(@flight) do |f| %>
 <table border=0 width="100%">
   <%= f.error_messages %>
@@ -41,3 +40,4 @@
 <% end %>
 </div>
 </div>
+<%= session[:test_version]?  1 : 0	 %>

@@ -25,7 +25,7 @@ class Search
     to_time = URI.escape(to_time)
     travelers = 1
      
-    url = "/s/apisearch?basicmode=true&oneway=n&origin=#{from_code}&destination=#{to_code}&destcode=&depart_date=#{from_date}&depart_time=#{from_time}&return_date=#{to_date}&return_time=#{to_time}&travelers=#{travelers}&s=p&cabin=f&action=doflights&apimode=1"
+    url = "/s/apisearch?basicmode=true&oneway=n&origin=#{from_code}&destination=#{to_code}&destcode=&depart_date=#{from_date}&depart_time=a&return_date=#{to_date}&return_time=a&travelers=#{travelers}&s=p&cabin=e&action=doflights&apimode=1"
     if count
       url += "&c=#{count}"
     end
