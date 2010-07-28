@@ -17,37 +17,35 @@
 <% form_for(@flight_select) do |f| %>
   <%= f.error_messages %>
 
-       <div class="content">Freeze this fare for: <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+       <div class="content">Freeze this fare for: <br /><%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
        
    <br />
    <div style="font-size:10pt">
 <table border=0>
-<tr><th colspan=2></th><th colspan=8>Departing Flight</th><th colspan=8>Returning Flight</th></tr>
-<tr><th></th>
-<th></th><th></th><th colspan=2>Airline</th><th>Dept: Airport</th><th>Arr: Airport</th><th>ETD</th><th>ETA</th><th colspan=4></th>
-<th colspan=2>Airline</th><th>Dept: Airport</th><th>Arr: Airport</th><th>ETD</th><th>ETA</th><th colspan=3></th></tr>
+<tr>
+<th></th>
+<th>Price</th>
+<th>Airline</th>
+<th>Flight</th>
+</tr>
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
 <tr>
 <td>   	<%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>     </td>   
         <% e.each_element("price") do |t|   %>       
-       
-
-         <%=t.attribute("id") %>
-         <td> $<%=t.text%></td>
-
-        <% end %>
-    	<% e.each_element("legs") do |legs| %>
-   		<%  legs.each_element("leg") do |l| %>
-   		  <%  l.each_element do |ld| %>
-   		    <td> <%=ld.text.to_s %></td>
-   		   <%  end %>
-   		<%  end %>
-	 <%	end %>
+	         <%=t.attribute("id") %>        <td> $<%=t.text%></td>
+	
+        <% end 
+		e.elements.each("legs/leg/segment/airline") do |a|
+			%><td><%=a.text %></td>
+	<%	end 
+		e.elements.each("legs/leg/segment/flight") do |af|
+			%><td><%=af.text %></td>
+	<%	end %>
 	 </tr>
 	</p>
      <% end %>
 </table>
 </div>
-       <div class="content">Freeze this fare for: <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+       <div class="content">Freeze this fare for:<br /> <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
 <% end %>
 </div>
