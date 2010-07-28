@@ -3,6 +3,10 @@ log/
 log
 
 # manage dbs with heroku db:push, db:pull not source control
+*.sqlite3
 db/development.sqlite3
 db/test.sqlite3
 db/schema.rb
+
+# OS generated files
+.DS_Store?
