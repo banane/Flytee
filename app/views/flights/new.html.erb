@@ -12,7 +12,7 @@
 <td> From</td><td>Departing On:</td>
 </tr>
 <tr>
-<td><%= f.text_field "from_code" %>
+<td>
  <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
 
@@ -23,7 +23,6 @@
 <tr><td> To</td><td>Returning on:</td></tr>
 <tr>
 <td>
- <%= f.text_field "to_code" %>
  <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
 <td>
