@@ -100,3 +100,14 @@ body.splash {
    width:500;
 }
 
+#ticket{
+	background: #b3c7e7 url(/images/ticket.png) no-repeat top left;
+	display:inline-block;
+	height: 85px;
+	line-height:85px;
+	padding: 0 1em 0 2em;
+}
+.buy_buttons{
+	margin: 13px 0 17px;
+}
+}

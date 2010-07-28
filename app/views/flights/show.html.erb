@@ -2,10 +2,13 @@
 
 <div class="main">  
 	   <div class="title">
-			<p>Today's Best Price: $<%= @low_fare %></p>
+			<p>Today's Best Price: <span id="ticket">$<%= @low_fare %></span></p>
 	   </div>
 	   
-       <div class="content">Freeze this fare for: <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+       <div class="content">
+         Freeze this fare for: 
+         <div class="buy_buttons"><%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+        </div>
 <div style="text-align:left; font-size:12pt;">
 </div>
 </div>
