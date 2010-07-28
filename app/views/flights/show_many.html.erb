@@ -1,8 +1,26 @@
 <!-- multiple flight select option (version B) -->
+<div id="logo"><img src="/images/freezefare-logo.png" /></div>
 
-<%= f.hidden_field :flight_id, :value=>@flight.id %>
-    <%= f.submit 'Freeze' %>
-<br />
+<div class="main">
+<div style="font-size:12pt">
+<table width="100%">
+<tr><td>From: </td><td>Departing On:</td></tr>
+<tr><td><%= @flight.from_code %></td><td>
+<%= @flight.from_date.strftime("%m/%d/%Y")%> </td></tr>
+
+<tr><td>To:</td><td>Arriving At:</td></tr>
+<tr><td> <%= @flight.to_code %></td><td><%= @flight.to_date.strftime("%m/%d/%Y") %>
+</td></tr>
+</table>
+</div>
+
+<% form_for(@flight_select) do |f| %>
+  <%= f.error_messages %>
+
+       <div class="content">Freeze this fare for: <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+       
+   <br />
+   <div style="font-size:10pt">
 <table border=0>
 <tr><th colspan=2></th><th colspan=8>Departing Flight</th><th colspan=8>Returning Flight</th></tr>
 <tr><th></th>
@@ -29,7 +47,7 @@
 	</p>
      <% end %>
 </table>
- <p>
-    <%= f.submit 'Freeze' %>
-  </p>
+</div>
+       <div class="content">Freeze this fare for: <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
 <% end %>
+</div>
