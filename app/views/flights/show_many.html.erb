@@ -8,27 +8,31 @@
          <div class="buy_buttons"><%= link_to (image_tag '/images/freezefare-5bucks-btn.gif'), :controller=>'survey_users',:action=>'new', :button_label=>'5bucks' %>  <%= link_to (image_tag 'freezefare-10percent-btn.gif'), :action=>'new', :controller=>'survey_users', :button_label=>'10percent' %>
          </div>
 <% form_for(@flight_select) do |f| %>
-  <%= f.error_messages %>
-       
-   <br />
-   <div class="flight_table">
-<table border=1>
+  <%= f.error_messages %>       
+<table border=0 width="100%">
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
 <tr>
 <td>   <%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>     </td>   
        <% e.each_element("price") do |t|   %>       
 	         <%=t.attribute("id") %>        <td> $<%=t.text%></td>	
 	      <% end %>
-	      <td><table border=1>
-		<% e.each_element("legs/leg") do |l| 
+	      <td><table border="0" id="leg_table" width="100%">
+		<% 
+		legcount=0
+		e.each_element("legs/leg") do |l| 
 		   %><tr><%
-		    l.elements.each("airline_display") do |a|
+		    l.each_element("airline_display") do |a|
 		       %><td><%=a.text %></td><%
 			end
 			l.each_element("depart") do |d|          
 			     %><td><%=d.text %></td><%
 			end
-			%> </tr><%
+			
+			l.each_element("stops") do |s|
+			   %><td>Stops: <%=s.text%></td><%
+			end%>
+			</tr><%
+			
 		 end%>
 		 </table>
 		 </td>

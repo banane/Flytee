@@ -108,8 +108,16 @@ body.splash {
 	padding: 0 1em 0 2em;
 }
 
-flight_table {
+.new_flight_select {
 	font-size:10pt;
+	color:#000;
+	line-height:1em;
+	padding:2px;
+	font-weight:bold;
+}
+
+#leg_table {
+  border-bottom:1px solid gray;
 }
 
 img {
