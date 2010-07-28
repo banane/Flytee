@@ -2,9 +2,6 @@ require RAILS_ROOT  + '/lib/Search.rb'
 
 class FlightsController < ApplicationController
 
-
-  # GET /flights
-  # GET /flights.xml
   def index
     @flights = Flight.all
 
@@ -14,8 +11,6 @@ class FlightsController < ApplicationController
     end
   end
 
-  # GET /flights/1
-  # GET /flights/1.xml
   def show
       @flight = Flight.find(params[:id])
 
@@ -25,9 +20,14 @@ class FlightsController < ApplicationController
     end
   end
 
-  # GET /flights/new
-  # GET /flights/new.xml
   def new
+    @airports = Airports.find(:all)
+
+    # do the toggle    
+	version = session[:test_version]
+	version ^=1
+	session[:test_version] = version
+  
     @flight = Flight.new
 
     respond_to do |format|
@@ -50,9 +50,42 @@ class FlightsController < ApplicationController
 
     respond_to do |format|
       if @flight.save
-#        flash[:notice] = 'Flight was successfully created.'
-        format.html { redirect_to(@flight) }
-#       format.xml  { render :xml => @flight, :status => :created, :location => @flight }
+
+		if session[:test_version] then @flight_select = FlightSelect.new end
+
+		@srch = Search.new
+
+		puts @flight.id.to_s + "<<<<<< the flight id"
+#		from_time = @flight.from_date.strftime("%H:%M").to_s
+		from_time = '12:00'
+		from_date = @flight.from_date.strftime("%m/%d/%Y").to_s
+#		to_time =   @flight.to_date.strftime("%H:%M").to_s
+		to_time = '12:00'
+		to_date = @flight.to_date.strftime("%m/%d/%Y").to_s
+		
+		session[:test_version]? count=1 : count=0
+
+		@xml = @srch.start_kayak_search(
+			@flight.from_code, 
+			@flight.to_code,
+			from_date,from_time, to_date, to_time, count)
+			
+		# grab version b value here
+		if session[:test_version] == false then
+		   @xml.elements.each("/searchresult/trips/trip") do |e| 
+		     e.each_element("price") do |t| 
+		       @low_fare = t.text
+		     end
+		   end
+		end
+		
+        format.html {        
+         if session[:test_version] then 
+           render :action => "show_many"  
+         else 
+           render :action => "show"
+         end
+        } 
  		
       else
         format.html { render :action => "new" }
@@ -61,28 +94,6 @@ class FlightsController < ApplicationController
     end
 
   end
-
-  def kayak_search
-  	@flight_select = FlightSelect.new
-  	@srch = Search.new
-  	@flight = Flight.find(params[:id])
-  	puts @flight.id.to_s + "<<<<<< the flight id"
-	from_time = @flight.from_date.strftime("%H:%M").to_s
-    from_date = @flight.from_date.strftime("%m/%d/%Y").to_s
-    to_time =   @flight.to_date.strftime("%H:%M").to_s
-	to_date = @flight.to_date.strftime("%m/%d/%Y").to_s
-	
-	@xml = @srch.start_kayak_search(
-    	@flight.from_code, 
-    	@flight.to_code,
-    	from_date,from_time, to_date, to_time)
-    	
-   
-   render :action => :show_many
-    
-    
-  end
-  
   
   # PUT /flights/1
   # PUT /flights/1.xml

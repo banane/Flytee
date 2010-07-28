@@ -5,30 +5,30 @@
 			<p>Freeze your flight at today's cheapest price so you can have more time to decide if you want to buy.</p>
 		</div>
 <div style="text-align:left; font-size:12pt;">
+<%=h session[:test_version] %>*******TEST VERSION
 <% form_for(@flight) do |f| %>
-<table border=1 width=100%>
+<table border=0 width="100%">
   <%= f.error_messages %>
 <tr>
-<td> From</td><td>To</td>
+<td> From</td><td>Departing On:</td>
 </tr>
 <tr>
-<td>
-    <%= select("flight", "from_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
+<td><%= f.text_field "from_code" %>
+ <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + r.state_short, r.airport_code ] }) %>
 </td>
+
 <td>
-    <%= f.datetime_select :from_date, :default=>14.days.from_now, :minute_step=>30 %>
+    <%= f.date_select :from_date, :default=>14.days.from_now, :minute_step=>30 %>
 </td>
 </tr>
-<tr>
-<td> To</td><td>Returning on:</td>
-</tr>
+<tr><td> To</td><td>Returning on:</td></tr>
 <tr>
 <td>
-    <%= select("flight", "to_code", Citystate.all.collect {|p| [ p.city + ", " + p.state, p.code ] }) %>
+ <%= f.text_field "to_code" %>
+ <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short, r.airport_code ] }) %>
 </td>
 <td>
-    <%= f.label :to_date %><br />
-    <%= f.datetime_select :to_date, :default=>28.days.from_now, :minute_step=>30 %>
+    <%= f.date_select :to_date, :default=>28.days.from_now, :minute_step=>30 %>
 </td>
 </tr>
 

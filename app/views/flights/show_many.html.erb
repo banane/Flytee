@@ -1,18 +1,5 @@
 <!-- multiple flight select option (version B) -->
 
-<% form_for(@flight_select) do |f| %>
-  <%= f.error_messages %>
-
-<h1>Flight search results</h1>
-<div style="border:1px purple dotted; width:300px;">
-Flight Search Criteria:<br />
-From: <%= @flight.from_code %><br />
-To: <%= @flight.to_code %><br />
-Departing: <%= @flight.from_date%> Arriving: <%= @flight.to_date %><br />
-Search ID (flight_id): <%= @flight.id %>
-</div>
-
-
 <%= f.hidden_field :flight_id, :value=>@flight.id %>
     <%= f.submit 'Freeze' %>
 <br />

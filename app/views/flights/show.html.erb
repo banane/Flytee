@@ -1,35 +1,11 @@
-<!-- single fare show (version A) -->
+<div id="logo"><img src="/images/freezefare-logo.png" /></div>
 
-<p>
-  <b>From code:</b>
-  <%=h @flight.from_code %>
-</p>
-
-<p>
-  <b>To code:</b>
-  <%=h @flight.to_code %>
-</p>
-
-<p>
-  <b>From date:</b>
-  <%=h @flight.from_date %>
-</p>
-
-<p>
-  <b>To date:</b>
-  <%=h @flight.to_date %>
-</p>
-
-<p>
-  <b>Prebook date:</b>
-  <%=h @flight.prebook_date %>
-</p>
-
-<p>
-  <b>Boughtflag:</b>
-  <%=h @flight.boughtFlag %>
-</p>
-<%= link_to 'Search', :action=>"kayak_search", :id=> @flight.id %>
-
-<%= link_to 'Edit', edit_flight_path(@flight) %> |
-<%= link_to 'Back', flights_path %>
+<div class="main">  
+	   <div class="title">
+			<p>Today's Best Price: $<%= @low_fare %></p>
+	   </div>
+	   
+       <div class="content">Freeze this fare for: <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+<div style="text-align:left; font-size:12pt;">
+</div>
+</div>

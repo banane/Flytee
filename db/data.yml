@@ -1,0 +1,717 @@
+airports: 
+  columns: 
+  - id
+  - city
+  - state_short
+  - state_long
+  - airport_code
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - Akron/Canton
+    - OH
+    - " Ohio"
+    - CAK
+    - 7/27/2010
+    - 7/27/2010
+  - - "2"
+    - Albany
+    - NY
+    - " New York"
+    - ALB
+    - 7/27/2010
+    - 7/27/2010
+  - - "3"
+    - Albuquerque
+    - NM
+    - " New Mexico"
+    - ABQ
+    - 7/27/2010
+    - 7/27/2010
+  - - "4"
+    - Allentown
+    - PA
+    - " Pennsylvania"
+    - ABE
+    - 7/27/2010
+    - 7/27/2010
+  - - "5"
+    - Amarillo
+    - TX
+    - " Texas"
+    - AMA
+    - 7/27/2010
+    - 7/27/2010
+  - - "6"
+    - Atlanta
+    - GA
+    - " Georgia"
+    - ATL
+    - 7/27/2010
+    - 7/27/2010
+  - - "7"
+    - Atlantic City
+    - NJ
+    - " New Jersey"
+    - AIY
+    - 7/27/2010
+    - 7/27/2010
+  - - "8"
+    - Austin
+    - TX
+    - " Texas"
+    - AUS
+    - 7/27/2010
+    - 7/27/2010
+  - - "9"
+    - Baltimore
+    - MD
+    - " Maryland"
+    - BWI
+    - 7/27/2010
+    - 7/27/2010
+  - - "10"
+    - Bellingham
+    - WA
+    - " Washington"
+    - BLI
+    - 7/27/2010
+    - 7/27/2010
+  - - "11"
+    - Birmingham
+    - AL
+    - " Alabama"
+    - BHM
+    - 7/27/2010
+    - 7/27/2010
+  - - "12"
+    - Boise
+    - ID
+    - " Idaho"
+    - BOI
+    - 7/27/2010
+    - 7/27/2010
+  - - "13"
+    - Boston
+    - MA
+    - " Massachusetts"
+    - BOS
+    - 7/27/2010
+    - 7/27/2010
+  - - "14"
+    - Buffalo
+    - NY
+    - " New York"
+    - BUF
+    - 7/27/2010
+    - 7/27/2010
+  - - "15"
+    - Burlington
+    - VT
+    - " Vermont"
+    - BTV
+    - 7/27/2010
+    - 7/27/2010
+  - - "16"
+    - Charleston
+    - SC
+    - " South Carolina"
+    - CHS
+    - 7/27/2010
+    - 7/27/2010
+  - - "17"
+    - Charlotte
+    - NC
+    - " North Carolina"
+    - CLT
+    - 7/27/2010
+    - 7/27/2010
+  - - "18"
+    - Chicago
+    - IL
+    - " Illinois"
+    - CHI
+    - 7/27/2010
+    - 7/27/2010
+  - - "19"
+    - Chicago
+    - IL
+    - " Illinois"
+    - MDW
+    - 7/27/2010
+    - 7/27/2010
+  - - "20"
+    - Chicago
+    - IL
+    - " Illinois"
+    - ORD
+    - 7/27/2010
+    - 7/27/2010
+  - - "21"
+    - Cincinnati
+    - OH
+    - " Ohio"
+    - CVG
+    - 7/27/2010
+    - 7/27/2010
+  - - "22"
+    - Cleveland
+    - OH
+    - " Ohio"
+    - CLE
+    - 7/27/2010
+    - 7/27/2010
+  - - "23"
+    - Colorado Springs
+    - CO
+    - " Colorado"
+    - COS
+    - 7/27/2010
+    - 7/27/2010
+  - - "24"
+    - Columbus
+    - OH
+    - " Ohio"
+    - CMH
+    - 7/27/2010
+    - 7/27/2010
+  - - "25"
+    - Corpus Christi
+    - TX
+    - " Texas"
+    - CRP
+    - 7/27/2010
+    - 7/27/2010
+  - - "26"
+    - Dayton
+    - OH
+    - " Ohio"
+    - DAY
+    - 7/27/2010
+    - 7/27/2010
+  - - "27"
+    - Denver
+    - CO
+    - " Colorado"
+    - DEN
+    - 7/27/2010
+    - 7/27/2010
+  - - "28"
+    - Denver
+    - CO
+    - " Colorado"
+    - QWM
+    - 7/27/2010
+    - 7/27/2010
+  - - "29"
+    - Des Moines
+    - IA
+    - " Iowa"
+    - DSM
+    - 7/27/2010
+    - 7/27/2010
+  - - "30"
+    - Detroit
+    - MI
+    - " Michigan"
+    - DTT
+    - 7/27/2010
+    - 7/27/2010
+  - - "31"
+    - Detroit
+    - MI
+    - " Michigan"
+    - DTW
+    - 7/27/2010
+    - 7/27/2010
+  - - "32"
+    - El Paso
+    - TX
+    - " Texas"
+    - ELP
+    - 7/27/2010
+    - 7/27/2010
+  - - "33"
+    - Flint
+    - MI
+    - " Michigan"
+    - FNT
+    - 7/27/2010
+    - 7/27/2010
+  - - "34"
+    - Fresno
+    - CA
+    - " California"
+    - FAT
+    - 7/27/2010
+    - 7/27/2010
+  - - "35"
+    - Grand Rapids
+    - MI
+    - " Michigan"
+    - GRR
+    - 7/27/2010
+    - 7/27/2010
+  - - "36"
+    - Harlingen
+    - TX
+    - " Texas"
+    - HRL
+    - 7/27/2010
+    - 7/27/2010
+  - - "37"
+    - Harrisburg
+    - PA
+    - " Pennsylvania"
+    - MDT
+    - 7/27/2010
+    - 7/27/2010
+  - - "38"
+    - Houston
+    - TX
+    - " Texas"
+    - HOU
+    - 7/27/2010
+    - 7/27/2010
+  - - "39"
+    - Houston
+    - TX
+    - " Texas"
+    - IAH
+    - 7/27/2010
+    - 7/27/2010
+  - - "40"
+    - Huntsville
+    - AL
+    - " Alabama"
+    - HSV
+    - 7/27/2010
+    - 7/27/2010
+  - - "41"
+    - Indianapolis
+    - IN
+    - " Indiana"
+    - IND
+    - 7/27/2010
+    - 7/27/2010
+  - - "42"
+    - Jacksonville
+    - FL
+    - " Florida"
+    - JAX
+    - 7/27/2010
+    - 7/27/2010
+  - - "43"
+    - Kansas City
+    - MO
+    - " Missouri"
+    - MCI
+    - 7/27/2010
+    - 7/27/2010
+  - - "44"
+    - Knoxville
+    - TN
+    - " Tennessee"
+    - TYS
+    - 7/27/2010
+    - 7/27/2010
+  - - "45"
+    - Las Vegas
+    - NV
+    - " Nevada"
+    - LAS
+    - 7/27/2010
+    - 7/27/2010
+  - - "46"
+    - Little Rock
+    - AR
+    - " Arkansas"
+    - LIT
+    - 7/27/2010
+    - 7/27/2010
+  - - "47"
+    - Long Beach
+    - CA
+    - " California"
+    - LGB
+    - 7/27/2010
+    - 7/27/2010
+  - - "48"
+    - Los Angeles
+    - CA
+    - " California"
+    - LAX
+    - 7/27/2010
+    - 7/27/2010
+  - - "49"
+    - Louisville
+    - KY
+    - " Kentucky"
+    - SDF
+    - 7/27/2010
+    - 7/27/2010
+  - - "50"
+    - Lubbock
+    - TX
+    - " Texas"
+    - LBB
+    - 7/27/2010
+    - 7/27/2010
+  - - "51"
+    - Madison
+    - WI
+    - " Wisconsin"
+    - MSN
+    - 7/27/2010
+    - 7/27/2010
+  - - "52"
+    - Manchester
+    - NH
+    - " New Hampshire"
+    - MHT
+    - 7/27/2010
+    - 7/27/2010
+  - - "53"
+    - Medford
+    - OR
+    - " Oregon"
+    - MFR
+    - 7/27/2010
+    - 7/27/2010
+  - - "54"
+    - Memphis
+    - TN
+    - " Tennessee"
+    - MEM
+    - 7/27/2010
+    - 7/27/2010
+  - - "55"
+    - Miami
+    - FL
+    - " Florida"
+    - MIA
+    - 7/27/2010
+    - 7/27/2010
+  - - "56"
+    - Miami
+    - FL
+    - " Florida"
+    - MPB
+    - 7/27/2010
+    - 7/27/2010
+  - - "57"
+    - Midland/Odessa
+    - TX
+    - " Texas"
+    - MAF
+    - 7/27/2010
+    - 7/27/2010
+  - - "58"
+    - Milwaukee
+    - WI
+    - " Wisconsin"
+    - MKE
+    - 7/27/2010
+    - 7/27/2010
+  - - "59"
+    - Myrtle Beach
+    - SC
+    - " South Carolina"
+    - MYR
+    - 7/27/2010
+    - 7/27/2010
+  - - "60"
+    - Nantucket
+    - MA
+    - " Massachusetts"
+    - ACK
+    - 7/27/2010
+    - 7/27/2010
+  - - "61"
+    - Nashville
+    - TN
+    - " Tennessee"
+    - BNA
+    - 7/27/2010
+    - 7/27/2010
+  - - "62"
+    - New Orleans
+    - LA
+    - " Louisiana"
+    - MSY
+    - 7/27/2010
+    - 7/27/2010
+  - - "63"
+    - New York
+    - NY
+    - " New York"
+    - JFK
+    - 7/27/2010
+    - 7/27/2010
+  - - "64"
+    - New York
+    - NY
+    - " New York"
+    - LGA
+    - 7/27/2010
+    - 7/27/2010
+  - - "65"
+    - New York
+    - NY
+    - " New York"
+    - NYC
+    - 7/27/2010
+    - 7/27/2010
+  - - "66"
+    - Norfolk
+    - VA
+    - " Virginia"
+    - ORF
+    - 7/27/2010
+    - 7/27/2010
+  - - "67"
+    - Oakland
+    - CA
+    - " California"
+    - OAK
+    - 7/27/2010
+    - 7/27/2010
+  - - "68"
+    - Oklahoma City
+    - OK
+    - " Oklahoma"
+    - OKC
+    - 7/27/2010
+    - 7/27/2010
+  - - "69"
+    - Omaha
+    - NE
+    - " Nebraska"
+    - OMA
+    - 7/27/2010
+    - 7/27/2010
+  - - "70"
+    - Ontario
+    - CA
+    - " California"
+    - ONT
+    - 7/27/2010
+    - 7/27/2010
+  - - "71"
+    - Orlando
+    - FL
+    - " Florida"
+    - MCO
+    - 7/27/2010
+    - 7/27/2010
+  - - "72"
+    - Orlando
+    - FL
+    - " Florida"
+    - ORL
+    - 7/27/2010
+    - 7/27/2010
+  - - "73"
+    - Philadelphia
+    - PA
+    - " Pennsylvania"
+    - PHL
+    - 7/27/2010
+    - 7/27/2010
+  - - "74"
+    - Philadelphia
+    - PA
+    - " Pennsylvania"
+    - TTN
+    - 7/27/2010
+    - 7/27/2010
+  - - "75"
+    - Phoenix
+    - AZ
+    - " Arizona"
+    - PHX
+    - 7/27/2010
+    - 7/27/2010
+  - - "76"
+    - Pittsburgh
+    - PA
+    - " Pennsylvania"
+    - PIT
+    - 7/27/2010
+    - 7/27/2010
+  - - "77"
+    - Portland
+    - ME
+    - " Maine"
+    - PWM
+    - 7/27/2010
+    - 7/27/2010
+  - - "78"
+    - Portland
+    - OR
+    - " Oregon"
+    - PDX
+    - 7/27/2010
+    - 7/27/2010
+  - - "79"
+    - Providence
+    - RI
+    - " Rhode Island"
+    - PVD
+    - 7/27/2010
+    - 7/27/2010
+  - - "80"
+    - Raleigh/Durham
+    - NC
+    - " North Carolina"
+    - RDU
+    - 7/27/2010
+    - 7/27/2010
+  - - "81"
+    - Reno
+    - NV
+    - " Nevada"
+    - RNO
+    - 7/27/2010
+    - 7/27/2010
+  - - "82"
+    - Richmond
+    - VA
+    - " Virginia"
+    - RIC
+    - 7/27/2010
+    - 7/27/2010
+  - - "83"
+    - Rochester
+    - NY
+    - " New York"
+    - ROC
+    - 7/27/2010
+    - 7/27/2010
+  - - "84"
+    - Sacramento
+    - CA
+    - " California"
+    - SMF
+    - 7/27/2010
+    - 7/27/2010
+  - - "85"
+    - Salt Lake City
+    - UT
+    - " Utah"
+    - SLC
+    - 7/27/2010
+    - 7/27/2010
+  - - "86"
+    - San Antonio
+    - TX
+    - " Texas"
+    - SAT
+    - 7/27/2010
+    - 7/27/2010
+  - - "87"
+    - San Diego
+    - CA
+    - " California"
+    - SAN
+    - 7/27/2010
+    - 7/27/2010
+  - - "88"
+    - San Francisco
+    - CA
+    - " California"
+    - SFO
+    - 7/27/2010
+    - 7/27/2010
+  - - "89"
+    - San Jose
+    - CA
+    - " California"
+    - SJC
+    - 7/27/2010
+    - 7/27/2010
+  - - "90"
+    - Sanford
+    - FL
+    - " Florida"
+    - SFB
+    - 7/27/2010
+    - 7/27/2010
+  - - "91"
+    - Santa Ana
+    - CA
+    - " California"
+    - SNA
+    - 7/27/2010
+    - 7/27/2010
+  - - "92"
+    - Savannah
+    - GA
+    - " Georgia"
+    - SAV
+    - 7/27/2010
+    - 7/27/2010
+  - - "93"
+    - Seattle
+    - WA
+    - " Washington"
+    - LKE
+    - 7/27/2010
+    - 7/27/2010
+  - - "94"
+    - Seattle
+    - WA
+    - " Washington"
+    - SEA
+    - 7/27/2010
+    - 7/27/2010
+  - - "95"
+    - Spokane
+    - WA
+    - " Washington"
+    - GEG
+    - 7/27/2010
+    - 7/27/2010
+  - - "96"
+    - Syracuse
+    - NY
+    - " New York"
+    - SYR
+    - 7/27/2010
+    - 7/27/2010
+  - - "97"
+    - Tampa
+    - FL
+    - " Florida"
+    - TPA
+    - 7/27/2010
+    - 7/27/2010
+  - - "98"
+    - Tucson
+    - AZ
+    - " Arizona"
+    - TUS
+    - 7/27/2010
+    - 7/27/2010
+  - - "99"
+    - Tulsa
+    - OK
+    - " Oklahoma"
+    - TUL
+    - 7/27/2010
+    - 7/27/2010
+  - - "100"
+    - West Palm Beach
+    - FL
+    - " Florida"
+    - PBI
+    - 7/27/2010
+    - 7/27/2010
+  - - "101"
+    - Wichita
+    - KS
+    - " Kansas"
+    - ICT
+    - 7/27/2010
+    - 7/27/2010

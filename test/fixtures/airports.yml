@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  city: MyString
+  state_short: MyString
+  state_long: MyString
+  airport_code: MyString
+
+two:
+  city: MyString
+  state_short: MyString
+  state_long: MyString
+  airport_code: MyString
