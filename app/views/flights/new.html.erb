@@ -14,7 +14,7 @@
 </tr>
 <tr>
 <td><%= f.text_field "from_code" %>
- <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + r.state_short, r.airport_code ] }) %>
+ <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
 
 <td>
@@ -25,7 +25,7 @@
 <tr>
 <td>
  <%= f.text_field "to_code" %>
- <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short, r.airport_code ] }) %>
+ <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
 <td>
     <%= f.date_select :to_date, :default=>28.days.from_now, :minute_step=>30 %>
