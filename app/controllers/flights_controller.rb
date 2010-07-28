@@ -63,7 +63,7 @@ class FlightsController < ApplicationController
 		to_time = '12:00'
 		to_date = @flight.to_date.strftime("%m/%d/%Y").to_s
 		
-		session[:test_version]? count=1 : count=0
+		session[:test_version]? count=nil : count=1 
 
 		@xml = @srch.start_kayak_search(
 			@flight.from_code, 

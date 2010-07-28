@@ -108,6 +108,10 @@ body.splash {
 	padding: 0 1em 0 2em;
 }
 
+flight_table {
+	font-size:10pt;
+}
+
 img {
   border:0;
 }

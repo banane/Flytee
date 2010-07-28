@@ -7,6 +7,8 @@ class Search
   @@port = 80
   @@token = '92Dt_nblxFAzwnwRX5ENYw'
   @@lastcount = 0
+
+
   
   @@global_xml = REXML::Document.new
 
@@ -23,7 +25,7 @@ class Search
     to_time = URI.escape(to_time)
     travelers = 1
      
-    url = "/s/apisearch?basicmode=true&oneway=n&origin=#{from_code}&destination=#{to_code}&destcode=&depart_date=#{from_date}&depart_time=#{from_time}&return_date=#{to_date}&return_time=#{to_time}&travelers=#{travelers}&cabin=f&action=doflights&apimode=1"
+    url = "/s/apisearch?basicmode=true&oneway=n&origin=#{from_code}&destination=#{to_code}&destcode=&depart_date=#{from_date}&depart_time=#{from_time}&return_date=#{to_date}&return_time=#{to_time}&travelers=#{travelers}&s=p&cabin=f&action=doflights&apimode=1"
     if count
       url += "&c=#{count}"
     end
@@ -41,7 +43,7 @@ class Search
       end
     end    
        
-    more = poll_results(searchid, sid)
+    more = poll_results(searchid, sid, count)
     while more == 'true' do
       more = poll_results(searchid, sid)
       puts "more to come: #{more} "
@@ -49,12 +51,17 @@ class Search
     end
   
     #one final call to get all results (instead of only 10)
-    poll_results(searchid, sid)
+    poll_results(searchid, sid, count)
 	return @@global_xml 
   end
   
-  def poll_results(searchid, sid)
-    search_url = "/s/apibasic/flight?searchid=#{searchid}&apimode=1&_sid_=#{sid}"
+  def poll_results(searchid, sid, count)
+  
+    search_url = "/s/apibasic/flight?searchid=#{searchid}&apimode=1&s=p"
+    if count == 1
+      search_url += "&c=#{count}"
+    end
+    search_url += "&_sid_=#{sid}"
     Net::HTTP.start(@@hostname, @@port) do |http|
       response = http.get(search_url)
       puts "http://#{@@hostname}#{search_url}"
