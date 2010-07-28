@@ -1,23 +1,16 @@
 <!-- multiple flight select option (version B) -->
 <div id="logo"><img src="/images/freezefare-logo.png" /></div>
 
-<div class="main">
-<div style="font-size:12pt">
-<table width="100%">
-<tr><td>From: </td><td>Departing On:</td></tr>
-<tr><td><%= @flight.from_code %></td><td>
-<%= @flight.from_date.strftime("%m/%d/%Y")%> </td></tr>
-
-<tr><td>To:</td><td>Arriving At:</td></tr>
-<tr><td> <%= @flight.to_code %></td><td><%= @flight.to_date.strftime("%m/%d/%Y") %>
-</td></tr>
-</table>
-</div>
-
+<div class="main">  
+	   <div class="title">
+         Freeze one of these fares
+         </div>
+         <div class="buy_buttons"><%= link_to (image_tag '/images/freezefare-5bucks-btn.gif'), :controller=>'survey_users',:action=>'new', :button_label=>'5bucks' %>  <%= link_to (image_tag 'freezefare-10percent-btn.gif'), :action=>'new', :controller=>'survey_users', :button_label=>'10percent' %>
+         </div>
 <% form_for(@flight_select) do |f| %>
   <%= f.error_messages %>
 
-       <div class="content">Freeze this fare for: <br /><%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+       
        
    <br />
    <div style="font-size:10pt">
@@ -45,7 +38,11 @@
 	</p>
      <% end %>
 </table>
-</div>
-       <div class="content">Freeze this fare for:<br /> <%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
 <% end %>
+
+ <div class="content">
+         Freeze this fare for: 
+         <div class="buy_buttons"><%= link_to (image_tag '/images/freezefare-5bucks-btn.gif'), :controller=>'survey_users',:action=>'new', :button_label=>'5bucks' %>  <%= link_to (image_tag 'freezefare-10percent-btn.gif'), :action=>'new', :controller=>'survey_users', :button_label=>'10percent' %>
+         </div>
+ </div>
 </div>
