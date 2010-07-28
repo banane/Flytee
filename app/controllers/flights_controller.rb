@@ -111,6 +111,15 @@ class FlightsController < ApplicationController
       end
     end
   end
+  
+  def thanks
+#	@flight.button_label = params[:button_label]  
+	respond_to do |format|
+	  format.html
+	  format.xml { redirect_to(@flight) }
+	end
+  
+  end
 
   # DELETE /flights/1
   # DELETE /flights/1.xml

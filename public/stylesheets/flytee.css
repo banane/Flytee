@@ -107,6 +107,11 @@ body.splash {
 	line-height:85px;
 	padding: 0 1em 0 2em;
 }
+
+img {
+  border:0;
+}
+
 .buy_buttons{
 	margin: 13px 0 17px;
 }

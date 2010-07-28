@@ -7,8 +7,8 @@
 	   
        <div class="content">
          Freeze this fare for: 
-         <div class="buy_buttons"><%= image_submit_tag '/images/freezefare-5bucks-btn.gif'%>  <%= image_submit_tag 'freezefare-10percent-btn.gif' %></div>
+         <div class="buy_buttons"><%= link_to (image_tag '/images/freezefare-5bucks-btn.gif'), :controller=>'survey_users',:action=>'new', :button_label=>'5bucks' %>  <%= link_to (image_tag 'freezefare-10percent-btn.gif'), :action=>'new', :controller=>'survey_users', :button_label=>'10percent' %>
+         </div></div>
         </div>
-<div style="text-align:left; font-size:12pt;">
-</div>
+
 </div>
