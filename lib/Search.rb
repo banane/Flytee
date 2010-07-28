@@ -5,7 +5,8 @@ require 'uri'
 class Search
   @@hostname = 'api.kayak.com'
   @@port = 80
-  @@token = '92Dt_nblxFAzwnwRX5ENYw'
+#  @@token = '92Dt_nblxFAzwnwRX5ENYw'
+  @@token = 'GywW52rL3BWGYrgV_m3hVA'
   @@lastcount = 0
 
 
@@ -14,10 +15,9 @@ class Search
 
   def start_kayak_search(from_code, to_code, from_date, from_time, to_date, to_time, count)
 	
-    token ='92Dt_nblxFAzwnwRX5ENYw'
-    sid = getsession(token);
+    sid = getsession(@@token);
 
-	# should pass in # of travelers
+	# hard coded params: default cabin, anytime, and 1 passenger
      
     from_date = URI.escape(from_date)
     from_time = URI.escape(from_time)

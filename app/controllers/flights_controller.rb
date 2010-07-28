@@ -52,10 +52,10 @@ class FlightsController < ApplicationController
       if @flight.save
 
 		if session[:test_version] then @flight_select = FlightSelect.new end
+		puts @flight.id.to_s + "<<<<<< the flight id"
 
 		@srch = Search.new
 
-		puts @flight.id.to_s + "<<<<<< the flight id"
 #		from_time = @flight.from_date.strftime("%H:%M").to_s
 		from_time = '12:00'
 		from_date = @flight.from_date.strftime("%m/%d/%Y").to_s
