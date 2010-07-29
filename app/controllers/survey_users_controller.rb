@@ -72,6 +72,16 @@ class SurveyUsersController < ApplicationController
       end
     end
   end
+  
+  def download
+    @surveys = SurveyUser.find(:all, :conditions=>"test_version != ''")
+     respond_to do |format|
+       format.html
+       format.xml { render :xml => @surveys}
+     end
+#    render :action => "download" 
+  end
+  
 
   # DELETE /survey_users/1
   # DELETE /survey_users/1.xml

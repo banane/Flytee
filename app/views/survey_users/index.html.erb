@@ -1,7 +1,8 @@
 <div id="dumpTable"><h1>surveys</h1> Total so far: <%=h @survey_users.count %>, last Survey submitted: <%=h @survey_users.last.created_at %>
-<br />
-<a href="#feedback">See longer narratives- Feedback & Price Long</a>
-<br />
+<ul>
+<li><a href="#feedback">See longer narratives- Feedback & Price Long</a>
+<li><a href="/download">download CSV of latest survey (short Qualtrics one)</a>
+</ul>
 
 <table width="1000px" border=1>
   <tr>
@@ -24,6 +25,11 @@
     <th>Price</th>
     <th>Price<br />-long</th>
     <th width="300px">Feedback</th>
+    <th>Booking Wait</th>
+    <th>Research Goals</th>
+    <th>Miss Out Fares</th>
+    <th>test version</th>
+    <th>button label</th>
   </tr>
 
 <% @survey_users.each do |survey_user| %>
@@ -47,6 +53,12 @@
     <td><%=h survey_user.price %></td>
     <td><%=h survey_user.price_long %></td>
     <td width="300px"><%=h survey_user.feedback %></td>
+    <td><%=h survey_user.booking_wait %></td>
+    <td><%=h survey_user.research_goals %></td>
+    <td><%=h survey_user.miss_out_fares %></td>
+    <td><%=h survey_user.test_version %></td>
+    <td><%=h survey_user.button_label %></td>
+    
    
   </tr>
 <% end %>
