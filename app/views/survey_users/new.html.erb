@@ -18,51 +18,26 @@ Please fill out the survey below:
 	<%= f.hidden_field :button_label, :value=>params['button_label'] %>
 	<%= f.hidden_field :test_version, :value=>val %>
 
-  <h3>Do you book most of your own travel?</h3>
-  <div>
-  <%= f.radio_button :book_travel, 'Yes' %> Yes<br />
-  <%= f.radio_button :book_travel, 'No' %> No<br />
-  <%= f.radio_button :book_travel, 'someone_else' %>  I'm involved in the process, but someone else books it in the end
-  </div> 
-  
-  <h3>What is the reason behind most of your air travel?</h3>
-    <div><%= f.radio_button :reason_book, 'Business' %> Business</div>
-    <div><%= f.radio_button :reason_book, 'Pleasure' %> Pleasure</div>
-    <div><%= f.radio_button :reason_book, 'Half of each' %> About half personal, half business</div>
 
-  <h3>What resources do you use to book your plane travel?</h3>
+<h3>Please enter your email below if we may ask you follow-up questions & keep you updated. We won't share or sell your email. </h3>
+<div><%= f.text_field :contact_long %><br /><div>
 
-    <div><%= f.check_box :res_bing, {} ,'Bing' %>Bing Travel / Farecast</div>
-    <div><%= f.check_box :res_expedia,  {} ,'Expedia' %>Expedia</div>
-    <div><%= f.check_box :res_kayak,  {} ,'Kayak' %>Kayak</div>
-    <div><%= f.check_box :res_momondo, {} , 'Momondo' %>Momondo</div>
-    <div><%= f.check_box :res_orbitz, {} , 'Orbitz' %>Orbitz</div>
-    <div><%= f.check_box :res_travelocity, {} ,'Travelocity' %>Travelocity</div>
-	<div><%= f.check_box :resources,  {} ,'Other' %> <%= f.text_field :resources %>
+<h3>How long do you wait between your first airfare search for a trip and booking the airfare? </h3>
+<div><%= f.text_area :booking_wait, :cols=>20, :rows=>10 %></div>
 
-    <h3>Do you usually book your flights on the same day that you start your flight search?</h3>
-      <%= f.radio_button :book_same_day, 'Yes' %> Yes<br />
-      <%= f.radio_button :book_same_day, 'No' %> No, because:  <%= f.text_field :book_same_day_long %>
+<h3>Do you research for flights? If so, why? What are your goals when researching?</h3>
+<div><%= f.text_area :research_goals, :cols=>20, :rows=>10 %></div>
 
-  
-<h3>How much would you pay to hold your flight for a week at today's price?</h3>
-<div><%= f.radio_button :price, 'Nothing' %>Nothing - I wouldn't pay for this service</div>
-<div><%= f.radio_button :price, 'under $10' %>Under $10</div>
-<div><%= f.radio_button :price, '$10 - $20' %>$10 - $20</div>
-<div><%= f.radio_button :price, 'Over $20' %>Over $20</div>
-<div><%= f.radio_button :price, 'It Depends' %>It depends on the flight - I'll explain below</div>
-<div><%= f.text_area :price_long, :cols=>20, :rows=>10 %></div>
-
-    <h3>Can we contact you via email to ask you follow-up questions &amp; keep you updated? We won&#8217;t share or sell your email.</h3>
-      <%= f.radio_button :contact, 'Yes' %> Yes at this email address: 
-      <%= f.text_field :contact_long %><br />
-      <%= f.radio_button :contact, 'No' %> No<br /><br />
-
+<h3>Are you concerned with missing out on a good deal when searching for airfare?</h3>
+<div>
+<%= f.radio_button :miss_out_fares, 'Yes' %> Yes<br />
+<%= f.radio_button :miss_out_fares, 'No' %> No
+      </div>
+      
   <div class="button">
     <%= image_submit_tag 'freezefare-submit-btn.gif' %>
   </div>
 
-<%= params[:moo]%>
 <% end %>
 
 </div>
