@@ -3,7 +3,7 @@
 contact_long, booking_wait, research_goals, miss_out_fares, test_version, button_label<br />
 <% @surveys.each do |s| %>
 
-"<%= if(s.contact_long) then puts "real_email" else puts "no_email" end%>","<%=h s.booking_wait%>", "<%=h s.research_goals%>","<%=h s.miss_out_fares%>","<%=h s.test_version%>","<%=h s.button_label%>"<br />
+"<% if s.contact_long.length > 0 %>Email<% else %>No Email <% end %>","<%=h s.booking_wait%>", "<%=h s.research_goals%>","<%=h s.miss_out_fares%>","<%=h s.test_version%>","<%=h s.button_label%>"<br />
 
 <% end %>
 </div>
