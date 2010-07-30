@@ -1,14 +1,17 @@
 <div id="logo"><img src="/images/freezefare-logo.png" /></div>
-
 <div class="main">  
 	   <div class="title">
 			<p>Today's Best Price: <span id="ticket">$<%= @low_fare %></span></p>
 	   </div>
 	   
+<% 
+@flight_select = FlightSelect.new
+form_for(@flight_select) do |f| %>
        <div class="content">
-         Freeze this fare for: 
-         <div class="buy_buttons"><%= link_to (image_tag '/images/freezefare-5bucks-btn.gif'), :controller=>'survey_users',:action=>'new', :button_label=>'5bucks' %>  <%= link_to (image_tag 'freezefare-10percent-btn.gif'), :action=>'new', :controller=>'survey_users', :button_label=>'10percent' %>
+         Freeze this fare for<br />
+         <%= f.text_field :freeze_time, :size=>10 %>
+         <div class="buy_buttons"><%= image_submit_tag '/images/freezefare-freeze-btn.gif' %>
          </div></div>
         </div>
-
+<% end %>
 </div>

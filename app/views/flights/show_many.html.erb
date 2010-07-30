@@ -1,14 +1,15 @@
 <!-- multiple flight select option (version B) -->
 <div id="logo"><img src="/images/freezefare-logo.png" /></div>
+<% form_for(@flight_select) do |f| %>
+  <%= f.error_messages %>       
 
 <div class="main">  
 	   <div class="title">
-         Freeze one of these fares
+         Freeze one of these fares for:
          </div>
-         <div class="buy_buttons"><%= link_to (image_tag '/images/freezefare-5bucks-btn.gif'), :controller=>'survey_users',:action=>'new', :button_label=>'5bucks' %>  <%= link_to (image_tag 'freezefare-10percent-btn.gif'), :action=>'new', :controller=>'survey_users', :button_label=>'10percent' %>
+         <%= f.text_field :freeze_time, :size=>'10' %>
+         <div class="buy_buttons"><%= image_submit_tag '/images/freezefare-freeze-btn.gif' %>
          </div>
-<% form_for(@flight_select) do |f| %>
-  <%= f.error_messages %>       
 <table border=0 width="100%">
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
 <tr>
@@ -40,10 +41,5 @@
 	</p>
      <% end %>
 </table>
-<% end %>
- <div class="content">
-         Freeze this fare for: 
-         <div class="buy_buttons"><%= link_to (image_tag '/images/freezefare-5bucks-btn.gif'), :controller=>'survey_users',:action=>'new', :button_label=>'5bucks' %>  <%= link_to (image_tag 'freezefare-10percent-btn.gif'), :action=>'new', :controller=>'survey_users', :button_label=>'10percent' %>
-         </div>
- </div>
-</div>
+
+</div><% end %>

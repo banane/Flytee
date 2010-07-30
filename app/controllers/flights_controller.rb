@@ -13,6 +13,7 @@ class FlightsController < ApplicationController
 
   def show
       @flight = Flight.find(params[:id])
+      @flight_select = FlightSelect.new
 
     respond_to do |format|
       format.html # show.html.erb

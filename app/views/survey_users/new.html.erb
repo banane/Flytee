@@ -5,8 +5,7 @@
 
 <h1>We're sorry- We're not quite ready yet</h1>
 <h2>
-But we'd love to hear about your travel planning so we can make airline booking easier for you!<br />
-Please fill out the survey below: 
+
 </h2>
 
 <hr />
@@ -19,22 +18,10 @@ Please fill out the survey below:
 	<%= f.hidden_field :test_version, :value=>val %>
 
 
-<h3>Please enter your email below if we may ask you follow-up questions & keep you updated. We won't share or sell your email. </h3>
+<h3>Enter your email below to join our Beta Program</h3>
 <div><%= f.text_field :contact_long %><br /><div>
 
-<h3>How long do you wait between your first airfare search for a trip and booking the airfare? </h3>
-<div><%= f.text_area :booking_wait, :cols=>20, :rows=>10 %></div>
-
-<h3>Do you research for flights? If so, why? What are your goals when researching?</h3>
-<div><%= f.text_area :research_goals, :cols=>20, :rows=>10 %></div>
-
-<h3>Are you concerned with missing out on a good deal when searching for airfare?</h3>
-<div>
-<%= f.radio_button :miss_out_fares, 'Yes' %> Yes<br />
-<%= f.radio_button :miss_out_fares, 'No' %> No
-      </div>
-      
-  <div class="button">
+  <div class="buy_buttons">
     <%= image_submit_tag 'freezefare-submit-btn.gif' %>
   </div>
 

@@ -46,8 +46,9 @@ class SurveyUsersController < ApplicationController
 
     respond_to do |format|
       if @survey_user.save
-        flash[:notice] = 'Your survey was successfully added.'
-        format.html { redirect_to(@survey_user) }
+     #   flash[:notice] = 'Your survey was successfully added.'
+     #   format.html { redirect_to(@survey_user) }
+         format.html { redirect_to('http://wharton.qualtrics.com/SE?SID=SV_5jQgyf6dQTq4VjC') }
         format.xml  { render :xml => @survey_user, :status => :created, :location => @survey_user }
       else
         format.html { render :action => "new" }
