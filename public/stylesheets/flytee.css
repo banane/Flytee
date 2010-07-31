@@ -127,4 +127,7 @@ img {
 .buy_buttons{
 	margin: 13px 0 17px;
 }
+#new_flight_select h3{
+	color: #6A6D71;
+	font-size: 21px;
 }
