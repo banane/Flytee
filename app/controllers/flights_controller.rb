@@ -71,11 +71,12 @@ class FlightsController < ApplicationController
     from_date = @flight.from_date.strftime("%m/%d/%Y").to_s
     to_time =   @flight.to_date.strftime("%H:%M").to_s
 	to_date = @flight.to_date.strftime("%m/%d/%Y").to_s
+	count = nil
 	
 	@xml = @srch.start_kayak_search(
     	@flight.from_code, 
     	@flight.to_code,
-    	from_date,from_time, to_date, to_time)
+    	from_date,from_time, to_date, to_time,count)
     	
    
    render :action => :show_many

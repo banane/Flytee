@@ -1,0 +1,2391 @@
+
+--- 
+flights: 
+  columns: 
+  - id
+  - from_code
+  - to_code
+  - from_date
+  - to_date
+  - prebook_date
+  - boughtFlag
+  - created_at
+  - updated_at
+  - user_id
+  records: 
+  - - "1"
+    - ATL
+    - CHI
+    - 2010-08-13 18:00:00
+    - 2010-08-15 18:00:00
+    - 2010-07-25 18:34:42
+    - 
+    - 2010-07-25 18:34:51
+    - 2010-07-25 18:34:51
+    - 
+
+--- 
+flight_selects: 
+  columns: 
+  - id
+  - user_id
+  - kayak_flight_id
+  - created_at
+  - updated_at
+  - flight_id
+  records: 
+  - - "1"
+    - 
+    - value9e9c68621a224860bee4259092ff1f61
+    - 2010-07-25 18:44:00
+    - 2010-07-25 18:44:00
+    - "1"
+
+--- 
+airportmaster: 
+  columns: 
+  - city
+  - state
+  - state_long
+  - code
+  records: 
+  - - Akron/Canton
+    - OH
+    - " Ohio"
+    - CAK
+  - - Albany
+    - NY
+    - " New York"
+    - ALB
+  - - Albuquerque
+    - NM
+    - " New Mexico"
+    - ABQ
+  - - Allentown
+    - PA
+    - " Pennsylvania"
+    - ABE
+  - - Amarillo
+    - TX
+    - " Texas"
+    - AMA
+  - - Atlanta
+    - GA
+    - " Georgia"
+    - ATL
+  - - Atlantic City
+    - NJ
+    - " New Jersey"
+    - AIY
+  - - Austin
+    - TX
+    - " Texas"
+    - AUS
+  - - Baltimore
+    - MD
+    - " Maryland"
+    - BWI
+  - - Bellingham
+    - WA
+    - " Washington"
+    - BLI
+  - - Birmingham
+    - AL
+    - " Alabama"
+    - BHM
+  - - Boise
+    - ID
+    - " Idaho"
+    - BOI
+  - - Boston
+    - MA
+    - " Massachusetts"
+    - BOS
+  - - Buffalo
+    - NY
+    - " New York"
+    - BUF
+  - - Burlington
+    - VT
+    - " Vermont"
+    - BTV
+  - - Charleston
+    - SC
+    - " South Carolina"
+    - CHS
+  - - Charlotte
+    - NC
+    - " North Carolina"
+    - CLT
+  - - Chicago
+    - IL
+    - " Illinois"
+    - CHI
+  - - Chicago
+    - IL
+    - " Illinois"
+    - MDW
+  - - Chicago
+    - IL
+    - " Illinois"
+    - ORD
+  - - Cincinnati
+    - OH
+    - " Ohio"
+    - CVG
+  - - Cleveland
+    - OH
+    - " Ohio"
+    - CLE
+  - - Colorado Springs
+    - CO
+    - " Colorado"
+    - COS
+  - - Columbus
+    - OH
+    - " Ohio"
+    - CMH
+  - - Corpus Christi
+    - TX
+    - " Texas"
+    - CRP
+  - - Dayton
+    - OH
+    - " Ohio"
+    - DAY
+  - - Denver
+    - CO
+    - " Colorado"
+    - DEN
+  - - Denver
+    - CO
+    - " Colorado"
+    - QWM
+  - - Des Moines
+    - IA
+    - " Iowa"
+    - DSM
+  - - Detroit
+    - MI
+    - " Michigan"
+    - DTT
+  - - Detroit
+    - MI
+    - " Michigan"
+    - DTW
+  - - El Paso
+    - TX
+    - " Texas"
+    - ELP
+  - - Flint
+    - MI
+    - " Michigan"
+    - FNT
+  - - Fresno
+    - CA
+    - " California"
+    - FAT
+  - - Grand Rapids
+    - MI
+    - " Michigan"
+    - GRR
+  - - Harlingen
+    - TX
+    - " Texas"
+    - HRL
+  - - Harrisburg
+    - PA
+    - " Pennsylvania"
+    - MDT
+  - - Houston
+    - TX
+    - " Texas"
+    - HOU
+  - - Houston
+    - TX
+    - " Texas"
+    - IAH
+  - - Huntsville
+    - AL
+    - " Alabama"
+    - HSV
+  - - Indianapolis
+    - IN
+    - " Indiana"
+    - IND
+  - - Jacksonville
+    - FL
+    - " Florida"
+    - JAX
+  - - Kansas City
+    - MO
+    - " Missouri"
+    - MCI
+  - - Knoxville
+    - TN
+    - " Tennessee"
+    - TYS
+  - - Las Vegas
+    - NV
+    - " Nevada"
+    - LAS
+  - - Little Rock
+    - AR
+    - " Arkansas"
+    - LIT
+  - - Long Beach
+    - CA
+    - " California"
+    - LGB
+  - - Los Angeles
+    - CA
+    - " California"
+    - LAX
+  - - Louisville
+    - KY
+    - " Kentucky"
+    - SDF
+  - - Lubbock
+    - TX
+    - " Texas"
+    - LBB
+  - - Madison
+    - WI
+    - " Wisconsin"
+    - MSN
+  - - Manchester
+    - NH
+    - " New Hampshire"
+    - MHT
+  - - Medford
+    - OR
+    - " Oregon"
+    - MFR
+  - - Memphis
+    - TN
+    - " Tennessee"
+    - MEM
+  - - Miami
+    - FL
+    - " Florida"
+    - MIA
+  - - Miami
+    - FL
+    - " Florida"
+    - MPB
+  - - Midland/Odessa
+    - TX
+    - " Texas"
+    - MAF
+  - - Milwaukee
+    - WI
+    - " Wisconsin"
+    - MKE
+  - - Myrtle Beach
+    - SC
+    - " South Carolina"
+    - MYR
+  - - Nantucket
+    - MA
+    - " Massachusetts"
+    - ACK
+  - - Nashville
+    - TN
+    - " Tennessee"
+    - BNA
+  - - New Orleans
+    - LA
+    - " Louisiana"
+    - MSY
+  - - New York
+    - NY
+    - " New York"
+    - JFK
+  - - New York
+    - NY
+    - " New York"
+    - LGA
+  - - New York
+    - NY
+    - " New York"
+    - NYC
+  - - Norfolk
+    - VA
+    - " Virginia"
+    - ORF
+  - - Oakland
+    - CA
+    - " California"
+    - OAK
+  - - Oklahoma City
+    - OK
+    - " Oklahoma"
+    - OKC
+  - - Omaha
+    - NE
+    - " Nebraska"
+    - OMA
+  - - Ontario
+    - CA
+    - " California"
+    - ONT
+  - - Orlando
+    - FL
+    - " Florida"
+    - MCO
+  - - Orlando
+    - FL
+    - " Florida"
+    - ORL
+  - - Philadelphia
+    - PA
+    - " Pennsylvania"
+    - PHL
+  - - Philadelphia
+    - PA
+    - " Pennsylvania"
+    - TTN
+  - - Phoenix
+    - AZ
+    - " Arizona"
+    - PHX
+  - - Pittsburgh
+    - PA
+    - " Pennsylvania"
+    - PIT
+  - - Portland
+    - ME
+    - " Maine"
+    - PWM
+  - - Portland
+    - OR
+    - " Oregon"
+    - PDX
+  - - Providence
+    - RI
+    - " Rhode Island"
+    - PVD
+  - - Raleigh/Durham
+    - NC
+    - " North Carolina"
+    - RDU
+  - - Reno
+    - NV
+    - " Nevada"
+    - RNO
+  - - Richmond
+    - VA
+    - " Virginia"
+    - RIC
+  - - Rochester
+    - NY
+    - " New York"
+    - ROC
+  - - Sacramento
+    - CA
+    - " California"
+    - SMF
+  - - Salt Lake City
+    - UT
+    - " Utah"
+    - SLC
+  - - San Antonio
+    - TX
+    - " Texas"
+    - SAT
+  - - San Diego
+    - CA
+    - " California"
+    - SAN
+  - - San Francisco
+    - CA
+    - " California"
+    - SFO
+  - - San Jose
+    - CA
+    - " California"
+    - SJC
+  - - Sanford
+    - FL
+    - " Florida"
+    - SFB
+  - - Santa Ana
+    - CA
+    - " California"
+    - SNA
+  - - Savannah
+    - GA
+    - " Georgia"
+    - SAV
+  - - Seattle
+    - WA
+    - " Washington"
+    - LKE
+  - - Seattle
+    - WA
+    - " Washington"
+    - SEA
+  - - Spokane
+    - WA
+    - " Washington"
+    - GEG
+  - - Syracuse
+    - NY
+    - " New York"
+    - SYR
+  - - Tampa
+    - FL
+    - " Florida"
+    - TPA
+  - - Tucson
+    - AZ
+    - " Arizona"
+    - TUS
+  - - Tulsa
+    - OK
+    - " Oklahoma"
+    - TUL
+  - - West Palm Beach
+    - FL
+    - " Florida"
+    - PBI
+  - - Wichita
+    - KS
+    - " Kansas"
+    - ICT
+
+--- 
+routes: 
+  columns: 
+  - id
+  - origin_code
+  - dest_code
+  - rank
+  - pass_per_day
+  - carrier_code
+  - ave_fare
+  - created_at
+  - updated_at
+  records: 
+  - - "1427"
+    - ATL
+    - CHI
+    - "19"
+    - "3157.934783"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1428"
+    - ATL
+    - JFK
+    - "6"
+    - "6010.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1429"
+    - ATL
+    - LGA
+    - "6"
+    - "6010.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1430"
+    - ATL
+    - MDW
+    - "19"
+    - "3157.934783"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1431"
+    - ATL
+    - NYC
+    - "6"
+    - "6010.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1432"
+    - ATL
+    - ORD
+    - "19"
+    - "3157.934783"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1433"
+    - BOS
+    - CHI
+    - "20"
+    - "3148.26087"
+    - AA
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1434"
+    - BOS
+    - JFK
+    - "12"
+    - "3437.717391"
+    - B6
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1435"
+    - BOS
+    - LGA
+    - "12"
+    - "3437.717391"
+    - B6
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1436"
+    - BOS
+    - MDW
+    - "20"
+    - "3148.26087"
+    - AA
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1437"
+    - BOS
+    - NYC
+    - "12"
+    - "3437.717391"
+    - B6
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1438"
+    - BOS
+    - ORD
+    - "20"
+    - "3148.26087"
+    - AA
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1439"
+    - CHI
+    - DEN
+    - "23"
+    - "3014.782609"
+    - F9
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1440"
+    - CHI
+    - JFK
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1441"
+    - CHI
+    - LAS
+    - "21"
+    - "3080.543478"
+    - US
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1442"
+    - CHI
+    - LAX
+    - "11"
+    - "3491.521739"
+    - WN
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1443"
+    - CHI
+    - LGA
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1444"
+    - CHI
+    - MCO
+    - "24"
+    - "2955.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1445"
+    - CHI
+    - NYC
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1446"
+    - CHI
+    - ORL
+    - "24"
+    - "2955.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1447"
+    - CHI
+    - QWM
+    - "23"
+    - "3014.782609"
+    - F9
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1448"
+    - CLT
+    - JFK
+    - "25"
+    - "2942.173913"
+    - B6
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1449"
+    - CLT
+    - LGA
+    - "25"
+    - "2942.173913"
+    - B6
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1450"
+    - CLT
+    - NYC
+    - "25"
+    - "2942.173913"
+    - B6
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1451"
+    - JFK
+    - MCO
+    - "3"
+    - "7282.282609"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1452"
+    - JFK
+    - ORL
+    - "3"
+    - "7282.282609"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1453"
+    - JFK
+    - SFO
+    - "5"
+    - "6533.478261"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1454"
+    - JFK
+    - TPA
+    - "13"
+    - "3429.891304"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1455"
+    - LAS
+    - JFK
+    - "8"
+    - "4528.152174"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1456"
+    - LAS
+    - LGA
+    - "8"
+    - "4528.152174"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1457"
+    - LAS
+    - NYC
+    - "8"
+    - "4528.152174"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1458"
+    - LAS
+    - SFO
+    - "10"
+    - "3546.956522"
+    - US
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1459"
+    - LAX
+    - JFK
+    - "2"
+    - "8178.913044"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1460"
+    - LAX
+    - LGA
+    - "2"
+    - "8178.913044"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1461"
+    - LAX
+    - LKE
+    - "18"
+    - "3183.586957"
+    - WN
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1462"
+    - LAX
+    - NYC
+    - "2"
+    - "8178.913044"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1463"
+    - LAX
+    - SEA
+    - "18"
+    - "3183.586957"
+    - WN
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1464"
+    - LAX
+    - SFO
+    - "7"
+    - "4851.086957"
+    - AA
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1465"
+    - LGA
+    - MCO
+    - "3"
+    - "7282.282609"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1466"
+    - LGA
+    - ORL
+    - "3"
+    - "7282.282609"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1467"
+    - LGA
+    - SFO
+    - "5"
+    - "6533.478261"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1468"
+    - LGA
+    - TPA
+    - "13"
+    - "3429.891304"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1469"
+    - MCO
+    - PHL
+    - "17"
+    - "3198.804348"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1470"
+    - MCO
+    - TTN
+    - "17"
+    - "3198.804348"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1471"
+    - MDW
+    - DEN
+    - "23"
+    - "3014.782609"
+    - F9
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1472"
+    - MDW
+    - JFK
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1473"
+    - MDW
+    - LAS
+    - "21"
+    - "3080.543478"
+    - US
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1474"
+    - MDW
+    - LAX
+    - "11"
+    - "3491.521739"
+    - WN
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1475"
+    - MDW
+    - LGA
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1476"
+    - MDW
+    - MCO
+    - "24"
+    - "2955.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1477"
+    - MDW
+    - NYC
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1478"
+    - MDW
+    - ORL
+    - "24"
+    - "2955.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1479"
+    - MDW
+    - QWM
+    - "23"
+    - "3014.782609"
+    - F9
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1480"
+    - MIA
+    - JFK
+    - "9"
+    - "3984.130435"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1481"
+    - MIA
+    - LGA
+    - "9"
+    - "3984.130435"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1482"
+    - MIA
+    - NYC
+    - "9"
+    - "3984.130435"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1483"
+    - MPB
+    - JFK
+    - "9"
+    - "3984.130435"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1484"
+    - MPB
+    - LGA
+    - "9"
+    - "3984.130435"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1485"
+    - MPB
+    - NYC
+    - "9"
+    - "3984.130435"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1486"
+    - NYC
+    - MCO
+    - "3"
+    - "7282.282609"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1487"
+    - NYC
+    - ORL
+    - "3"
+    - "7282.282609"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1488"
+    - NYC
+    - SFO
+    - "5"
+    - "6533.478261"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1489"
+    - NYC
+    - TPA
+    - "13"
+    - "3429.891304"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1490"
+    - ORD
+    - DEN
+    - "23"
+    - "3014.782609"
+    - F9
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1491"
+    - ORD
+    - JFK
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1492"
+    - ORD
+    - LAS
+    - "21"
+    - "3080.543478"
+    - US
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1493"
+    - ORD
+    - LAX
+    - "11"
+    - "3491.521739"
+    - WN
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1494"
+    - ORD
+    - LGA
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1495"
+    - ORD
+    - MCO
+    - "24"
+    - "2955.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1496"
+    - ORD
+    - NYC
+    - "1"
+    - "8808.043478"
+    - DL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1497"
+    - ORD
+    - ORL
+    - "24"
+    - "2955.652174"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1498"
+    - ORD
+    - QWM
+    - "23"
+    - "3014.782609"
+    - F9
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1499"
+    - ORL
+    - PHL
+    - "17"
+    - "3198.804348"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1500"
+    - ORL
+    - TTN
+    - "17"
+    - "3198.804348"
+    - FL
+    - " low_fare"
+    - "2010-07-25"
+    - "2010-07-25"
+  - - "1501"
+    - SFO
+    - PDX
+    - "100"
+    - "0"
+    - AL
+    - 
+    - 2010-07-25 07:56:13
+    - 2010-07-25 07:56:13
+  - - "1502"
+    - SFO
+    - PDX
+    - 
+    - 
+    - UA
+    - 
+    - 2010-07-25 07:56:31
+    - 2010-07-25 07:56:31
+
+--- 
+itineraries: 
+  columns: 
+  - id
+  - dept_date
+  - ret_date
+  - route_id
+  - created_at
+  - updated_at
+  records: 
+  - - "2"
+    - 2010-08-13 17:00:00
+    - 2010-08-15 17:00:00
+    - "1464"
+    - 2010-07-25 07:01:35
+    - 2010-07-25 07:45:43
+  - - "4"
+    - 2010-08-26 08:54:00
+    - 2010-08-29 12:00:00
+    - "1464"
+    - 2010-07-25 07:55:49
+    - 2010-07-25 07:55:49
+
+--- 
+fare_histories: 
+  columns: 
+  - id
+  - offer_date
+  - itinerary_id
+  - low_price
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - 2010-07-25 07:48:00
+    - "2"
+    - "215"
+    - 2010-07-25 07:48:30
+    - 2010-07-25 07:48:30
+  - - "2"
+    - 2010-07-25 17:00:00
+    - 
+    - "208"
+    - 2010-07-25 17:53:17
+    - 2010-07-25 17:53:17
+
+--- 
+toproutes_latest_csv: 
+  columns: 
+  - Rank
+  - Tier
+  - origin_city
+  - origin_state
+  - dest_city
+  - dest_state
+  - pass_per_day
+  - " ave_fare "
+  - lrg_carrier
+  - lrg_mrktshr
+  - " lrg_avg_fare "
+  - low_carrier
+  - low_mkrkts_shr
+  - " low_fare "
+  - numrecs
+  - Quarter
+  - origincty
+  - destcty
+  records: 
+  - - "1"
+    - "1"
+    - Chicago
+    - " Illinois"
+    - New York
+    - " New York"
+    - "8808.043478"
+    - " $158.47 "
+    - AA
+    - 35%
+    - " $155.59 "
+    - DL
+    - 11%
+    - " $134.83 "
+    - "358"
+    - "20093"
+    - "18500"
+    - "63760"
+  - - "2"
+    - "1"
+    - Los Angeles
+    - " California"
+    - New York
+    - " New York"
+    - "8178.913044"
+    - " $297.03 "
+    - AA
+    - 23%
+    - " $367.44 "
+    - DL
+    - 16%
+    - " $231.32 "
+    - "958"
+    - "20093"
+    - "51410"
+    - "63760"
+  - - "3"
+    - "1"
+    - New York
+    - " New York"
+    - Orlando
+    - " Florida"
+    - "7282.282609"
+    - " $141.28 "
+    - B6
+    - 48%
+    - " $139.23 "
+    - DL
+    - 21%
+    - " $133.12 "
+    - "489"
+    - "20093"
+    - "63760"
+    - "66600"
+  - - "4"
+    - "1"
+    - Ft. Lauderdale
+    - " Florida"
+    - New York
+    - " New York"
+    - "7148.043478"
+    - " $137.81 "
+    - B6
+    - 47%
+    - " $143.14 "
+    - NK
+    - 15%
+    - " $110.51 "
+    - "601"
+    - "20093"
+    - "29420"
+    - "63760"
+  - - "5"
+    - "1"
+    - New York
+    - " New York"
+    - San Francisco
+    - " California"
+    - "6533.478261"
+    - " $298.26 "
+    - CO
+    - 21%
+    - " $280.37 "
+    - DL
+    - 12%
+    - " $230.88 "
+    - "957"
+    - "20093"
+    - "63760"
+    - "79830"
+  - - "6"
+    - "1"
+    - Atlanta
+    - " Georgia"
+    - New York
+    - " New York"
+    - "6010.652174"
+    - " $155.18 "
+    - DL
+    - 62%
+    - " $166.65 "
+    - FL
+    - 24%
+    - " $111.71 "
+    - "383"
+    - "20093"
+    - "5850"
+    - "63760"
+  - - "7"
+    - "1"
+    - Los Angeles
+    - " California"
+    - San Francisco
+    - " California"
+    - "4851.086957"
+    - " $94.40 "
+    - UA
+    - 34%
+    - " $102.26 "
+    - AA
+    - 12%
+    - " $86.58 "
+    - "93"
+    - "20093"
+    - "51410"
+    - "79830"
+  - - "8"
+    - "1"
+    - Las Vegas
+    - " Nevada"
+    - New York
+    - " New York"
+    - "4528.152174"
+    - " $212.82 "
+    - CO
+    - 34%
+    - " $214.91 "
+    - DL
+    - 20%
+    - " $197.65 "
+    - "932"
+    - "20093"
+    - "48880"
+    - "63760"
+  - - "9"
+    - "1"
+    - Miami
+    - " Florida"
+    - New York
+    - " New York"
+    - "3984.130435"
+    - " $159.97 "
+    - AA
+    - 56%
+    - " $163.71 "
+    - DL
+    - 18%
+    - " $137.37 "
+    - "594"
+    - "20093"
+    - "57560"
+    - "63760"
+  - - "10"
+    - "1"
+    - Las Vegas
+    - " Nevada"
+    - San Francisco
+    - " California"
+    - "3546.956522"
+    - " $98.96 "
+    - WN
+    - 26%
+    - " $100.07 "
+    - US
+    - 20%
+    - " $92.78 "
+    - "166"
+    - "20093"
+    - "48880"
+    - "79830"
+  - - "11"
+    - "1"
+    - Chicago
+    - " Illinois"
+    - Los Angeles
+    - " California"
+    - "3491.521739"
+    - " $228.88 "
+    - AA
+    - 33%
+    - " $221.27 "
+    - WN
+    - 26%
+    - " $194.18 "
+    - "807"
+    - "20093"
+    - "18500"
+    - "51410"
+  - - "12"
+    - "1"
+    - Boston
+    - " Massachusetts"
+    - New York
+    - " New York"
+    - "3437.717391"
+    - " $153.42 "
+    - DL
+    - 34%
+    - " $143.99 "
+    - B6
+    - 15%
+    - " $96.12 "
+    - "3"
+    - "20093"
+    - "12200"
+    - "63760"
+  - - "13"
+    - "1"
+    - New York
+    - " New York"
+    - Tampa
+    - " Florida"
+    - "3429.891304"
+    - " $143.06 "
+    - B6
+    - 37%
+    - " $136.54 "
+    - DL
+    - 12%
+    - " $136.38 "
+    - "566"
+    - "20093"
+    - "63760"
+    - "87870"
+  - - "14"
+    - "1"
+    - Chicago
+    - " Illinois"
+    - Washington
+    - " D.C."
+    - "3381.304348"
+    - " $180.71 "
+    - UA
+    - 54%
+    - " $212.70 "
+    - WN
+    - 18%
+    - " $132.57 "
+    - "283"
+    - "20093"
+    - "18500"
+    - "96460"
+  - - "15"
+    - "1"
+    - Chicago
+    - " Illinois"
+    - Minneapolis/St.Paul
+    - " Minnesota"
+    - "3364.673913"
+    - " $100.77 "
+    - NW
+    - 39%
+    - " $98.91 "
+    - WN
+    - 23%
+    - " $96.78 "
+    - "89"
+    - "20093"
+    - "18500"
+    - "57970"
+  - - "16"
+    - "1"
+    - Dallas/Ft.Worth
+    - " Texas"
+    - New York
+    - " New York"
+    - "3266.630435"
+    - " $277.20 "
+    - AA
+    - 61%
+    - " $307.22 "
+    - CO
+    - 14%
+    - " $287.75 "
+    - "698"
+    - "20093"
+    - "23210"
+    - "63760"
+  - - "17"
+    - "1"
+    - Orlando
+    - " Florida"
+    - Philadelphia
+    - " Pennsylvania"
+    - "3198.804348"
+    - " $107.51 "
+    - WN
+    - 36%
+    - " $106.55 "
+    - FL
+    - 25%
+    - " $93.04 "
+    - "461"
+    - "20093"
+    - "66600"
+    - "69880"
+  - - "18"
+    - "1"
+    - Los Angeles
+    - " California"
+    - Seattle
+    - " Washington"
+    - "3183.586957"
+    - " $143.83 "
+    - AS
+    - 41%
+    - " $153.27 "
+    - WN
+    - 8%
+    - " $126.73 "
+    - "519"
+    - "20093"
+    - "51410"
+    - "82630"
+  - - "19"
+    - "1"
+    - Atlanta
+    - " Georgia"
+    - Chicago
+    - " Illinois"
+    - "3157.934783"
+    - " $129.58 "
+    - DL
+    - 46%
+    - " $134.58 "
+    - FL
+    - 22%
+    - " $101.34 "
+    - "301"
+    - "20093"
+    - "5850"
+    - "18500"
+  - - "20"
+    - "1"
+    - Boston
+    - " Massachusetts"
+    - Chicago
+    - " Illinois"
+    - "3148.26087"
+    - " $149.66 "
+    - AA
+    - 41%
+    - " $148.25 "
+    - AA
+    - 41%
+    - " $148.25 "
+    - "446"
+    - "20093"
+    - "12200"
+    - "18500"
+  - - "21"
+    - "1"
+    - Chicago
+    - " Illinois"
+    - Las Vegas
+    - " Nevada"
+    - "3080.543478"
+    - " $180.35 "
+    - WN
+    - 40%
+    - " $172.24 "
+    - US
+    - 17%
+    - " $169.26 "
+    - "766"
+    - "20093"
+    - "18500"
+    - "48880"
+  - - "22"
+    - "1"
+    - Dallas/Ft.Worth
+    - " Texas"
+    - Houston
+    - " Texas"
+    - "3061.73913"
+    - " $120.08 "
+    - WN
+    - 73%
+    - " $121.90 "
+    - AA
+    - 18%
+    - " $112.51 "
+    - "17"
+    - "20093"
+    - "23210"
+    - "37320"
+  - - "23"
+    - "1"
+    - Chicago
+    - " Illinois"
+    - Denver
+    - " Colorado"
+    - "3014.782609"
+    - " $164.27 "
+    - UA
+    - 34%
+    - " $216.68 "
+    - F9
+    - 21%
+    - " $123.89 "
+    - "439"
+    - "20093"
+    - "18500"
+    - "24090"
+  - - "24"
+    - "1"
+    - Chicago
+    - " Illinois"
+    - Orlando
+    - " Florida"
+    - "2955.652174"
+    - " $122.43 "
+    - WN
+    - 36%
+    - " $118.01 "
+    - FL
+    - 17%
+    - " $107.12 "
+    - "574"
+    - "20093"
+    - "18500"
+    - "66600"
+  - - "25"
+    - "2"
+    - Charlotte
+    - " North Carolina"
+    - New York
+    - " New York"
+    - "2942.173913"
+    - " $133.71 "
+    - US
+    - 61%
+    - " $138.57 "
+    - B6
+    - 15%
+    - " $117.00 "
+    - "225"
+    - "20093"
+    - "17960"
+    - "63760"
+
+--- 
+airports: 
+  columns: 
+  - id
+  - city
+  - state_short
+  - state_long
+  - airport_code
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - Akron/Canton
+    - OH
+    - " Ohio"
+    - CAK
+    - 7/27/2010
+    - 7/27/2010
+  - - "2"
+    - Albany
+    - NY
+    - " New York"
+    - ALB
+    - 7/27/2010
+    - 7/27/2010
+  - - "3"
+    - Albuquerque
+    - NM
+    - " New Mexico"
+    - ABQ
+    - 7/27/2010
+    - 7/27/2010
+  - - "4"
+    - Allentown
+    - PA
+    - " Pennsylvania"
+    - ABE
+    - 7/27/2010
+    - 7/27/2010
+  - - "5"
+    - Amarillo
+    - TX
+    - " Texas"
+    - AMA
+    - 7/27/2010
+    - 7/27/2010
+  - - "6"
+    - Atlanta
+    - GA
+    - " Georgia"
+    - ATL
+    - 7/27/2010
+    - 7/27/2010
+  - - "7"
+    - Atlantic City
+    - NJ
+    - " New Jersey"
+    - AIY
+    - 7/27/2010
+    - 7/27/2010
+  - - "8"
+    - Austin
+    - TX
+    - " Texas"
+    - AUS
+    - 7/27/2010
+    - 7/27/2010
+  - - "9"
+    - Baltimore
+    - MD
+    - " Maryland"
+    - BWI
+    - 7/27/2010
+    - 7/27/2010
+  - - "10"
+    - Bellingham
+    - WA
+    - " Washington"
+    - BLI
+    - 7/27/2010
+    - 7/27/2010
+  - - "11"
+    - Birmingham
+    - AL
+    - " Alabama"
+    - BHM
+    - 7/27/2010
+    - 7/27/2010
+  - - "12"
+    - Boise
+    - ID
+    - " Idaho"
+    - BOI
+    - 7/27/2010
+    - 7/27/2010
+  - - "13"
+    - Boston
+    - MA
+    - " Massachusetts"
+    - BOS
+    - 7/27/2010
+    - 7/27/2010
+  - - "14"
+    - Buffalo
+    - NY
+    - " New York"
+    - BUF
+    - 7/27/2010
+    - 7/27/2010
+  - - "15"
+    - Burlington
+    - VT
+    - " Vermont"
+    - BTV
+    - 7/27/2010
+    - 7/27/2010
+  - - "16"
+    - Charleston
+    - SC
+    - " South Carolina"
+    - CHS
+    - 7/27/2010
+    - 7/27/2010
+  - - "17"
+    - Charlotte
+    - NC
+    - " North Carolina"
+    - CLT
+    - 7/27/2010
+    - 7/27/2010
+  - - "18"
+    - Chicago
+    - IL
+    - " Illinois"
+    - CHI
+    - 7/27/2010
+    - 7/27/2010
+  - - "19"
+    - Chicago
+    - IL
+    - " Illinois"
+    - MDW
+    - 7/27/2010
+    - 7/27/2010
+  - - "20"
+    - Chicago
+    - IL
+    - " Illinois"
+    - ORD
+    - 7/27/2010
+    - 7/27/2010
+  - - "21"
+    - Cincinnati
+    - OH
+    - " Ohio"
+    - CVG
+    - 7/27/2010
+    - 7/27/2010
+  - - "22"
+    - Cleveland
+    - OH
+    - " Ohio"
+    - CLE
+    - 7/27/2010
+    - 7/27/2010
+  - - "23"
+    - Colorado Springs
+    - CO
+    - " Colorado"
+    - COS
+    - 7/27/2010
+    - 7/27/2010
+  - - "24"
+    - Columbus
+    - OH
+    - " Ohio"
+    - CMH
+    - 7/27/2010
+    - 7/27/2010
+  - - "25"
+    - Corpus Christi
+    - TX
+    - " Texas"
+    - CRP
+    - 7/27/2010
+    - 7/27/2010
+  - - "26"
+    - Dayton
+    - OH
+    - " Ohio"
+    - DAY
+    - 7/27/2010
+    - 7/27/2010
+  - - "27"
+    - Denver
+    - CO
+    - " Colorado"
+    - DEN
+    - 7/27/2010
+    - 7/27/2010
+  - - "28"
+    - Denver
+    - CO
+    - " Colorado"
+    - QWM
+    - 7/27/2010
+    - 7/27/2010
+  - - "29"
+    - Des Moines
+    - IA
+    - " Iowa"
+    - DSM
+    - 7/27/2010
+    - 7/27/2010
+  - - "30"
+    - Detroit
+    - MI
+    - " Michigan"
+    - DTT
+    - 7/27/2010
+    - 7/27/2010
+  - - "31"
+    - Detroit
+    - MI
+    - " Michigan"
+    - DTW
+    - 7/27/2010
+    - 7/27/2010
+  - - "32"
+    - El Paso
+    - TX
+    - " Texas"
+    - ELP
+    - 7/27/2010
+    - 7/27/2010
+  - - "33"
+    - Flint
+    - MI
+    - " Michigan"
+    - FNT
+    - 7/27/2010
+    - 7/27/2010
+  - - "34"
+    - Fresno
+    - CA
+    - " California"
+    - FAT
+    - 7/27/2010
+    - 7/27/2010
+  - - "35"
+    - Grand Rapids
+    - MI
+    - " Michigan"
+    - GRR
+    - 7/27/2010
+    - 7/27/2010
+  - - "36"
+    - Harlingen
+    - TX
+    - " Texas"
+    - HRL
+    - 7/27/2010
+    - 7/27/2010
+  - - "37"
+    - Harrisburg
+    - PA
+    - " Pennsylvania"
+    - MDT
+    - 7/27/2010
+    - 7/27/2010
+  - - "38"
+    - Houston
+    - TX
+    - " Texas"
+    - HOU
+    - 7/27/2010
+    - 7/27/2010
+  - - "39"
+    - Houston
+    - TX
+    - " Texas"
+    - IAH
+    - 7/27/2010
+    - 7/27/2010
+  - - "40"
+    - Huntsville
+    - AL
+    - " Alabama"
+    - HSV
+    - 7/27/2010
+    - 7/27/2010
+  - - "41"
+    - Indianapolis
+    - IN
+    - " Indiana"
+    - IND
+    - 7/27/2010
+    - 7/27/2010
+  - - "42"
+    - Jacksonville
+    - FL
+    - " Florida"
+    - JAX
+    - 7/27/2010
+    - 7/27/2010
+  - - "43"
+    - Kansas City
+    - MO
+    - " Missouri"
+    - MCI
+    - 7/27/2010
+    - 7/27/2010
+  - - "44"
+    - Knoxville
+    - TN
+    - " Tennessee"
+    - TYS
+    - 7/27/2010
+    - 7/27/2010
+  - - "45"
+    - Las Vegas
+    - NV
+    - " Nevada"
+    - LAS
+    - 7/27/2010
+    - 7/27/2010
+  - - "46"
+    - Little Rock
+    - AR
+    - " Arkansas"
+    - LIT
+    - 7/27/2010
+    - 7/27/2010
+  - - "47"
+    - Long Beach
+    - CA
+    - " California"
+    - LGB
+    - 7/27/2010
+    - 7/27/2010
+  - - "48"
+    - Los Angeles
+    - CA
+    - " California"
+    - LAX
+    - 7/27/2010
+    - 7/27/2010
+  - - "49"
+    - Louisville
+    - KY
+    - " Kentucky"
+    - SDF
+    - 7/27/2010
+    - 7/27/2010
+  - - "50"
+    - Lubbock
+    - TX
+    - " Texas"
+    - LBB
+    - 7/27/2010
+    - 7/27/2010
+  - - "51"
+    - Madison
+    - WI
+    - " Wisconsin"
+    - MSN
+    - 7/27/2010
+    - 7/27/2010
+  - - "52"
+    - Manchester
+    - NH
+    - " New Hampshire"
+    - MHT
+    - 7/27/2010
+    - 7/27/2010
+  - - "53"
+    - Medford
+    - OR
+    - " Oregon"
+    - MFR
+    - 7/27/2010
+    - 7/27/2010
+  - - "54"
+    - Memphis
+    - TN
+    - " Tennessee"
+    - MEM
+    - 7/27/2010
+    - 7/27/2010
+  - - "55"
+    - Miami
+    - FL
+    - " Florida"
+    - MIA
+    - 7/27/2010
+    - 7/27/2010
+  - - "56"
+    - Miami
+    - FL
+    - " Florida"
+    - MPB
+    - 7/27/2010
+    - 7/27/2010
+  - - "57"
+    - Midland/Odessa
+    - TX
+    - " Texas"
+    - MAF
+    - 7/27/2010
+    - 7/27/2010
+  - - "58"
+    - Milwaukee
+    - WI
+    - " Wisconsin"
+    - MKE
+    - 7/27/2010
+    - 7/27/2010
+  - - "59"
+    - Myrtle Beach
+    - SC
+    - " South Carolina"
+    - MYR
+    - 7/27/2010
+    - 7/27/2010
+  - - "60"
+    - Nantucket
+    - MA
+    - " Massachusetts"
+    - ACK
+    - 7/27/2010
+    - 7/27/2010
+  - - "61"
+    - Nashville
+    - TN
+    - " Tennessee"
+    - BNA
+    - 7/27/2010
+    - 7/27/2010
+  - - "62"
+    - New Orleans
+    - LA
+    - " Louisiana"
+    - MSY
+    - 7/27/2010
+    - 7/27/2010
+  - - "63"
+    - New York
+    - NY
+    - " New York"
+    - JFK
+    - 7/27/2010
+    - 7/27/2010
+  - - "64"
+    - New York
+    - NY
+    - " New York"
+    - LGA
+    - 7/27/2010
+    - 7/27/2010
+  - - "65"
+    - New York
+    - NY
+    - " New York"
+    - NYC
+    - 7/27/2010
+    - 7/27/2010
+  - - "66"
+    - Norfolk
+    - VA
+    - " Virginia"
+    - ORF
+    - 7/27/2010
+    - 7/27/2010
+  - - "67"
+    - Oakland
+    - CA
+    - " California"
+    - OAK
+    - 7/27/2010
+    - 7/27/2010
+  - - "68"
+    - Oklahoma City
+    - OK
+    - " Oklahoma"
+    - OKC
+    - 7/27/2010
+    - 7/27/2010
+  - - "69"
+    - Omaha
+    - NE
+    - " Nebraska"
+    - OMA
+    - 7/27/2010
+    - 7/27/2010
+  - - "70"
+    - Ontario
+    - CA
+    - " California"
+    - ONT
+    - 7/27/2010
+    - 7/27/2010
+  - - "71"
+    - Orlando
+    - FL
+    - " Florida"
+    - MCO
+    - 7/27/2010
+    - 7/27/2010
+  - - "72"
+    - Orlando
+    - FL
+    - " Florida"
+    - ORL
+    - 7/27/2010
+    - 7/27/2010
+  - - "73"
+    - Philadelphia
+    - PA
+    - " Pennsylvania"
+    - PHL
+    - 7/27/2010
+    - 7/27/2010
+  - - "74"
+    - Philadelphia
+    - PA
+    - " Pennsylvania"
+    - TTN
+    - 7/27/2010
+    - 7/27/2010
+  - - "75"
+    - Phoenix
+    - AZ
+    - " Arizona"
+    - PHX
+    - 7/27/2010
+    - 7/27/2010
+  - - "76"
+    - Pittsburgh
+    - PA
+    - " Pennsylvania"
+    - PIT
+    - 7/27/2010
+    - 7/27/2010
+  - - "77"
+    - Portland
+    - ME
+    - " Maine"
+    - PWM
+    - 7/27/2010
+    - 7/27/2010
+  - - "78"
+    - Portland
+    - OR
+    - " Oregon"
+    - PDX
+    - 7/27/2010
+    - 7/27/2010
+  - - "79"
+    - Providence
+    - RI
+    - " Rhode Island"
+    - PVD
+    - 7/27/2010
+    - 7/27/2010
+  - - "80"
+    - Raleigh/Durham
+    - NC
+    - " North Carolina"
+    - RDU
+    - 7/27/2010
+    - 7/27/2010
+  - - "81"
+    - Reno
+    - NV
+    - " Nevada"
+    - RNO
+    - 7/27/2010
+    - 7/27/2010
+  - - "82"
+    - Richmond
+    - VA
+    - " Virginia"
+    - RIC
+    - 7/27/2010
+    - 7/27/2010
+  - - "83"
+    - Rochester
+    - NY
+    - " New York"
+    - ROC
+    - 7/27/2010
+    - 7/27/2010
+  - - "84"
+    - Sacramento
+    - CA
+    - " California"
+    - SMF
+    - 7/27/2010
+    - 7/27/2010
+  - - "85"
+    - Salt Lake City
+    - UT
+    - " Utah"
+    - SLC
+    - 7/27/2010
+    - 7/27/2010
+  - - "86"
+    - San Antonio
+    - TX
+    - " Texas"
+    - SAT
+    - 7/27/2010
+    - 7/27/2010
+  - - "87"
+    - San Diego
+    - CA
+    - " California"
+    - SAN
+    - 7/27/2010
+    - 7/27/2010
+  - - "88"
+    - San Francisco
+    - CA
+    - " California"
+    - SFO
+    - 7/27/2010
+    - 7/27/2010
+  - - "89"
+    - San Jose
+    - CA
+    - " California"
+    - SJC
+    - 7/27/2010
+    - 7/27/2010
+  - - "90"
+    - Sanford
+    - FL
+    - " Florida"
+    - SFB
+    - 7/27/2010
+    - 7/27/2010
+  - - "91"
+    - Santa Ana
+    - CA
+    - " California"
+    - SNA
+    - 7/27/2010
+    - 7/27/2010
+  - - "92"
+    - Savannah
+    - GA
+    - " Georgia"
+    - SAV
+    - 7/27/2010
+    - 7/27/2010
+  - - "93"
+    - Seattle
+    - WA
+    - " Washington"
+    - LKE
+    - 7/27/2010
+    - 7/27/2010
+  - - "94"
+    - Seattle
+    - WA
+    - " Washington"
+    - SEA
+    - 7/27/2010
+    - 7/27/2010
+  - - "95"
+    - Spokane
+    - WA
+    - " Washington"
+    - GEG
+    - 7/27/2010
+    - 7/27/2010
+  - - "96"
+    - Syracuse
+    - NY
+    - " New York"
+    - SYR
+    - 7/27/2010
+    - 7/27/2010
+  - - "97"
+    - Tampa
+    - FL
+    - " Florida"
+    - TPA
+    - 7/27/2010
+    - 7/27/2010
+  - - "98"
+    - Tucson
+    - AZ
+    - " Arizona"
+    - TUS
+    - 7/27/2010
+    - 7/27/2010
+  - - "99"
+    - Tulsa
+    - OK
+    - " Oklahoma"
+    - TUL
+    - 7/27/2010
+    - 7/27/2010
+  - - "100"
+    - West Palm Beach
+    - FL
+    - " Florida"
+    - PBI
+    - 7/27/2010
+    - 7/27/2010
+  - - "101"
+    - Wichita
+    - KS
+    - " Kansas"
+    - ICT
+    - 7/27/2010
+    - 7/27/2010

@@ -53,6 +53,38 @@ class FareHistoriesController < ApplicationController
       end
     end
   end
+  
+  def log
+    # gets latest fare
+    @itinerary_id = params["it"]
+    @search = Search.new
+   
+    
+    from_date = itinerary.dept_date.strftime("%m/%d/%Y").to_s
+    from_time = itinerary.dept_date.strftime("%H:%M").to_s
+    to_date = itinerary.ret_date.strftime("%m/%d/%Y").to_s
+    to_time = itinerary.ret_date.strftime("%H:%M").to_s
+    from_code = itinerary.route.dept_code
+    to_code = itinerary.route.to_code
+    
+    offer_date = Date.now
+    count = 1 #just grab lowest fare
+    
+    @xml = @srch.start_kayak_search(
+    	@flight.from_code, 
+    	@flight.to_code,
+    	from_date,from_time, to_date, to_time,count)
+    	
+    # get price
+    @xml.elements.each("/searchresult/trips/trip") do |e|
+      e.each_element("price") do |t| 
+        @price = t.text
+      end
+    end
+	
+	@farehistory = FareHistory.new(:fare => @price, :itinerary_id => @itinerary_id, :offer_date => offer_date)
+        
+  end
 
   # PUT /fare_histories/1
   # PUT /fare_histories/1.xml
