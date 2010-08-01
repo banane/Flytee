@@ -16,18 +16,14 @@
  <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
 
-<td>
-    <%= f.date_select :from_date, :default=>14.days.from_now, :minute_step=>30 %>
-</td>
+<td><%= f.text_field :from_date, :class=>"date" %></td>
 </tr>
 <tr><td> To</td><td>Returning on:</td></tr>
 <tr>
 <td>
  <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
-<td>
-    <%= f.date_select :to_date, :default=>28.days.from_now, :minute_step=>30 %>
-</td>
+<td><%= f.text_field :to_date, :class=>"date" %></td>
 </tr>
 
 </table>

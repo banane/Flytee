@@ -8,7 +8,7 @@
          <%= f.text_field :freeze_time, :size=>'10' %>
          <div class="buy_buttons"><%= image_submit_tag '/images/freezefare-freeze-btn.gif' %>
          </div>
-<table border=0 width="100%">
+<table border=0 width="100%" class="manyresults">
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
 <tr>
 <td>   <%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>     </td>   

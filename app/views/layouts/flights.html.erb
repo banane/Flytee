@@ -5,27 +5,20 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>FreezeFare</title>
+  <%= stylesheet_link_tag 'dateinput' %>
+  <%= javascript_include_tag 'prototype' %>
+  <%= javascript_include_tag 'lowpro' %>
+  <%= javascript_include_tag 'dateinput' %>
   <%= stylesheet_link_tag 'flytee' %>
   <script type="text/javascript">
+   Event.addBehavior({'input.date': DateInputBehavior()});
+  </script>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-314355-6']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </head>
 <body class="splash">
 
 <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield %>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
