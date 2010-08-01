@@ -13,7 +13,7 @@
 </tr>
 <tr>
 <td>
- <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + " (" + r.airport_code + ")", r.airport_code ] }) %>
+ <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
 
 <td>
