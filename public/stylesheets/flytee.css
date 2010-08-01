@@ -129,5 +129,6 @@ img {
 }
 #new_flight_select h3{
 	color: #6A6D71;
-	font-size: 21px;
+	#font-size: 21px;	
 }
+
