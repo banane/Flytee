@@ -23,11 +23,13 @@ class FlightsController < ApplicationController
 
   def new
     @airports = Airports.find(:all)
+    session[:source] = params[:source]
 
     # do the toggle    
 	version = session[:test_version]
 	version ^=1
 	session[:test_version] = version
+	session[:source] = params['source']
   
     @flight = Flight.new
 

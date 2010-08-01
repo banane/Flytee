@@ -25,7 +25,7 @@ class SurveyUsersController < ApplicationController
   # GET /survey_users/new.xml
   def new
     @survey_user = SurveyUser.new
-    @sourceid = params[:source]
+    @sourceid = session[:source]
 
     respond_to do |format|
       format.html # new.html.erb
