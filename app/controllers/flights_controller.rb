@@ -22,7 +22,7 @@ class FlightsController < ApplicationController
   end
 
   def new
-    @airports = Airports.find(:all)
+    @airports = Airports.find(:all, :order=>'city')
     session[:source] = params[:source]
 
     # do the toggle    
