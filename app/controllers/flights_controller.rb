@@ -83,11 +83,14 @@ class FlightsController < ApplicationController
 		if session[:test_version] == false then
 		   @xml.elements.each("/searchresult/trips/trip") do |e| 
 		     e.each_element("price") do |t| 
-		       @low_fare = t.text
+		       @low_fare = t.text		       
 		     end
 		   end
 		end
+
+	   @xml.elements.count < 1 ? @result_nil = true : @result_nil = false
 		
+				
         format.html {        
          if session[:test_version] then 
            render :action => "show_many"  

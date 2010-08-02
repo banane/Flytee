@@ -1,4 +1,4 @@
-<% unless @low_fare %><div id="fare_warning">Still polling Kayak, refresh to view latest results</div> <% end %>
+<% if @result_nil %><div id="fare_warning">Still polling Kayak, refresh to view latest results</div> <% end %>
 <div id="logo"><img src="/images/freezefare-logo.png" /></div>
 <div class="main">  
 	   <div class="title">
