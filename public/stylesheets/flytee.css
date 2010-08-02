@@ -139,3 +139,12 @@ img {
 	font-size:18px;
 	font-weight:bold;
 }
+
+#fare_warning {
+	color:#ff8c00;
+	background-color:#FF6;
+	magin: auto;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+}

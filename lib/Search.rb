@@ -6,7 +6,8 @@ class Search
   @@hostname = 'api.kayak.com'
   @@port = 80
 #  @@token = '92Dt_nblxFAzwnwRX5ENYw'
-  @@token = 'GywW52rL3BWGYrgV_m3hVA'
+#  @@token = 'GywW52rL3BWGYrgV_m3hVA'
+	@@token = 'AAZV3hZP0nkGOBYKANbDUA '
   @@lastcount = 0
 
 

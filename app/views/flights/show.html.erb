@@ -1,10 +1,9 @@
+<% unless @low_fare %><div id="fare_warning">Still polling Kayak, refresh to view latest results</div> <% end %>
 <div id="logo"><img src="/images/freezefare-logo.png" /></div>
 <div class="main">  
 	   <div class="title">
 			<p>Today's Best Price: <span id="ticket">$<%= @low_fare %></span></p>
 	   </div>
-	   
-	   
 <% 
 @flight_select = FlightSelect.new
 
@@ -15,5 +14,6 @@ form_for(@flight_select) do |f| %>
          <div class="buy_buttons"><%= image_submit_tag '/images/freezefare-freeze-btn.gif' %>
          </div></div>
         </div>
+        <%= f.hidden_field :flight_id, :value=>@flight.id.to_s %>
 <% end %>
 </div>
