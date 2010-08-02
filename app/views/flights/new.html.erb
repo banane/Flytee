@@ -13,17 +13,17 @@
 </tr>
 <tr>
 <td>
- <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + " (" + r.airport_code + ")", r.airport_code ] }) %>
+ <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + " )", r.airport_code ] }) %>
 </td>
 
-<td><%= f.text_field :from_date, :class=>"date" %></td>
+<td><%= f.text_field :from_date, :class=>"date", :value=>14.days.from_now.strftime("%B %d, %Y") %></td>
 </tr>
 <tr><td> To</td><td>Returning on:</td></tr>
 <tr>
 <td>
  <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
 </td>
-<td><%= f.text_field :to_date, :class=>"date" %></td>
+<td><%= f.text_field :to_date, :class=>"date", :value=>17.days.from_now.strftime("%B %d, %Y") %></td>
 </tr>
 
 </table>
