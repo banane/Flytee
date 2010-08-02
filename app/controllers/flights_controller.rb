@@ -22,14 +22,16 @@ class FlightsController < ApplicationController
   end
 
   def new
-    @airports = Airports.find(:all, :order=>'city')
-    session[:source] = params[:source]
+    @airports = Airports.find(:all)
+    
 
     # do the toggle    
 	version = session[:test_version]
 	version ^=1
 	session[:test_version] = version
-	session[:source] = params['source']
+	
+	session[:source] = params[:source]
+	
   
     @flight = Flight.new
 
@@ -50,6 +52,10 @@ class FlightsController < ApplicationController
   # POST /flights.xml
   def create
    @flight = Flight.new(params[:flight])
+   
+   session[:test_version]? version= 'multiple choice' : version='single choice'
+   @survey = SurveyUser.new(:source=>session[:source], :test_version=>version)
+	@survey.save
 
     respond_to do |format|
       if @flight.save
