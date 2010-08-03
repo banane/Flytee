@@ -22,7 +22,7 @@ class FlightsController < ApplicationController
   end
 
   def new
-    @airports = Airports.find(:all)
+    @airports = Airports.find(:all, :order=>'City')
     
 
     # do the toggle    
