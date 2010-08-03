@@ -13,7 +13,7 @@
 </tr>
 <tr>
 <td>
- <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
+ <%= select("flight", "from_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }, :selected=>'SFO' ) %>
 </td>
 
 <td><%= f.text_field :from_date, :class=>"date" %></td>
@@ -21,9 +21,11 @@
 <tr><td> To</td><td>Returning on:</td></tr>
 <tr>
 <td>
- <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }) %>
+ <%= select("flight", "to_code", @airports.map {|r| [ r.city + ", " + r.state_short + " (" + r.airport_code + ")", r.airport_code ] }, :selected=>'LAX') %>
 </td>
-<td><%= f.text_field :to_date, :class=>"date" %></td>
+<td>
+    <%= f.date_select :to_date, :default=>17.days.from_now, :minute_step=>30 %>
+</td>
 </tr>
 
 </table>
@@ -35,6 +37,5 @@
 <% end %>
 </div>
 </div>
-<iframe src="http://www.facebook.com/plugins/likebox.php?id=185550966885&amp;width=292&amp;connections=10&amp;stream=true&amp;header=true&amp;height=587" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:587px;" allowTransparency="true"></iframe>
 
 <%= session[:test_version]?  1 : 0	 %>

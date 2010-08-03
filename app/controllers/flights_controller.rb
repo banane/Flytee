@@ -22,14 +22,16 @@ class FlightsController < ApplicationController
   end
 
   def new
-    @airports = Airports.find(:all, :order=>'city')
-    session[:source] = params[:source]
+    @airports = Airports.find(:all, :order=>'City')
+    
 
     # do the toggle    
 	version = session[:test_version]
 	version ^=1
 	session[:test_version] = version
-	session[:source] = params['source']
+	
+	session[:source] = params[:source]
+	
   
     @flight = Flight.new
 
@@ -50,6 +52,10 @@ class FlightsController < ApplicationController
   # POST /flights.xml
   def create
    @flight = Flight.new(params[:flight])
+   
+   session[:test_version]? version= 'multiple choice' : version='single choice'
+   @survey = SurveyUser.new(:source=>session[:source], :test_version=>version)
+	@survey.save
 
     respond_to do |format|
       if @flight.save
@@ -77,11 +83,14 @@ class FlightsController < ApplicationController
 		if session[:test_version] == false then
 		   @xml.elements.each("/searchresult/trips/trip") do |e| 
 		     e.each_element("price") do |t| 
-		       @low_fare = t.text
+		       @low_fare = t.text		       
 		     end
 		   end
 		end
+
+	   @xml.elements.count < 1 ? @result_nil = true : @result_nil = false
 		
+				
         format.html {        
          if session[:test_version] then 
            render :action => "show_many"  

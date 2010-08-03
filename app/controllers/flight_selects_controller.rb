@@ -44,9 +44,7 @@ class FlightSelectsController < ApplicationController
 
     respond_to do |format|
       if @flight_select.save
-      #  flash[:notice] = 'Your flight selection saved.'
-      #  format.html { redirect_to(@flight_select) }
-      format.html { redirect_to(new_survey_user_path) }
+      format.html { redirect_to('http://wharton.qualtrics.com/SE?SID=SV_5jQgyf6dQTq4VjC') }
         format.xml  { render :xml => @flight_select, :status => :created, :location => @flight_select }
       else
         format.html { render :action => "new" }

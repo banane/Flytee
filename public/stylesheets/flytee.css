@@ -129,7 +129,6 @@ img {
 }
 #new_flight_select h3{
 	color: #6A6D71;
-<<<<<<< HEAD
 	font-size: 21px;
 }
 #source_callout {
@@ -141,3 +140,11 @@ img {
 	font-weight:bold;
 }
 
+#fare_warning {
+	color:#ff8c00;
+	background-color:#FF6;
+	magin: auto;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+}
