@@ -90,7 +90,7 @@ class FlightsController < ApplicationController
 		   end
 		end
 
-	   @xml.elements.count < 1 ? @result_nil = true : @result_nil = false
+#	   @xml.elements.count < 1 ? @result_nil = true : @result_nil = false
 		
 				
         format.html {        
