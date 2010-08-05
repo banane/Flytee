@@ -23,15 +23,17 @@ class FlightsController < ApplicationController
 
   def new
     @airports = Airports.find(:all, :order=>'City')
-    
+	session[:freeze_fee] = 1+rand(19) 
+	
+	puts session[:freeze_fee].to_s + '<--------- fee'
 
     # do the toggle    
-	version = session[:test_version]
-	version ^=1
-	session[:test_version] = version
+#	version = session[:test_version]
+#	version ^=1
+#	session[:test_version] = version
+	session[:test_version] = 'freeze fee testing'
 	
-	session[:source] = params[:source]
-	
+	session[:source] = params[:source]	
   
     @flight = Flight.new
 

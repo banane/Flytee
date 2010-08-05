@@ -1,13 +1,11 @@
-<!-- multiple flight select option (version B) -->
 <div id="logo"><img src="/images/freezefare-logo.png" /></div>
 <% form_for(@flight_select) do |f| %>
   <%= f.error_messages %>       
 
 <div class="main">  
-        <h3>How long would you like to freeze this fare?</h3>
-         <%= f.text_field :freeze_time, :size=>'10' %>
-         <div class="buy_buttons"><%= image_submit_tag '/images/freezefare-freeze-btn.gif' %>
-         </div>
+        <h3>Freeze this fare for 1 Day</h3>
+        <h3>$<%= session[:freeze_fee] %></h3>
+		 <%= f.hidden_field :freeze_fee, :value=>session[:freeze_fee] %>
 <table border=0 width="100%" class="manyresults">
 <%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
 <tr>
