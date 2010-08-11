@@ -23,7 +23,7 @@ class FlightsController < ApplicationController
 
   def new
     @airports = Airports.find(:all, :order=>'City')
-	session[:freeze_fee] = 1+rand(19) 
+	session[:freeze_fee] = 1+rand(20) 
 	
 	puts session[:freeze_fee].to_s + '<--------- fee'
 
