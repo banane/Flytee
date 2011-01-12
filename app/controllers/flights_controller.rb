@@ -76,23 +76,23 @@ class FlightsController < ApplicationController
 		
 		session[:test_version]? count=nil : count=1 
 
-		@xml = @srch.start_kayak_search(
-			@flight.from_code, 
-			@flight.to_code,
-			from_date,from_time, to_date, to_time, count)
+#		@xml = @srch.start_kayak_search(
+#			@flight.from_code, 
+#			@flight.to_code,
+#			from_date,from_time, to_date, to_time, count)
 			
-		# grab version b value here
-		if session[:test_version] == false then
-		   @xml.elements.each("/searchresult/trips/trip") do |e| 
-		     e.each_element("price") do |t| 
-		       @low_fare = t.text		       
-		     end
-		   end
-		end
+#		# grab version b value here
+#		if session[:test_version] == false then
+#		   @xml.elements.each('/searchresult/trips/trip') do |e| 
+#		     e.each_element("price") do |t| 
+#		       @low_fare = t.text		       
+#		     end
+#		   end
+#		end
 
 #	   @xml.elements.count < 1 ? @result_nil = true : @result_nil = false
 		
-				
+		
         format.html {        
          if session[:test_version] then 
            render :action => "show_many"  
