@@ -1,0 +1,47 @@
+<div id="logo"><img src="/images/freezefare-logo.png" /></div>
+<% form_for(@flight_select) do |f| %>
+  <%= f.error_messages %>       
+
+<div class="main">  
+        <h3>Freeze this fare for 1 Day</h3>
+        We're temporarily down- come back again!
+        <!--
+        <h3>$<%= session[:freeze_fee] %></h3>
+        <%= image_submit_tag('/images/freezefare-freeze-btn.gif') %>
+		 <%= f.hidden_field :freeze_fee, :value=>session[:freeze_fee] %>
+<table border=0 width="100%" class="manyresults">
+<%    @xml.elements.each("/searchresult/trips/trip") do |e| %>
+<tr>
+<td>   <%= f.radio_button :kayak_flight_id, :value=>e.attribute('id') %>     </td>   
+       <% e.each_element("price") do |t|   %>       
+	         <%=t.attribute("id") %>        <td> $<%=t.text%></td>	
+	      <% end %>
+	      <td><table border="0" id="leg_table" width="100%">
+		<% 
+		legcount=0
+		e.each_element("legs/leg") do |l| 
+		   %><tr><%
+		    l.each_element("airline_display") do |a|
+		       %><td><%=a.text %></td><%
+			end
+			l.each_element("depart") do |d|          
+			     %><td><%=d.text %></td><%
+			end
+			
+			l.each_element("stops") do |s|
+			   %><td>Stops: <%=s.text%></td><%
+			end%>
+			</tr><%
+			
+		 end%>
+		 </table>
+		 </td>
+	 </tr>
+	</p>
+        <%= f.hidden_field :flight_id, :value=>@flight.id.to_s %>
+     <% end %>
+     
+     
+</table>
+
+</div><% end %>
